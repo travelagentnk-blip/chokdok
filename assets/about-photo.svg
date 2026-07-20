@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <linearGradient id="p" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C3159"/>
+      <stop offset="100%" stop-color="#101E3A"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#p)"/>
+  <circle cx="450" cy="430" r="140" fill="none" stroke="#C9A063" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="450" y="450" font-family="'Cormorant Garamond', serif" font-size="96" fill="#E8D9B5" text-anchor="middle">Н К</text>
+  <text x="450" y="720" font-family="'Jost', sans-serif" font-size="22" letter-spacing="4" fill="#C9A063" fill-opacity="0.7" text-anchor="middle">PHOTO PLACEHOLDER</text>
+</svg>

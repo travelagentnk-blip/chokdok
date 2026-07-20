@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наталья Кузнецова — персональный турагент</title>
+<meta name="description" content="Наталья Кузнецова, персональный турагент: путешествия, спланированные с личным вниманием к каждой детали. Напишите в Telegram или Instagram.">
+<meta name="theme-color" content="#101E3A">
+
+<meta property="og:title" content="Наталья Кузнецова — персональный турагент">
+<meta property="og:description" content="Путешествия, спланированные с той же заботой, с какой их проживают.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sprite: иконки Telegram / Instagram, используются через <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="icon-telegram" viewBox="0 0 24 24">
+      <path d="M21.5 3.5 2.7 10.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.9 5.7c.2.6.4.8.9.8.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.3-1.4Zm-12.6 10 8.7-7.9c.4-.4.8-.2.5.2l-7.1 8.2-.3 3.3-1.2-3.8Z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path d="M12 2.2c2.7 0 3 0 4 .1 1.1 0 1.8.2 2.2.4a4.4 4.4 0 0 1 2.1 2.1c.2.4.4 1.1.4 2.2.1 1 .1 1.3.1 4s0 3-.1 4c0 1.1-.2 1.8-.4 2.2a4.4 4.4 0 0 1-2.1 2.1c-.4.2-1.1.4-2.2.4-1 .1-1.3.1-4 .1s-3 0-4-.1c-1.1 0-1.8-.2-2.2-.4a4.4 4.4 0 0 1-2.1-2.1c-.2-.4-.4-1.1-.4-2.2-.1-1-.1-1.3-.1-4s0-3 .1-4c0-1.1.2-1.8.4-2.2A4.4 4.4 0 0 1 5.8 2.7c.4-.2 1.1-.4 2.2-.4 1-.1 1.3-.1 4-.1ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0Z"/>
+    </symbol>
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24">
+      <path d="M12 4v15M12 19l-6-6M12 19l6-6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Sticky-иконки соцсетей -->
+<div class="sticky-social" aria-label="Быстрая связь">
+  <a href="https://t.me/ta_nkru" target="_blank" rel="noopener" class="sticky-social__link" aria-label="Написать в Telegram">
+    <svg class="sticky-social__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+  </a>
+  <a href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener" class="sticky-social__link" aria-label="Написать в Instagram">
+    <svg class="sticky-social__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+  </a>
+</div>
+
+<!-- 1. Hero -->
+<header class="hero" id="hero">
+  <div class="hero__bg" style="background-image:url('assets/hero-bg.svg')"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content reveal">
+    <p class="hero__eyebrow">Персональный турагент</p>
+    <h1 class="hero__name">Наталья Кузнецова</h1>
+    <p class="hero__slogan">«Путешествия, спланированные с той же заботой,<br class="hero__br"> с какой их проживают»</p>
+    <div class="hero__actions">
+      <a class="btn btn--outline" href="https://t.me/ta_nkru" target="_blank" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+        Написать в Telegram
+      </a>
+      <a class="btn btn--outline" href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+        Написать в Instagram
+      </a>
+    </div>
+  </div>
+  <a href="#about" class="hero__scroll" aria-label="Прокрутить вниз">
+    <svg class="hero__scroll-icon" aria-hidden="true"><use href="#icon-arrow-down"/></svg>
+  </a>
+</header>
+
+<main>
+
+  <!-- 2. Обо мне -->
+  <section class="section section--cream" id="about">
+    <div class="container about">
+      <div class="about__media reveal">
+        <div class="about__photo-frame">
+          <img class="about__photo" src="assets/about-photo.svg" alt="Наталья Кузнецова, персональный турагент" loading="lazy" width="900" height="1100">
+        </div>
+      </div>
+      <div class="about__text reveal">
+        <p class="eyebrow">Обо мне</p>
+        <h2 class="section__title">Не турагентство — <span class="accent">личная ответственность</span></h2>
+        <p>Меня зовут Наталья. Уже 12 лет я провожу для своих туристов путешествия, которые запоминаются не расписанием, а ощущением. Для меня это не бизнес по продаже путёвок, а личная ответственность за каждую деталь вашего маршрута — от первого сообщения до возвращения домой.</p>
+        <p>Я сама бываю в отелях и странах, которые рекомендую, поэтому говорю о них честно — включая то, что не попадёт в рекламный буклет. Каждый маршрут собирается индивидуально, под ваш темп и ваш стиль отдыха, а не по шаблону из каталога.</p>
+        <p>Если что-то пойдёт не по плану — вы пишете не в чат поддержки, а мне лично, и я решаю вопрос сама.</p>
+
+        <div class="about__video-frame">
+          <video
+            class="about__video"
+            controls
+            preload="none"
+            poster="assets/about-video-poster.svg"
+            aria-label="Короткое видео-приветствие от Натальи">
+            <!-- TODO: заменить на реальное видео-приветствие -->
+            <source src="assets/about-video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Цифры -->
+  <section class="section section--navy stats" id="stats">
+    <div class="container stats__grid">
+      <div class="stat reveal">
+        <span class="stat__number" data-count-to="12">0</span>
+        <span class="stat__label">лет на рынке</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__number" data-count-to="500" data-suffix="+">0</span>
+        <span class="stat__label">довольных туристов</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__number" data-count-to="34">0</span>
+        <span class="stat__label">страны, где я была лично</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Почему я -->
+  <section class="section section--cream" id="why">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Принципы подхода</p>
+      <h2 class="section__title section__title--center">Почему обращаются <span class="accent">именно ко мне</span></h2>
+
+      <div class="principles">
+        <div class="principle reveal">
+          <span class="principle__mark" aria-hidden="true"></span>
+          <h3 class="principle__title">Личное сопровождение</h3>
+          <p>Я на связи на каждом этапе поездки — до вылета, во время и после возвращения, а не только в момент оплаты тура.</p>
+        </div>
+        <div class="principle reveal">
+          <span class="principle__mark" aria-hidden="true"></span>
+          <h3 class="principle__title">Проверено лично</h3>
+          <p>Отели и маршруты, которые я рекомендую, я видела своими глазами, а не выбрала по фотографиям из каталога.</p>
+        </div>
+        <div class="principle reveal">
+          <span class="principle__mark" aria-hidden="true"></span>
+          <h3 class="principle__title">Индивидуальный подбор</h3>
+          <p>Маршрут собирается под ваш стиль путешествия и темп отдыха — никаких типовых пакетов «для всех».</p>
+        </div>
+        <div class="principle reveal">
+          <span class="principle__mark" aria-hidden="true"></span>
+          <h3 class="principle__title">Честность в деталях</h3>
+          <p>Вы заранее знаете о всех условиях и нюансах поездки — без мелкого шрифта и сюрпризов по факту.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Виджеты подбора туров -->
+  <section class="section section--cream" id="search">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Подбор тура</p>
+      <h2 class="section__title section__title--center">Найдём вариант <span class="accent">вместе</span></h2>
+      <p class="section__lead">Можно начать с самостоятельного поиска ниже — а затем написать мне, чтобы обсудить детали и подобрать лучший вариант под ваш запрос.</p>
+
+      <div class="widget-frame reveal">
+        <!-- TODO: вставить embed-код партнёрского виджета поиска туров (Level.Travel / Travelata / Онлайн-Тур и т.п.) -->
+        <div class="widget-frame__placeholder">
+          <p>Здесь будет виджет подбора туров партнёрского сервиса</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Финальный CTA -->
+  <section class="section section--navy cta">
+    <div class="container cta__inner reveal">
+      <h2 class="cta__title">Расскажите, о каком путешествии вы мечтаете</h2>
+      <p class="cta__lead">Напишите мне в любое время — отвечаю лично.</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="https://t.me/ta_nkru" target="_blank" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+          Написать в Telegram
+        </a>
+        <a class="btn btn--outline btn--outline-light" href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+          Написать в Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__brand">Наталья Кузнецова</p>
+    <div class="footer__social">
+      <a href="https://t.me/ta_nkru" target="_blank" rel="noopener" aria-label="Telegram">
+        <svg class="footer__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+      </a>
+      <a href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="footer__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+      </a>
+    </div>
+    <p class="footer__copyright">© 2026 Наталья Кузнецова</p>
+    <p class="footer__legal">Персональные данные, оставленные через формы на сайте, обрабатываются исключительно для связи с вами и не передаются третьим лицам.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
