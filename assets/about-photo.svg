@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
   <defs>
     <linearGradient id="p" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1C3159"/>
-      <stop offset="100%" stop-color="#101E3A"/>
+      <stop offset="0%" stop-color="#23406B"/>
+      <stop offset="100%" stop-color="#16294A"/>
     </linearGradient>
   </defs>
   <rect width="900" height="1100" fill="url(#p)"/>
