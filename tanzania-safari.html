@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Танзания: Северное сафари — программа тура | Наталья Кожедуб</title>
+<meta name="description" content="Инфографика маршрута: 5 дней сафари по Танзании — Аруша, Тарангире, кратер Нгоронгоро, Серенгети. Программа тура от персонального турагента Натальи Кожедуб.">
+<meta name="theme-color" content="#1D3559">
+
+<meta property="og:title" content="Танзания: Северное сафари — программа тура">
+<meta property="og:description" content="5 дней · Тарангире → Нгоронгоро → Серенгети → Занзибар">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ==========================================================================
+     Safari infographic — page-specific styles (built on top of styles.css tokens)
+     ========================================================================== */
+
+  .breadcrumb {
+    position: relative;
+    z-index: 2;
+    padding: 1.1rem 0;
+    background: var(--color-navy);
+    border-bottom: 1px solid rgba(201, 160, 99, 0.25);
+  }
+  .breadcrumb__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-sand-light);
+    opacity: 0.85;
+  }
+  .breadcrumb__link:hover { opacity: 1; color: var(--color-sand); }
+  .breadcrumb__icon { width: 0.8rem; height: 0.8rem; fill: none; stroke: currentColor; stroke-width: 1.4; }
+
+  /* ---- Safari hero ---- */
+  .safari-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-navy);
+    color: var(--color-sand-light);
+    text-align: center;
+    padding: 5rem 0 6rem;
+  }
+  .safari-hero__bg { position: absolute; inset: 0; z-index: 0; }
+  .safari-hero__bg svg { width: 100%; height: 100%; display: block; }
+  .safari-hero__content { position: relative; z-index: 1; max-width: 40rem; margin: 0 auto; padding: 0 1.5rem; }
+  .safari-hero__eyebrow {
+    font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--color-sand); margin: 0 0 1.1rem;
+  }
+  .safari-hero__title { font-size: 2.4rem; line-height: 1.2; margin-bottom: 1rem; }
+  .safari-hero__lead {
+    font-family: var(--font-display); font-style: italic; font-size: 1.15rem;
+    opacity: 0.9; margin-bottom: 2rem;
+  }
+  .safari-hero__facts {
+    display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; justify-content: center;
+    margin-bottom: 2.2rem;
+  }
+  .safari-hero__fact {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    padding: 0.5rem 0.9rem; border: 1px solid rgba(201, 160, 99, 0.5);
+    border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.05em;
+  }
+  .safari-hero__fact svg { width: 0.95rem; height: 0.95rem; fill: var(--color-sand); color: var(--color-sand); flex-shrink: 0; }
+
+  /* ---- Route map strip ---- */
+  .route-map {
+    display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center;
+    gap: 0.25rem 0; row-gap: 1.6rem;
+  }
+  .route-stop { display: flex; flex-direction: column; align-items: center; width: 6.4rem; text-align: center; }
+  .route-stop__dot {
+    width: 2.6rem; height: 2.6rem; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--color-navy); border: 1px solid var(--color-sand);
+    color: var(--color-sand);
+    margin-bottom: 0.6rem;
+  }
+  .route-stop__dot svg { width: 1.2rem; height: 1.2rem; fill: var(--color-sand); }
+  .route-stop__dot svg.stroke-icon { fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
+  .route-stop__name { font-size: 0.78rem; line-height: 1.35; color: var(--color-graphite); }
+  .route-link {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 3.2rem; margin-top: 1.3rem; flex-shrink: 0;
+  }
+  .route-link__line { width: 100%; height: 1px; background: repeating-linear-gradient(90deg, var(--color-sand) 0 6px, transparent 6px 10px); }
+  .route-link__time { font-size: 0.68rem; color: var(--color-sand); opacity: 0.9; margin-top: 0.4rem; white-space: nowrap; letter-spacing: 0.02em; }
+
+  /* ---- Timeline / day cards ---- */
+  .timeline { position: relative; display: grid; gap: 3rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 1.55rem; top: 0.5rem; bottom: 0.5rem;
+    width: 1px; background: rgba(201, 160, 99, 0.35);
+  }
+  .day-card { position: relative; padding-left: 4.4rem; }
+  .day-card__badge {
+    position: absolute; left: 0; top: 0;
+    width: 3.1rem; height: 3.1rem; border-radius: 50%;
+    background: var(--color-cream); border: 1px solid var(--color-sand);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: var(--font-display); color: var(--color-navy); line-height: 1;
+    z-index: 1;
+  }
+  .day-card__badge span:first-child { font-size: 1.15rem; font-weight: 600; }
+  .day-card__badge span:last-child { font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sand); }
+  .day-card__title { font-size: 1.35rem; margin-bottom: 0.4rem; }
+  .day-card__route {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.5rem;
+    font-size: 0.8rem; color: var(--color-sand); opacity: 0.9;
+    margin-bottom: 1rem; letter-spacing: 0.01em;
+  }
+  .day-card__route svg { width: 0.8rem; height: 0.8rem; fill: none; stroke: var(--color-sand); stroke-width: 1.4; flex-shrink: 0; }
+  .day-card__body { display: grid; gap: 1.6rem; }
+  .day-card__text p { font-size: 0.96rem; opacity: 0.9; margin-bottom: 0.7rem; }
+  .day-card__text p:last-child { margin-bottom: 0; }
+
+  .stay-card {
+    display: flex; align-items: center; gap: 0.9rem;
+    background: var(--color-cream); border: 1px solid rgba(201, 160, 99, 0.5);
+    color: var(--color-graphite);
+    padding: 0.9rem 1.1rem;
+  }
+  .stay-card__icon {
+    width: 2.4rem; height: 2.4rem; flex-shrink: 0; border-radius: 50%;
+    background: var(--color-navy); color: var(--color-sand);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .stay-card__icon svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
+  .stay-card__name { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.15rem; }
+  .stay-card__meta { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-sand); opacity: 0.95; }
+
+  .day-card__note {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    color: var(--color-sand);
+    font-size: 0.85rem; opacity: 0.75; font-style: italic;
+  }
+  .day-card__note svg { width: 1rem; height: 1rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; flex-shrink: 0; margin-top: 0.15rem; }
+
+  /* ---- Highlights ---- */
+  .highlights { display: grid; grid-template-columns: 1fr; gap: 2.2rem; }
+  .highlight { text-align: center; padding: 0 0.5rem; }
+  .highlight__icon {
+    width: 3.6rem; height: 3.6rem; margin: 0 auto 1rem; border-radius: 50%;
+    background: var(--color-navy); color: var(--color-sand);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .highlight__icon svg { width: 1.6rem; height: 1.6rem; fill: var(--color-sand); }
+  .highlight__icon svg.stroke-icon { fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
+  .highlight__title { font-size: 1.15rem; margin-bottom: 0.5rem; }
+  .highlight p { font-size: 0.88rem; opacity: 0.8; }
+
+  /* ---- Practical strip ---- */
+  .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
+  .practical__item { padding: 1.4rem 1rem; border: 1px solid rgba(201, 160, 99, 0.4); color: var(--color-sand); }
+  .practical__item strong, .practical__item span { color: var(--color-graphite); }
+  .practical__item svg { width: 1.5rem; height: 1.5rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; margin-bottom: 0.7rem; }
+  .practical__item strong { display: block; font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .practical__item span { font-size: 0.82rem; opacity: 0.75; }
+
+  @media (min-width: 768px) {
+    .safari-hero { padding: 7rem 0 8rem; }
+    .safari-hero__title { font-size: 3.2rem; }
+    .safari-hero__lead { font-size: 1.35rem; }
+
+    .day-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
+
+    .highlights { grid-template-columns: repeat(4, 1fr); }
+    .practical { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1200px) {
+    .safari-hero__title { font-size: 3.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sprite: иконки, используются через <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="icon-telegram" viewBox="0 0 24 24">
+      <path d="M21.5 3.5 2.7 10.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.9 5.7c.2.6.4.8.9.8.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.3-1.4Zm-12.6 10 8.7-7.9c.4-.4.8-.2.5.2l-7.1 8.2-.3 3.3-1.2-3.8Z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path d="M12 2.2c2.7 0 3 0 4 .1 1.1 0 1.8.2 2.2.4a4.4 4.4 0 0 1 2.1 2.1c.2.4.4 1.1.4 2.2.1 1 .1 1.3.1 4s0 3-.1 4c0 1.1-.2 1.8-.4 2.2a4.4 4.4 0 0 1-2.1 2.1c-.4.2-1.1.4-2.2.4-1 .1-1.3.1-4 .1s-3 0-4-.1c-1.1 0-1.8-.2-2.2-.4a4.4 4.4 0 0 1-2.1-2.1c-.2-.4-.4-1.1-.4-2.2-.1-1-.1-1.3-.1-4s0-3 .1-4c0-1.1.2-1.8.4-2.2A4.4 4.4 0 0 1 5.8 2.7c.4-.2 1.1-.4 2.2-.4 1-.1 1.3-.1 4-.1ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0Z"/>
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path d="M11 4 4 12l7 8M4 12h16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Route / day icons -->
+    <symbol id="icon-plane" viewBox="0 0 24 24">
+      <path d="M21 3 3 10.2l7.3 2.6L13 21l3-7.5L21 3Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M21 3 10.3 12.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-suitcase" viewBox="0 0 24 24">
+      <rect x="3" y="8" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M12 12v4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-mountain" viewBox="0 0 24 24">
+      <path d="M2 20 9 6l3 5 3-6 7 15Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M8 7.4 9.6 9.6 11.2 7.8 12.8 10 14.2 6.6" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-jeep" viewBox="0 0 24 24">
+      <rect x="2.2" y="12" width="15.5" height="4.4" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M5 12 6.6 8h6.3L15 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <circle cx="6.4" cy="17" r="1.6" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="14.2" cy="17" r="1.6" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M17.7 13 21 13.6V16h-1.8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M17 8.5 18 5.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-crater" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.75"/>
+      <circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+    </symbol>
+    <symbol id="icon-paw" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="16.3" rx="4.1" ry="3.3"/>
+      <ellipse cx="6.7" cy="10.4" rx="1.7" ry="2.2" transform="rotate(-24 6.7 10.4)"/>
+      <ellipse cx="10.6" cy="7.4" rx="1.7" ry="2.2" transform="rotate(-6 10.6 7.4)"/>
+      <ellipse cx="14.3" cy="7.6" rx="1.7" ry="2.2" transform="rotate(6 14.3 7.6)"/>
+      <ellipse cx="17.7" cy="10.6" rx="1.7" ry="2.2" transform="rotate(24 17.7 10.6)"/>
+    </symbol>
+    <symbol id="icon-tree" viewBox="0 0 24 24">
+      <path d="M12 22V12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <ellipse cx="12" cy="7.6" rx="8.6" ry="2.4"/>
+      <ellipse cx="12" cy="10" rx="6.4" ry="2.6"/>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="14" r="4.6" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M12 5.5v2M6.2 8l1.4 1.4M17.8 8l-1.4 1.4M2.5 19h19" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-beach" viewBox="0 0 24 24">
+      <path d="M12 21c-.8-5.5.6-9 4-11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M16 10c-2.6-1.8-5.4-1.8-7.5 0M16 10c-.7-2.7 0-5.2 2.6-7.2M16 10c1.8-1.8 4.4-1.8 6.2 0M16 10c.8-2.6 0-5-2-7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M2 21.5c3 1 17 1 20 0" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.6"/>
+    </symbol>
+    <symbol id="icon-bed" viewBox="0 0 24 24">
+      <path d="M2 19v-6.5A2 2 0 0 1 4 10.5h6a2 2 0 0 1 2 2V14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M12 14h8a2 2 0 0 1 2 2v3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M2 19v2M22 19v2M2 19h20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <rect x="3.5" y="11.5" width="4.5" height="2.5" rx="0.8" fill="none" stroke="currentColor" stroke-width="1.1"/>
+    </symbol>
+    <symbol id="icon-meal" viewBox="0 0 24 24">
+      <path d="M6 2v7a1.6 1.6 0 0 0 1.6 1.6V22M6 2v6M8 2v6M4 2v6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17.5 2c-1.6.3-2.5 1.9-2.5 4v3.2c0 1.3.9 2.3 2 2.5V22" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M12 7v5.2l3.4 2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M12 21.5S5 14.7 5 9.5a7 7 0 1 1 14 0c0 5.2-7 12-7 12Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <circle cx="12" cy="9.4" r="2.4" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M12 11v5.5M12 8v.01" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Sticky-иконки соцсетей -->
+<div class="sticky-social" aria-label="Быстрая связь">
+  <a href="https://t.me/ta_nkru" target="_blank" rel="noopener" class="sticky-social__link" aria-label="Написать в Telegram">
+    <svg class="sticky-social__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+  </a>
+  <a href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener" class="sticky-social__link" aria-label="Написать в Instagram">
+    <svg class="sticky-social__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+  </a>
+</div>
+
+<nav class="breadcrumb">
+  <div class="container">
+    <a class="breadcrumb__link" href="index.html">
+      <svg class="breadcrumb__icon" aria-hidden="true"><use href="#icon-arrow-left"/></svg>
+      На главную
+    </a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="safari-hero">
+  <div class="safari-hero__bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#192E52"/>
+          <stop offset="60%" stop-color="#1D3559"/>
+          <stop offset="100%" stop-color="#2A4E7B"/>
+        </linearGradient>
+        <radialGradient id="sunGlow" cx="50%" cy="30%" r="45%">
+          <stop offset="0%" stop-color="#C9A063" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#C9A063" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1200" height="500" fill="url(#skyGrad)"/>
+      <rect width="1200" height="500" fill="url(#sunGlow)"/>
+      <circle cx="600" cy="60" r="50" fill="#C9A063" opacity="0.3"/>
+      <g fill="#0F2141" opacity="0.9">
+        <path d="M0 500 L0 430 L60 340 L110 400 L150 380 L230 500Z"/>
+        <path d="M980 500 L1020 420 L1070 470 L1120 380 L1200 500Z"/>
+      </g>
+      <g fill="#132646" opacity="0.85">
+        <path d="M120 500c8-30 38-46 82-46s74 16 82 46c-20-14-50-21-82-21s-62 7-82 21Z"/>
+        <path d="M900 500c7-26 33-40 71-40s64 14 71 40c-17-12-43-18-71-18s-54 6-71 18Z"/>
+      </g>
+      <rect y="480" width="1200" height="20" fill="#0F2141"/>
+    </svg>
+  </div>
+  <div class="safari-hero__content">
+    <p class="safari-hero__eyebrow">Программа тура</p>
+    <h1 class="safari-hero__title">Танзания: <span class="accent">Северное сафари</span></h1>
+    <p class="safari-hero__lead">От заснеженного Килиманджаро до бескрайних саванн Серенгети — 5 дней среди дикой природы Восточной Африки</p>
+    <div class="safari-hero__facts">
+      <span class="safari-hero__fact"><svg aria-hidden="true"><use href="#icon-clock"/></svg>5 дней / 4 ночи</span>
+      <span class="safari-hero__fact"><svg aria-hidden="true"><use href="#icon-pin"/></svg>4 национальных парка и резервата</span>
+      <span class="safari-hero__fact"><svg aria-hidden="true"><use href="#icon-jeep"/></svg>Джип-сафари</span>
+    </div>
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="https://t.me/ta_nkru" target="_blank" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+        Обсудить маршрут
+      </a>
+      <a class="btn btn--outline btn--outline-light" href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+        Написать в Instagram
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Route map -->
+  <section class="section section--cream" id="route">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Маршрут</p>
+      <h2 class="section__title section__title--center">Путь через <span class="accent">сердце сафари</span></h2>
+      <p class="section__lead">От международного аэропорта Килиманджаро до великих равнин Серенгети — с остановками у подножия вулканов и на краю кратера.</p>
+
+      <div class="route-map reveal">
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-plane"/></svg></span>
+          <span class="route-stop__name">Килиманджаро (аэропорт)</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">~1.5 ч</span></div>
+
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-suitcase"/></svg></span>
+          <span class="route-stop__name">Аруша</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">1.5–2 ч</span></div>
+
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-paw"/></svg></span>
+          <span class="route-stop__name">Нац. парк Тарангире</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">~1.5 ч</span></div>
+
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-pin"/></svg></span>
+          <span class="route-stop__name">Карату</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">до 1 ч</span></div>
+
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-crater"/></svg></span>
+          <span class="route-stop__name">Кратер Нгоронгоро</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">3–4 ч</span></div>
+
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-paw"/></svg></span>
+          <span class="route-stop__name">Нац. парк Серенгети</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">перелёт<br>1.5–2 ч</span></div>
+
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-beach"/></svg></span>
+          <span class="route-stop__name">Аруша / Занзибар</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section section--navy" id="days">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">День за днём</p>
+      <h2 class="section__title section__title--center">Программа <span class="accent">тура</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light); opacity: 0.85;">Пять дней, спланированных так, чтобы застать животных в лучшие для наблюдений часы и провести ночи в самых атмосферных точках маршрута.</p>
+
+      <div class="timeline">
+
+        <!-- Day 1 -->
+        <article class="day-card reveal">
+          <div class="day-card__badge"><span>1</span><span>день</span></div>
+          <h3 class="day-card__title" style="color: var(--color-sand-light);">Килиманджаро — Аруша</h3>
+          <p class="day-card__route">
+            <svg aria-hidden="true"><use href="#icon-clock"/></svg> переезд ~1.5 часа
+          </p>
+          <div class="day-card__body">
+            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+              <p>Прибытие в международный аэропорт Килиманджаро, получение виз и багажа, встреча с водителем-гидом.</p>
+              <p>Трансфер в отель в городе Аруша. Отдых после перелёта — день без нагрузок, чтобы адаптироваться перед стартом сафари.</p>
+            </div>
+            <div class="stay-card">
+              <span class="stay-card__icon"><svg aria-hidden="true"><use href="#icon-bed"/></svg></span>
+              <div>
+                <div class="stay-card__name">Tumbili Lodge или подобный</div>
+                <div class="stay-card__meta">Завтрак</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 2 -->
+        <article class="day-card reveal">
+          <div class="day-card__badge"><span>2</span><span>день</span></div>
+          <h3 class="day-card__title" style="color: var(--color-sand-light);">Аруша — Тарангире — Карату</h3>
+          <p class="day-card__route">
+            <svg aria-hidden="true"><use href="#icon-clock"/></svg> 1.5–2 ч до парка · далее 1.5 ч до Карату
+          </p>
+          <div class="day-card__body">
+            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+              <p>Завтрак и встреча с водителем-гидом в 08:00 на рецепции отеля. Переезд до Национального парка Тарангире — сафари среди знаменитых баобабов и крупнейших в Танзании стад слонов, обед-пикник прямо в парке.</p>
+              <p>После сафари — переезд в отель в районе города Карату, у подножия резервата Нгоронгоро. Ужин и ночь в отеле.</p>
+            </div>
+            <div class="stay-card">
+              <span class="stay-card__icon"><svg aria-hidden="true"><use href="#icon-bed"/></svg></span>
+              <div>
+                <div class="stay-card__name">Marera Valley Lodge или подобный</div>
+                <div class="stay-card__meta">Полный пансион</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 3 -->
+        <article class="day-card reveal">
+          <div class="day-card__badge"><span>3</span><span>день</span></div>
+          <h3 class="day-card__title" style="color: var(--color-sand-light);">Карату — кратер Нгоронгоро — Серенгети</h3>
+          <p class="day-card__route">
+            <svg aria-hidden="true"><use href="#icon-clock"/></svg> до кратера ~1 ч · далее в Серенгети 3–4 ч
+          </p>
+          <div class="day-card__body">
+            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+              <p>Ранний завтрак и короткий переезд к резервату Нгоронгоро (20–30 минут). Спуск на джипе внутрь знаменитого кратера — сафари на дне древней вулканической кальдеры, где на замкнутой территории живёт одна из самых высоких концентраций животных в Африке (около 1 часа наблюдений).</p>
+              <p>Обед-пикник и переезд в Национальный парк Серенгети (около 4 часов) с сафари по пути прямо к лоджу. Отдых и ужин.</p>
+            </div>
+            <div class="stay-card">
+              <span class="stay-card__icon"><svg aria-hidden="true"><use href="#icon-bed"/></svg></span>
+              <div>
+                <div class="stay-card__name">Enkirari Wilderness Camp или подобный</div>
+                <div class="stay-card__meta">Полный пансион</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 4 -->
+        <article class="day-card reveal">
+          <div class="day-card__badge"><span>4</span><span>день</span></div>
+          <h3 class="day-card__title" style="color: var(--color-sand-light);">Национальный парк Серенгети</h3>
+          <p class="day-card__route">
+            <svg aria-hidden="true"><use href="#icon-sun"/></svg> целый день в парке
+          </p>
+          <div class="day-card__body">
+            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+              <p>Целый день сафари в Серенгети — бескрайние равнины, где (в сезон) разворачивается Великая миграция, и лучшие шансы увидеть всю Большую пятёрку в естественной среде.</p>
+              <p>Завтрак и ужин в лодже, обед-пикник — в парке, среди саванны.</p>
+            </div>
+            <div class="stay-card">
+              <span class="stay-card__icon"><svg aria-hidden="true"><use href="#icon-bed"/></svg></span>
+              <div>
+                <div class="stay-card__name">Enkirari Wilderness Camp или подобный</div>
+                <div class="stay-card__meta">Полный пансион</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 5 -->
+        <article class="day-card reveal">
+          <div class="day-card__badge"><span>5</span><span>день</span></div>
+          <h3 class="day-card__title" style="color: var(--color-sand-light);">Серенгети — Аруша / Занзибар</h3>
+          <p class="day-card__route">
+            <svg aria-hidden="true"><use href="#icon-plane"/></svg> перелёт 1.5–2 часа
+          </p>
+          <div class="day-card__body">
+            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+              <p>Завтрак в отеле и выселение. Утреннее сафари по пути в аэропорт Серонера — последний шанс встретить животных перед вылетом.</p>
+              <p>Далее — на выбор: вылет на Занзибар для продолжения отдыха на океане, либо вылет в Арушу для обеда и трансфера в аэропорт Килиманджаро к международному рейсу домой.</p>
+            </div>
+            <div class="day-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Продление тура пляжным отдыхом на Занзибаре легко добавить к программе — обсудим при планировании.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="section section--cream" id="highlights">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Что вас ждёт</p>
+      <h2 class="section__title section__title--center">Четыре разных <span class="accent">лица Африки</span></h2>
+
+      <div class="highlights">
+        <div class="highlight reveal">
+          <span class="highlight__icon"><svg aria-hidden="true"><use href="#icon-tree"/></svg></span>
+          <h3 class="highlight__title">Тарангире</h3>
+          <p>Вековые баобабы и одни из крупнейших в Танзании стад слонов на берегах реки Тарангире.</p>
+        </div>
+        <div class="highlight reveal">
+          <span class="highlight__icon"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-crater"/></svg></span>
+          <h3 class="highlight__title">Нгоронгоро</h3>
+          <p>Замкнутый мир на дне кратера — плотность диких животных, которую нигде больше не встретить.</p>
+        </div>
+        <div class="highlight reveal">
+          <span class="highlight__icon"><svg aria-hidden="true"><use href="#icon-paw"/></svg></span>
+          <h3 class="highlight__title">Серенгети</h3>
+          <p>Бескрайние равнины «до горизонта» и, в сезон, Великая миграция миллионов копытных.</p>
+        </div>
+        <div class="highlight reveal">
+          <span class="highlight__icon"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-beach"/></svg></span>
+          <h3 class="highlight__title">Занзибар</h3>
+          <p>Тёплый Индийский океан и белый песок — идеальное продолжение после дней в саванне.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical info -->
+  <section class="section section--cream" style="padding-top: 0;" id="practical">
+    <div class="container">
+      <div class="practical">
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-jeep"/></svg>
+          <strong>Джип-сафари</strong>
+          <span>Внедорожник с открывающейся крышей и водителем-гидом на всём маршруте</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-meal"/></svg>
+          <strong>Питание</strong>
+          <span>Завтраки со 2 дня, обеды-пикники в парках, полный пансион в лоджах</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-bed"/></svg>
+          <strong>Проживание</strong>
+          <span>Лоджи и кэмпы у границ парков — атмосфера сафари без потери комфорта</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--navy cta">
+    <div class="container cta__inner reveal">
+      <h2 class="cta__title">Хотите такое же путешествие?</h2>
+      <p class="cta__lead">Соберу маршрут под ваши даты и пожелания — от первого сообщения до возвращения домой.</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="https://t.me/ta_nkru" target="_blank" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+          Написать в Telegram
+        </a>
+        <a class="btn btn--outline btn--outline-light" href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+          Написать в Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__brand">Наталья Кожедуб</p>
+    <div class="footer__social">
+      <a href="https://t.me/ta_nkru" target="_blank" rel="noopener" aria-label="Telegram">
+        <svg class="footer__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+      </a>
+      <a href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="footer__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+      </a>
+    </div>
+    <p class="footer__copyright">© 2026 Наталья Кожедуб</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
