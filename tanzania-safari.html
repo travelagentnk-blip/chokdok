@@ -6,6 +6,7 @@
 <title>Танзания: Северное сафари — программа тура | Наталья Кожедуб</title>
 <meta name="description" content="Инфографика маршрута: 5 дней сафари по Танзании — Аруша, Тарангире, кратер Нгоронгоро, Серенгети. Программа тура от персонального турагента Натальи Кожедуб.">
 <meta name="theme-color" content="#1D3559">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 
 <meta property="og:title" content="Танзания: Северное сафари — программа тура">
 <meta property="og:description" content="5 дней · Тарангире → Нгоронгоро → Серенгети → Занзибар">
@@ -36,9 +37,8 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--color-sand-light);
-    opacity: 0.85;
   }
-  .breadcrumb__link:hover { opacity: 1; color: var(--color-sand); }
+  .breadcrumb__link:hover { color: var(--color-sand); }
   .breadcrumb__icon { width: 0.8rem; height: 0.8rem; fill: none; stroke: currentColor; stroke-width: 1.4; }
 
   /* ---- Safari hero ---- */
@@ -60,7 +60,7 @@
   .safari-hero__title { font-size: 2.4rem; line-height: 1.2; margin-bottom: 1rem; }
   .safari-hero__lead {
     font-family: var(--font-display); font-style: italic; font-size: 1.15rem;
-    opacity: 0.9; margin-bottom: 2rem;
+    color: var(--color-sand-light); margin-bottom: 2rem;
   }
   .safari-hero__facts {
     display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; justify-content: center;
@@ -68,10 +68,11 @@
   }
   .safari-hero__fact {
     display: inline-flex; align-items: center; gap: 0.45rem;
-    padding: 0.5rem 0.9rem; border: 1px solid rgba(201, 160, 99, 0.5);
+    padding: 0.5rem 0.9rem; border: 1px solid rgba(201, 160, 99, 0.7);
+    color: var(--color-sand-light);
     border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.05em;
   }
-  .safari-hero__fact svg { width: 0.95rem; height: 0.95rem; fill: var(--color-sand); color: var(--color-sand); flex-shrink: 0; }
+  .safari-hero__fact svg { width: 0.95rem; height: 0.95rem; fill: var(--color-sand-light); color: var(--color-sand-light); flex-shrink: 0; }
 
   /* ---- Route map strip ---- */
   .route-map {
@@ -116,12 +117,12 @@
   .day-card__title { font-size: 1.35rem; margin-bottom: 0.4rem; }
   .day-card__route {
     display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.5rem;
-    font-size: 0.8rem; color: var(--color-sand); opacity: 0.9;
+    font-size: 0.8rem; color: var(--color-sand-light); font-weight: 500;
     margin-bottom: 1rem; letter-spacing: 0.01em;
   }
-  .day-card__route svg { width: 0.8rem; height: 0.8rem; fill: none; stroke: var(--color-sand); stroke-width: 1.4; flex-shrink: 0; }
+  .day-card__route svg { width: 0.8rem; height: 0.8rem; fill: none; stroke: var(--color-sand-light); stroke-width: 1.4; flex-shrink: 0; }
   .day-card__body { display: grid; gap: 1.6rem; }
-  .day-card__text p { font-size: 0.96rem; opacity: 0.9; margin-bottom: 0.7rem; }
+  .day-card__text p { font-size: 0.96rem; margin-bottom: 0.7rem; }
   .day-card__text p:last-child { margin-bottom: 0; }
 
   .stay-card {
@@ -141,10 +142,10 @@
 
   .day-card__note {
     display: flex; align-items: flex-start; gap: 0.6rem;
-    color: var(--color-sand);
-    font-size: 0.85rem; opacity: 0.75; font-style: italic;
+    color: var(--color-sand-light);
+    font-size: 0.85rem; font-style: italic;
   }
-  .day-card__note svg { width: 1rem; height: 1rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; flex-shrink: 0; margin-top: 0.15rem; }
+  .day-card__note svg { width: 1rem; height: 1rem; fill: none; stroke: var(--color-sand-light); stroke-width: 1.3; flex-shrink: 0; margin-top: 0.15rem; }
 
   /* ---- Highlights ---- */
   .highlights { display: grid; grid-template-columns: 1fr; gap: 2.2rem; }
@@ -320,6 +321,7 @@
     </svg>
   </div>
   <div class="safari-hero__content">
+    <img class="brand-mark" src="assets/logo.png" alt="Chokdok — логотип Натальи Кожедуб" width="92" height="92">
     <p class="safari-hero__eyebrow">Программа тура</p>
     <h1 class="safari-hero__title">Танзания: <span class="accent">Северное сафари</span></h1>
     <p class="safari-hero__lead">От заснеженного Килиманджаро до бескрайних саванн Серенгети — 5 дней среди дикой природы Восточной Африки</p>
@@ -400,7 +402,7 @@
     <div class="container">
       <p class="eyebrow eyebrow--center">День за днём</p>
       <h2 class="section__title section__title--center">Программа <span class="accent">тура</span></h2>
-      <p class="section__lead" style="color: var(--color-sand-light); opacity: 0.85;">Пять дней, спланированных так, чтобы застать животных в лучшие для наблюдений часы и провести ночи в самых атмосферных точках маршрута.</p>
+      <p class="section__lead" style="color: var(--color-sand-light);">Пять дней, спланированных так, чтобы застать животных в лучшие для наблюдений часы и провести ночи в самых атмосферных точках маршрута.</p>
 
       <div class="timeline">
 
@@ -412,7 +414,7 @@
             <svg aria-hidden="true"><use href="#icon-clock"/></svg> переезд ~1.5 часа
           </p>
           <div class="day-card__body">
-            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+            <div class="day-card__text" style="color: var(--color-sand-light);">
               <p>Прибытие в международный аэропорт Килиманджаро, получение виз и багажа, встреча с водителем-гидом.</p>
               <p>Трансфер в отель в городе Аруша. Отдых после перелёта — день без нагрузок, чтобы адаптироваться перед стартом сафари.</p>
             </div>
@@ -434,7 +436,7 @@
             <svg aria-hidden="true"><use href="#icon-clock"/></svg> 1.5–2 ч до парка · далее 1.5 ч до Карату
           </p>
           <div class="day-card__body">
-            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+            <div class="day-card__text" style="color: var(--color-sand-light);">
               <p>Завтрак и встреча с водителем-гидом в 08:00 на рецепции отеля. Переезд до Национального парка Тарангире — сафари среди знаменитых баобабов и крупнейших в Танзании стад слонов, обед-пикник прямо в парке.</p>
               <p>После сафари — переезд в отель в районе города Карату, у подножия резервата Нгоронгоро. Ужин и ночь в отеле.</p>
             </div>
@@ -456,7 +458,7 @@
             <svg aria-hidden="true"><use href="#icon-clock"/></svg> до кратера ~1 ч · далее в Серенгети 3–4 ч
           </p>
           <div class="day-card__body">
-            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+            <div class="day-card__text" style="color: var(--color-sand-light);">
               <p>Ранний завтрак и короткий переезд к резервату Нгоронгоро (20–30 минут). Спуск на джипе внутрь знаменитого кратера — сафари на дне древней вулканической кальдеры, где на замкнутой территории живёт одна из самых высоких концентраций животных в Африке (около 1 часа наблюдений).</p>
               <p>Обед-пикник и переезд в Национальный парк Серенгети (около 4 часов) с сафари по пути прямо к лоджу. Отдых и ужин.</p>
             </div>
@@ -478,7 +480,7 @@
             <svg aria-hidden="true"><use href="#icon-sun"/></svg> целый день в парке
           </p>
           <div class="day-card__body">
-            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+            <div class="day-card__text" style="color: var(--color-sand-light);">
               <p>Целый день сафари в Серенгети — бескрайние равнины, где (в сезон) разворачивается Великая миграция, и лучшие шансы увидеть всю Большую пятёрку в естественной среде.</p>
               <p>Завтрак и ужин в лодже, обед-пикник — в парке, среди саванны.</p>
             </div>
@@ -500,7 +502,7 @@
             <svg aria-hidden="true"><use href="#icon-plane"/></svg> перелёт 1.5–2 часа
           </p>
           <div class="day-card__body">
-            <div class="day-card__text" style="color: var(--color-sand-light); opacity: 0.9;">
+            <div class="day-card__text" style="color: var(--color-sand-light);">
               <p>Завтрак в отеле и выселение. Утреннее сафари по пути в аэропорт Серонера — последний шанс встретить животных перед вылетом.</p>
               <p>Далее — на выбор: вылет на Занзибар для продолжения отдыха на океане, либо вылет в Арушу для обеда и трансфера в аэропорт Килиманджаро к международному рейсу домой.</p>
             </div>
@@ -591,6 +593,7 @@
 
 <footer class="footer">
   <div class="container footer__inner">
+    <img class="brand-mark" src="assets/logo.png" alt="Chokdok — логотип Натальи Кожедуб" width="62" height="62">
     <p class="footer__brand">Наталья Кожедуб</p>
     <div class="footer__social">
       <a href="https://t.me/ta_nkru" target="_blank" rel="noopener" aria-label="Telegram">
