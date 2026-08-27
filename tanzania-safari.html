@@ -148,17 +148,23 @@
   .day-card__note svg { width: 1rem; height: 1rem; fill: none; stroke: var(--color-sand-light); stroke-width: 1.3; flex-shrink: 0; margin-top: 0.15rem; }
 
   /* ---- Highlights ---- */
-  .highlights { display: grid; grid-template-columns: 1fr; gap: 2.2rem; }
-  .highlight { text-align: center; padding: 0 0.5rem; }
-  .highlight__icon {
-    width: 3.6rem; height: 3.6rem; margin: 0 auto 1rem; border-radius: 50%;
-    background: var(--color-navy); color: var(--color-sand);
-    display: flex; align-items: center; justify-content: center;
+  .highlights { display: grid; grid-template-columns: 1fr; gap: 2.4rem; }
+  .highlight { text-align: center; }
+  .highlight__photo {
+    aspect-ratio: 8 / 5;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 1.1rem;
+    border: 1px solid rgba(201, 160, 99, 0.5);
+    box-shadow: 0 8px 20px rgba(29, 53, 89, 0.18);
   }
-  .highlight__icon svg { width: 1.6rem; height: 1.6rem; fill: var(--color-sand); }
-  .highlight__icon svg.stroke-icon { fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
+  .highlight__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .highlight__title { font-size: 1.15rem; margin-bottom: 0.5rem; }
-  .highlight p { font-size: 0.88rem; opacity: 0.8; }
+  .highlight p { font-size: 0.88rem; opacity: 0.8; padding: 0 0.5rem; }
+
+  /* ---- Panorama banner ---- */
+  .panorama-banner { width: 100%; overflow: hidden; line-height: 0; background: var(--color-navy); }
+  .panorama-banner img { width: 100%; height: clamp(160px, 26vw, 380px); object-fit: cover; display: block; }
 
   /* ---- Practical strip ---- */
   .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
@@ -397,6 +403,10 @@
     </div>
   </section>
 
+  <div class="panorama-banner">
+    <img src="assets/scene-panorama.jpg" alt="Панорама саванны на закате: жирафы, баобаб и вершина Килиманджаро вдалеке" loading="lazy" width="1600" height="520">
+  </div>
+
   <!-- Timeline -->
   <section class="section section--navy" id="days">
     <div class="container">
@@ -525,22 +535,22 @@
 
       <div class="highlights">
         <div class="highlight reveal">
-          <span class="highlight__icon"><svg aria-hidden="true"><use href="#icon-tree"/></svg></span>
+          <div class="highlight__photo"><img src="assets/scene-tarangire.jpg" alt="Тарангире: баобаб и жирафы в свете заката" loading="lazy" width="800" height="500"></div>
           <h3 class="highlight__title">Тарангире</h3>
           <p>Вековые баобабы и одни из крупнейших в Танзании стад слонов на берегах реки Тарангире.</p>
         </div>
         <div class="highlight reveal">
-          <span class="highlight__icon"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-crater"/></svg></span>
+          <div class="highlight__photo"><img src="assets/scene-ngorongoro.jpg" alt="Кратер Нгоронгоро с высоты птичьего полёта" loading="lazy" width="800" height="500"></div>
           <h3 class="highlight__title">Нгоронгоро</h3>
           <p>Замкнутый мир на дне кратера — плотность диких животных, которую нигде больше не встретить.</p>
         </div>
         <div class="highlight reveal">
-          <span class="highlight__icon"><svg aria-hidden="true"><use href="#icon-paw"/></svg></span>
+          <div class="highlight__photo"><img src="assets/scene-serengeti.jpg" alt="Бескрайние равнины Серенгети на рассвете" loading="lazy" width="800" height="500"></div>
           <h3 class="highlight__title">Серенгети</h3>
           <p>Бескрайние равнины «до горизонта» и, в сезон, Великая миграция миллионов копытных.</p>
         </div>
         <div class="highlight reveal">
-          <span class="highlight__icon"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-beach"/></svg></span>
+          <div class="highlight__photo"><img src="assets/scene-zanzibar.jpg" alt="Океан и парусная лодка дхоу у берегов Занзибара" loading="lazy" width="800" height="500"></div>
           <h3 class="highlight__title">Занзибар</h3>
           <p>Тёплый Индийский океан и белый песок — идеальное продолжение после дней в саванне.</p>
         </div>
