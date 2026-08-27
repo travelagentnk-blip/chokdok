@@ -273,7 +273,6 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-sand-light);
-  opacity: 0.85;
 }
 
 /* ==========================================================================
@@ -300,6 +299,38 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 0.6rem;
 }
 .principle p { opacity: 0.85; }
+
+/* ==========================================================================
+   Tour teaser
+   ========================================================================== */
+.tour-teaser { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.tour-teaser__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: flex-start;
+  padding: 2.25rem;
+  border: 1px solid rgba(201, 160, 99, 0.4);
+}
+.tour-teaser__title {
+  font-size: 1.6rem;
+  color: var(--color-sand-light);
+  margin-bottom: 0.75rem;
+}
+.tour-teaser__lead {
+  color: var(--color-sand-light);
+  max-width: 36rem;
+}
+.tour-teaser .btn { flex-shrink: 0; }
+
+@media (min-width: 768px) {
+  .tour-teaser__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}
 
 /* ==========================================================================
    Widget
@@ -338,7 +369,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--color-sand-light);
 }
 .cta__lead {
-  opacity: 0.8;
+  color: var(--color-sand-light);
   margin-bottom: 2.5rem;
 }
 
@@ -366,17 +397,44 @@ p:last-child { margin-bottom: 0; }
   gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
-.footer__icon { width: 1.25rem; height: 1.25rem; fill: var(--color-sand); }
+.footer__icon { width: 1.25rem; height: 1.25rem; fill: var(--color-sand-light); }
 .footer__copyright {
   font-size: 0.8rem;
-  opacity: 0.7;
+  opacity: 0.85;
   margin-bottom: 0.75rem;
 }
 .footer__legal {
   font-size: 0.7rem;
-  opacity: 0.45;
+  opacity: 0.6;
   max-width: 32rem;
   margin: 0 auto;
+}
+
+/* ==========================================================================
+   Brand mark (logo)
+   ========================================================================== */
+.brand-mark {
+  display: block;
+  margin: 0 auto 1.4rem;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  box-shadow: 0 6px 20px rgba(16, 30, 58, 0.35);
+  padding: 12px;
+}
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.footer .brand-mark {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 1.1rem;
+  padding: 9px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 /* ==========================================================================
