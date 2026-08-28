@@ -416,12 +416,12 @@ p:last-child { margin-bottom: 0; }
 .brand-mark {
   display: block;
   margin: 0 auto 1.4rem;
-  width: 92px;
-  height: 92px;
+  width: 152px;
+  height: 78px;
   border-radius: 50%;
   background: var(--color-cream);
   box-shadow: 0 6px 20px rgba(16, 30, 58, 0.35);
-  padding: 12px;
+  padding: 10px 14px;
 }
 .brand-mark img {
   width: 100%;
@@ -430,10 +430,10 @@ p:last-child { margin-bottom: 0; }
   display: block;
 }
 .footer .brand-mark {
-  width: 62px;
-  height: 62px;
+  width: 104px;
+  height: 53px;
   margin-bottom: 1.1rem;
-  padding: 9px;
+  padding: 7px 10px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
