@@ -79,7 +79,7 @@
     display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center;
     gap: 0.25rem 0; row-gap: 1.6rem;
   }
-  .route-stop { display: flex; flex-direction: column; align-items: center; width: 7.2rem; text-align: center; }
+  .route-stop { display: flex; flex-direction: column; align-items: center; width: 8rem; text-align: center; }
   .route-stop__dot {
     width: 2.6rem; height: 2.6rem; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
@@ -89,7 +89,7 @@
   }
   .route-stop__dot svg { width: 1.2rem; height: 1.2rem; fill: var(--color-sand); }
   .route-stop__dot svg.stroke-icon { fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
-  .route-stop__name { font-family: var(--font-display); font-size: 1.12rem; font-weight: 500; line-height: 1.3; color: var(--color-navy); }
+  .route-stop__name { font-family: var(--font-display); font-size: 1.12rem; font-weight: 500; line-height: 1.3; color: var(--color-navy); white-space: nowrap; }
   .route-link {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     width: 3.2rem; margin-top: 1.3rem; flex-shrink: 0;
@@ -361,7 +361,7 @@
       <div class="route-map reveal">
         <div class="route-stop">
           <span class="route-stop__dot"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-plane"/></svg></span>
-          <span class="route-stop__name">Килиманджаро (аэропорт)</span>
+          <span class="route-stop__name">Килиманджаро</span>
         </div>
         <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">~1.5 ч</span></div>
 
@@ -373,7 +373,7 @@
 
         <div class="route-stop">
           <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-paw"/></svg></span>
-          <span class="route-stop__name">Нац. парк Тарангире</span>
+          <span class="route-stop__name">Тарангире</span>
         </div>
         <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">~1.5 ч</span></div>
 
@@ -385,13 +385,13 @@
 
         <div class="route-stop">
           <span class="route-stop__dot"><svg class="stroke-icon" aria-hidden="true"><use href="#icon-crater"/></svg></span>
-          <span class="route-stop__name">Кратер Нгоронгоро</span>
+          <span class="route-stop__name">Нгоронгоро</span>
         </div>
         <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">3–4 ч</span></div>
 
         <div class="route-stop">
           <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-paw"/></svg></span>
-          <span class="route-stop__name">Нац. парк Серенгети</span>
+          <span class="route-stop__name">Серенгети</span>
         </div>
         <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">перелёт<br>1.5–2 ч</span></div>
 
