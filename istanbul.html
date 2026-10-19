@@ -213,6 +213,22 @@
   .review-card__row p { font-size: 0.88rem; line-height: 1.6; opacity: 0.88; margin: 0; }
   .review-card__verdict { margin-top: 0.4rem; padding: 0.9rem 1rem; background: var(--color-cream); border-left: 2px solid var(--color-sand); font-size: 0.88rem; line-height: 1.6; }
 
+  /* ---- Where to stay: compare ---- */
+  .stay-compare { margin-top: 3.4rem; }
+  .stay-compare__title { text-align: center; font-size: 1.6rem; margin-bottom: 0.5rem; }
+  .stay-compare__lead { text-align: center; font-size: 0.92rem; opacity: 0.8; max-width: 38rem; margin: 0 auto 1.6rem; color: var(--color-graphite); }
+  .stay-compare__grid { display: grid; gap: 1.4rem; }
+  .stay-option { background: #fff; border: 1px solid rgba(201, 160, 99, 0.5); padding: 1.5rem 1.4rem; color: var(--color-graphite); }
+  .stay-option__name { font-size: 1.3rem; margin-bottom: 0.2rem; }
+  .stay-option__for { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); margin-bottom: 0.9rem; }
+  .stay-option ul { list-style: none; padding: 0; margin: 0 0 0.8rem; }
+  .stay-option li { position: relative; padding-left: 1.3rem; font-size: 0.88rem; line-height: 1.55; margin-bottom: 0.35rem; }
+  .stay-option li::before { position: absolute; left: 0; top: 0; font-weight: 600; color: var(--color-sand); }
+  .stay-option li.plus::before { content: '+'; }
+  .stay-option li.minus::before { content: '–'; }
+  .stay-option__link { display: inline-block; margin-top: 0.4rem; font-size: 0.82rem; color: var(--color-navy); border-bottom: 1px solid var(--color-sand); }
+  .stay-compare__tip { margin-top: 1.4rem; padding: 1rem 1.2rem; background: #fff; border-left: 2px solid var(--color-sand); font-size: 0.9rem; line-height: 1.6; color: var(--color-graphite); }
+
   /* ---- Practical strip ---- */
   .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
   .practical__item { padding: 1.4rem 1rem; border: 1px solid rgba(201, 160, 99, 0.4); }
@@ -229,6 +245,7 @@
 
     .route-choice { grid-template-columns: 1fr 1fr; }
     .review-cards { grid-template-columns: 1fr 1fr; }
+    .stay-compare__grid { grid-template-columns: 1fr 1fr; }
     .stop-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
     .places { grid-template-columns: repeat(2, 1fr); }
     .practical { grid-template-columns: repeat(3, 1fr); }
@@ -457,7 +474,38 @@
         <span><span class="tag tag--classic">Классика</span> знаковое место, must-see</span>
         <span><span class="tag tag--local">Местные</span> без толп туристов</span>
       </div>
-      <p class="legend"><a href="#sultanahmet-hotels" style="color: var(--color-navy); border-bottom: 1px solid var(--color-sand);">Где остановиться: отели Султанахмета на разный бюджет →</a></p>
+
+      <div class="stay-compare reveal" id="where-to-stay">
+        <h3 class="stay-compare__title">Где жить: у Айя-Софии или <span class="accent">у Галатской башни?</span></h3>
+        <p class="stay-compare__lead">Два района — два разных Стамбула. Между ними 10–15 минут на трамвае T1 (от Султанахмета до Каракёя) или 30 минут пешком через Галатский мост.</p>
+        <div class="stay-compare__grid">
+          <div class="stay-option">
+            <h4 class="stay-option__name">Султанахмет — у Айя-Софии</h4>
+            <p class="stay-option__for">Первая поездка · история · 2–4 дня</p>
+            <ul>
+              <li class="plus">Айя-София, Голубая мечеть, Цистерна и Топкапы — в 2–10 минутах пешком, к открытию вы приходите первыми</li>
+              <li class="plus">Особняки и бутик-отели с террасами и видом на купола и море</li>
+              <li class="plus">Тихие вечера и подсвеченные мечети прямо у дома</li>
+              <li class="minus">Вечером мало ресторанов и баров для местных, многие кафе закрываются рано</li>
+              <li class="minus">Много зазывал и сувенирных лавок вокруг площади</li>
+            </ul>
+            <a class="stay-option__link" href="#sultanahmet-hotels">Отели Султанахмета →</a>
+          </div>
+          <div class="stay-option">
+            <h4 class="stay-option__name">Галата — у Галатской башни</h4>
+            <p class="stay-option__for">Гастрономия · вечерняя жизнь · повторная поездка</p>
+            <ul>
+              <li class="plus">Лучшие рестораны, мейхане, кофейни и крыши для заката — рядом с отелем</li>
+              <li class="plus">Шопинг, галереи, Истикляль и Каракёй у воды; город живёт до ночи</li>
+              <li class="plus">Удобно ездить по Босфору: паромы из Каракёя и Кабаташа</li>
+              <li class="minus">Крутые улицы и лестницы — с тяжёлыми чемоданами непросто</li>
+              <li class="minus">В выходные шумно до поздней ночи — выбирайте номер окнами во двор</li>
+            </ul>
+            <a class="stay-option__link" href="#galata-hotels">Отели у Галатской башни →</a>
+          </div>
+        </div>
+        <p class="stay-compare__tip"><strong>Мой совет:</strong> если у вас 4 ночи и больше, разделите их — первые 2 ночи в Султанахмете для музеев, оставшиеся у Галатской башни для ресторанов и вечерних прогулок. Переезд занимает 20 минут на такси.</p>
+      </div>
     </div>
   </section>
 
