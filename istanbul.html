@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Стамбул: два маршрута от местного жителя | Наталья Кожедуб</title>
-<meta name="description" content="Два пеших маршрута по Стамбулу: Султанахмет и Таксим — Галата. Классические достопримечательности и тихие места без толп, лучшие видовые точки, кофейни, уличная еда, террасы и рестораны для ужина.">
+<meta name="description" content="Три маршрута по Стамбулу: Султанахмет, Таксим — Галата и Босфор. Классические достопримечательности и тихие места без толп, лучшие видовые точки, кофейни, уличная еда, террасы и рестораны для ужина.">
 <meta name="theme-color" content="#1D3559">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 
@@ -244,6 +244,7 @@
     .city-hero__lead { font-size: 1.35rem; }
 
     .route-choice { grid-template-columns: 1fr 1fr; }
+    .route-choice > .route-choice__card:nth-child(3):last-child { grid-column: 1 / -1; }
     .review-cards { grid-template-columns: 1fr 1fr; }
     .stay-compare__grid { grid-template-columns: 1fr 1fr; }
     .stop-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
@@ -429,7 +430,7 @@
     <h1 class="city-hero__title">Стамбул <span class="accent">глазами местного</span></h1>
     <p class="city-hero__lead">Два дня, две стороны Золотого Рога: главные открытки города и тихие дворики, где пьют чай сами стамбульцы</p>
     <div class="city-hero__facts">
-      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-walk"/></svg>2 пеших маршрута</span>
+      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-walk"/></svg>3 маршрута</span>
       <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-eye"/></svg>Классика + места без толп</span>
       <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-meal"/></svg>50+ проверенных мест</span>
     </div>
@@ -451,9 +452,9 @@
   <!-- Выбор маршрута -->
   <section class="section section--cream" id="routes">
     <div class="container">
-      <p class="eyebrow eyebrow--center">Два маршрута</p>
+      <p class="eyebrow eyebrow--center">Три маршрута</p>
       <h2 class="section__title section__title--center">Выберите, <span class="accent">с чего начать</span></h2>
-      <p class="section__lead">Каждый маршрут рассчитан на полный день пешком в спокойном темпе. В нём есть обязательная классика — и места рядом, о которых знают в основном местные.</p>
+      <p class="section__lead">Первые два маршрута рассчитаны на полный день пешком в спокойном темпе, третий — на несколько прогулок по Босфору. В нём есть обязательная классика — и места рядом, о которых знают в основном местные.</p>
 
       <div class="route-choice">
         <a class="route-choice__card reveal" href="#sultanahmet">
@@ -467,6 +468,12 @@
           <h3 class="route-choice__title">Таксим — Галата — Каракёй</h3>
           <p class="route-choice__text">Истикляль и ретро-трамвай, богемный Джихангир, антиквары Чукурджумы, Галатская башня, лучшие крыши для заката и шопинг.</p>
           <p class="route-choice__meta">≈ 6 км · 10–12 часов</p>
+        </a>
+        <a class="route-choice__card reveal" href="#bosphorus">
+          <p class="route-choice__num">Маршрут 3</p>
+          <h3 class="route-choice__title">Босфор</h3>
+          <p class="route-choice__text">Нишанташи и Зорлу, Бешикташ, Ортакёй, Куручешме и Бебек, Верхний Босфор и Ченгелькёй на азиатском берегу. Четыре прогулки для тех, кто уже видел старый город.</p>
+          <p class="route-choice__meta">4 прогулки · по полдня и дню</p>
         </a>
       </div>
 
@@ -1761,6 +1768,753 @@
     </div>
   </section>
 
+  <!-- ================= МАРШРУТ 3: БОСФОР ================= -->
+  <section class="section section--cream" id="bosphorus" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Маршрут 3</p>
+      <h2 class="section__title section__title--center">Босфор: <span class="accent">Стамбул, где живут стамбульцы</span></h2>
+      <p class="section__lead">Для тех, кто уже видел старый город. Дворцы и крепости, деревянные особняки-ялы, рыбные ресторанчики у воды и модный Нишанташи. Районы далеко друг от друга, поэтому маршрут разделён на четыре прогулки: соседние районы объединены, и каждая занимает полдня или день.</p>
+
+      <div class="route-choice route-choice--four">
+        <a class="route-choice__card reveal" href="#bosphorus-nisantasi">
+          <p class="route-choice__num">Прогулка 1 · полдня</p>
+          <h3 class="route-choice__title">Нишанташи и Зорлу</h3>
+          <p class="route-choice__text">Стамбульский стиль: бутики и турецкие дизайнеры, парк Мачка с канатной дорогой, обед в любимых локантах местных, вечером — шопинг или спектакль в Зорлу.</p>
+          <p class="route-choice__meta">≈ 3 км пешком + такси</p>
+        </a>
+        <a class="route-choice__card reveal" href="#bosphorus-shore">
+          <p class="route-choice__num">Прогулка 2 · день</p>
+          <h3 class="route-choice__title">Бешикташ — Ортакёй — Куручешме — Бебек</h3>
+          <p class="route-choice__text">Дворец Долмабахче, рынок Бешикташа, мечеть Ортакёй у моста, деревянные ялы Арнавуткёя, чай у воды в Бебеке и ужин на закате.</p>
+          <p class="route-choice__meta">≈ 8 км вдоль воды</p>
+        </a>
+        <a class="route-choice__card reveal" href="#bosphorus-upper">
+          <p class="route-choice__num">Прогулка 3 · день</p>
+          <h3 class="route-choice__title">Верхний Босфор</h3>
+          <p class="route-choice__text">Крепость Румели Хисары, парк Эмирган и музей Сакыпа Сабанджи, рыбацкий Румели Кавагы и закат у крепости Йорос, где Босфор встречается с Чёрным морем.</p>
+          <p class="route-choice__meta">Такси + паромы</p>
+        </a>
+        <a class="route-choice__card reveal" href="#bosphorus-asia">
+          <p class="route-choice__num">Прогулка 4 · день</p>
+          <h3 class="route-choice__title">Ченгелькёй и азиатский берег</h3>
+          <p class="route-choice__text">Дворец Бейлербейи, чай под старым платаном в Ченгелькёе, павильон Кючюксу, знаменитый йогурт Канлыджи и ужин у воды под мостом.</p>
+          <p class="route-choice__meta">≈ 6 км + такси</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-nisantasi">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 1 · полдня</p>
+      <h2 class="section__title section__title--center">Нишанташи <span class="accent">и Зорлу</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Самый модный район Стамбула — его здесь называют стамбульским Парижем. Начинаем неспешно, как местные: кофе, витрины, парк.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Завтрак в Нишанташи</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Начните с позднего завтрака в Teşvikiye, сердце района. Нишанташи просыпается не рано, поэтому к 10 утра улицы ещё спокойные, а за столиками — местные с собаками и газетами.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+              <div>
+                <div class="side-card__name">House Café Nişantaşı</div>
+                <div class="side-card__meta">Классика района: большие завтраки, хорошая выпечка, терраса на улице. Альтернатива — простой турецкий завтрак в любой кафешке на Şakayık Sk.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:00</div>
+          <h3 class="stop-card__title">Абди Ипекчи и мечеть Тешвикие <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Abdi İpekçi Caddesi — главная модная улица Турции: мировые бренды, флагманы турецких домов Vakko и Beymen. На углу — изящная мечеть Тешвикие XIX века.</p>
+              <p>Самое интересное — в боковых улочках: небольшие бутики турецких дизайнеров, концепт-сторы, ювелирные мастерские и книжные магазины.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-bag"/></svg></span>
+              <div>
+                <div class="side-card__name">Что купить</div>
+                <div class="side-card__meta">Vakko — шёлковые платки и аксессуары; Beymen — турецкие и мировые дизайнеры; керамика и украшения местных мастеров в переулках</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Парк Мачка и канатная дорога <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Спуститесь в зелёный парк Мачка — здесь гуляют и бегают местные, туристов почти нет. Прокатитесь на короткой канатной дороге Мачка — Ташкышла: несколько минут над кронами деревьев с видом на парк и Босфор вдали.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Канатная дорога работает по Istanbulkart, как обычный транспорт.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:30</div>
+          <h3 class="stop-card__title">Обед в локанте для своих <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Hünkar — османская локанта с 1950-х годов: на витрине десятки блюд, от хюнкяр бегенди (мясо на баклажанном пюре) до долмы и домашних десертов. Или Kantın — сезонная турецкая кухня от шефа Шемсы Денизсель, всё из свежих продуктов дня.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Hünkar или Kantın</div>
+                <div class="side-card__meta">Для быстрого местного варианта — лахмаджун и кебаб в Tatbak</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">16:00</div>
+          <h3 class="stop-card__title">Зорлу-центр: шопинг или спектакль</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>10 минут на такси — и вы в Zorlu Center: магазины премиальных марок, рестораны и Zorlu PSM, одна из главных концертных площадок города. Проверьте афишу: мюзиклы, концерты и шоу идут почти каждый вечер.</p>
+              <p>Если хочется не шопинга, а неба — поднимитесь в лаунж Raffles Istanbul, отель находится прямо в комплексе Зорлу.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Билеты в Zorlu PSM на популярные шоу раскупают заранее — могу помочь с бронированием.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-shore">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 2 · день</p>
+      <h2 class="section__title section__title--center">Бешикташ — Ортакёй — <span class="accent">Куручешме — Бебек</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Самая красивая прогулка вдоль европейского берега: от султанского дворца до богемного Бебека. Всё время у воды, в конце — закат.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">09:00</div>
+          <h3 class="stop-card__title">Улица завтраков в Бешикташе <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Начните день как студенты и футбольные фанаты Бешикташа: на Kahvaltıcılar Sokağı, «улице завтраков» у рынка Çarşı, подают серпме-кахвалты — десятки маленьких тарелок с сырами, вареньем, каймаком, яйцами с суджуком и бесконечным чаем.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Kahvaltıcılar Sokağı</div>
+                <div class="side-card__meta">Выбирайте любое заведение, где сидят местные; в выходные очереди — приходите до 10:00</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:15</div>
+          <h3 class="stop-card__title">Дворец Долмабахче <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Главный дворец поздней Османской империи на самом берегу: хрустальная лестница, люстра весом 4,5 тонны в Церемониальном зале и комната, где умер Ататюрк — часы в ней остановлены на 9:05.</p>
+              <p>Приходите к открытию: группы с круизных лайнеров подъезжают ближе к полудню.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Долмабахче закрыт по понедельникам. Берите билет с посещением Гарема — он не менее красив, чем парадные залы.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Рынок Бешикташа и обед <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Возвращаемся в Çarşı — живой рынок Бешикташа: рыбные ряды, лавки со специями и сырами, кафе болельщиков. Обед — знаменитый дёнер Karadeniz Döner Asım Usta: в очереди стоят все, от студентов до бизнесменов.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+              <div>
+                <div class="side-card__name">Karadeniz Döner Asım Usta</div>
+                <div class="side-card__meta">Тонко нарезанный дёнер из говядины в лаваше или на тарелке. Берите с айраном</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">14:00</div>
+          <h3 class="stop-card__title">Мечеть Ортакёй у Босфорского моста <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>20 минут пешком вдоль Çırağan Caddesi, мимо дворца Чыраган, — и вы на площади Ортакёя. Барочная мечеть Меджидийе на фоне моста — одна из самых узнаваемых открыток Стамбула.</p>
+              <p>Уличная классика Ортакёя — кумпир (печёная картошка с начинками) и вафли с фруктами и шоколадом.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>В выходные на площади очень людно. В будни после обеда здесь гораздо спокойнее.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">15:30</div>
+          <h3 class="stop-card__title">Куручешме и деревянные ялы Арнавуткёя <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Идём дальше вдоль воды через Куручешме к Арнавуткёю — самой красивой и самой тихой части прогулки. Ряды деревянных ялы (особняков на воде) XIX века, крутые улочки с эркерами, рыбаки на набережной.</p>
+              <p>Поднимитесь на пару кварталов вглубь от набережной: здесь сохранился настоящий старый Стамбул.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Лучший кадр</div>
+                <div class="side-card__meta">Набережная Арнавуткёя: ялы на переднем плане, мост Босфор — на заднем</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">17:00</div>
+          <h3 class="stop-card__title">Бебек: чай у воды и миндальная паста <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Бебек — элегантный район с яхтами и платанами. Возьмите чай на террасе Bebek Kahve, старой кофейни прямо у воды, где десятилетиями собираются местные.</p>
+              <p>Вкусный подарок домой — бадем эзмеси (миндальная паста) в Bebek Badem Ezmesi, кондитерской с 1904 года.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+              <div>
+                <div class="side-card__name">Bebek Kahve</div>
+                <div class="side-card__meta">Стаканчик чая, нарды, вид на яхты — без пафоса, в отличие от модных кафе по соседству</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">18:30</div>
+          <h3 class="stop-card__title">Закат над Босфором</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Закат лучше всего встречать с холма Улус — над Куручешме и Бебеком: Босфор, мост и оба берега как на ладони. Бесплатный вариант — смотровая площадка в парке Улус, ресторанный — терраса Sunset Grill &amp; Bar.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-terrace"/></svg></span>
+              <div>
+                <div class="side-card__name">Sunset Grill &amp; Bar</div>
+                <div class="side-card__meta">Авторская кухня и одна из лучших террас города. Бронь столика у края — заранее</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">20:00</div>
+          <h3 class="stop-card__title">Ужин у воды</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Если хочется рыбы — Bebek Balıkçısı, классический рыбный ресторан на набережной Бебека. Если хочется османской кухни в историческом здании — Feriye на берегу в Ортакёе. Для гастрономического вечера с видом — Ulus 29.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Бронь обязательна</div>
+                <div class="side-card__meta">Летом просите столик на террасе у воды</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-upper">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 3 · день</p>
+      <h2 class="section__title section__title--center">Верхний Босфор: <span class="accent">крепости и рыбацкие деревни</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Чем дальше на север, тем зеленее берега и тише город. Здесь стамбульцы проводят выходные: завтраки в парках, рыба у пристани, закат над Чёрным морем.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">09:00</div>
+          <h3 class="stop-card__title">Крепость Румели Хисары <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Крепость, которую Мехмед Завоеватель построил в 1452 году всего за четыре месяца, — накануне взятия Константинополя. Мощные башни спускаются к самой воде, над ними — мост Фатиха Султана Мехмета.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Уточните, открыта ли крепость для посещения: её реставрировали. Даже снаружи, с набережной, вид впечатляет.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Поздний завтрак в парке Эмирган <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Парк Эмирган — один из самых красивых в Стамбуле: в апреле здесь проходит фестиваль тюльпанов. Среди деревьев стоят три исторических павильона — Жёлтый, Розовый и Белый.</p>
+              <p>Позавтракайте в Emirgan Sütiş: турецкий завтрак и молочные десерты с видом на Босфор.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Emirgan Sütiş</div>
+                <div class="side-card__meta">Знаменит мухаллеби и сютлачом. В выходные — очереди семей, в будни спокойно</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:30</div>
+          <h3 class="stop-card__title">Музей Сакыпа Сабанджи <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Особняк Atlı Köşk над Босфором, сады с видом на воду и сильные выставки мирового уровня: здесь показывали Пикассо, Родена и Дали. Плюс одна из лучших коллекций османской каллиграфии.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Музей закрыт по понедельникам. Кафе-ресторан в саду музея — хорошая точка для кофе.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:30</div>
+          <h3 class="stop-card__title">Обед в рыбацком Румели Кавагы <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Едем на север в Сарыер и дальше в Румели Кавагы — последнюю деревню европейского берега перед Чёрным морем. Пристань, лодки, рыбные ресторанчики с жареными мидиями (midye tava) и рыбой дня.</p>
+              <p>По пути в Сарыере попробуйте сарыер-бёреги — местные слоёные пирожки, которыми славится район.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Рыба у пристани</div>
+                <div class="side-card__meta">Выбирайте ресторан, где рыба лежит на льду у входа, и спрашивайте, что поймали сегодня</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">15:30</div>
+          <h3 class="stop-card__title">Паром на азиатский берег: Анадолу Кавагы</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Короткий паром переправит вас на другой берег — в Анадолу Кавагы. Поднимитесь пешком (20–25 минут) к крепости Йорос: византийские и генуэзские руины на холме, откуда видно, как Босфор открывается в Чёрное море.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Крепость Йорос</div>
+                <div class="side-card__meta">Один из самых эффектных видов Стамбула — и почти без туристов, кроме пассажиров длинного парома</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">18:00</div>
+          <h3 class="stop-card__title">Закат и обратная дорога</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Встретьте закат у крепости или в одном из рыбных ресторанчиков у пристани Анадолу Кавагы. Обратно — на такси (около часа) или на пароме Şehir Hatları по расписанию.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Классический способ проделать этот путь — «длинный паром» по Босфору из Эминёню до Анадолу Кавагы. Расписание меняется по сезонам.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-asia">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 4 · день</p>
+      <h2 class="section__title section__title--center">Ченгелькёй <span class="accent">и азиатский берег</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Азиатский берег Босфора — спокойный, зелёный и очень «домашний». Летние дворцы султанов, чайные под платанами и лучший йогурт в Стамбуле.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Дворец Бейлербейи <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Летний дворец султанов прямо под Босфорским мостом. Он меньше и уютнее Долмабахче, а туристов здесь в разы меньше. Мраморные залы, бассейн с фонтаном, сады с магнолиями — и вид на европейский берег.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Уточните день закрытия перед поездкой: дворцы-музеи обычно не работают один день в неделю.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:30</div>
+          <h3 class="stop-card__title">Ченгелькёй: чай под старым платаном <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>10 минут на такси или 25 минут пешком вдоль воды — и вы в Ченгелькёе, деревне, которой Стамбул так и не смог стать окончательно. На площади у пристани — Çınaraltı, чайный сад под огромным столетним платаном. Чай, симит, вид на воду.</p>
+              <p>Напротив, на берегу, — величественное здание военного лицея Кулели, а рядом — деревянный павильон Вахдеттина.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Çengelköy Çınaraltı</div>
+                <div class="side-card__meta">Одно из самых душевных мест Стамбула. Утром в будни — только местные</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Бёреки Ченгелькёя <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Попробуйте местную выпечку в старой бёречной у пристани — с сыром, шпинатом или мясом, горячую, с чаем. А летом обязательно купите знаменитые ченгелькёйские огурцы — маленькие и хрустящие, ими славится деревня.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+              <div>
+                <div class="side-card__name">Çengelköy Börekçisi</div>
+                <div class="side-card__meta">Бёрек на развес — дешевле и вкуснее любого кафе</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">14:00</div>
+          <h3 class="stop-card__title">Павильон Кючюксу и Анадолухисары <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Едем на север вдоль берега. Кючюксу — изящный павильон в стиле рококо на самой кромке воды, где султаны отдыхали во время прогулок по Босфору. Рядом — маленькая крепость Анадолухисары, старшая «сестра» Румели Хисары на противоположном берегу.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-palace"/></svg></span>
+              <div>
+                <div class="side-card__name">Küçüksu Kasrı</div>
+                <div class="side-card__meta">Маленький, но очень красивый — осмотр занимает 30–40 минут</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">15:30</div>
+          <h3 class="stop-card__title">Знаменитый йогурт Канлыджи <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Канлыджа — тихая деревня у пристани, знаменитая на весь Стамбул своим йогуртом: густым, кисловатым, его подают в маленьких мисочках с сахарной пудрой. Ешьте его на скамейке у воды — так делают стамбульцы уже больше ста лет.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+              <div>
+                <div class="side-card__name">Kanlıca yoğurdu</div>
+                <div class="side-card__meta">Продают в кафе у пристани. С чаем — идеальный полдник</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">17:30</div>
+          <h3 class="stop-card__title">Закат на холме Оташтепе <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Поднимитесь на такси на холм Otağtepe над мостом Фатиха Султана Мехмета: парк, чайная и один из самых широких видов на Босфор. Местные приезжают сюда именно ради заката.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Otağtepe</div>
+                <div class="side-card__meta">Бесплатно, просторно, без толп. Возьмите тёплую кофту — на холме ветрено</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">19:30</div>
+          <h3 class="stop-card__title">Ужин под мостом</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Lacivert — ресторан на самой воде под мостом Фатиха Султана Мехмета: рыба, мезе и огни моста над головой. Или вернитесь в Ченгелькёй — в старый рыбный İsmet Baba, где семьи ужинают у воды уже несколько поколений.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Lacivert или İsmet Baba</div>
+                <div class="side-card__meta">Lacivert — эффектно и на особый случай; İsmet Baba — душевно и по-домашнему</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="bosphorus-places">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где поесть, выпить чай и купить</p>
+      <h2 class="section__title section__title--center">Проверенные места <span class="accent">на Босфоре</span></h2>
+      <p class="section__lead">Списки по всем четырём прогулкам — чтобы выбирать по настроению и тому, на каком берегу вы оказались.</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+          <h3 class="places-group__title">Кофейни и чайные</h3>
+          <span class="places-group__count">7 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Çengelköy Çınaraltı</div>
+            <div class="place__where">Ченгелькёй · чайный сад</div>
+            <p>Чай под столетним платаном у пристани. Самое душевное место азиатского берега.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Kahve</div>
+            <div class="place__where">Бебек · у воды</div>
+            <p>Старая кофейня на набережной: чай, нарды и вид на яхты.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Emirgan Sütiş</div>
+            <div class="place__where">Парк Эмирган</div>
+            <p>Завтраки и молочные десерты с видом на Босфор.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Чайная на Оташтепе</div>
+            <div class="place__where">Холм Otağtepe · азиатский берег</div>
+            <p>Чай с самым широким видом на Босфор и мост на закате.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">House Café Nişantaşı</div>
+            <div class="place__where">Нишанташи · Тешвикие</div>
+            <p>Завтраки, выпечка и терраса для наблюдения за модным Нишанташи.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Кафе музея Сакыпа Сабанджи</div>
+            <div class="place__where">Эмирган · сад музея</div>
+            <p>Кофе и десерты в саду особняка над Босфором.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Чайные у пристани Канлыджи</div>
+            <div class="place__where">Канлыджа</div>
+            <p>Чай с местным йогуртом на скамейке у воды.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+          <h3 class="places-group__title">Рестораны</h3>
+          <span class="places-group__count">8 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Sunset Grill &amp; Bar</div>
+            <div class="place__where">Улус · терраса</div>
+            <p>Авторская кухня и одна из лучших террас Стамбула с видом на Босфор.</p>
+            <span class="place__tip">Бронь заранее, особенно на закат.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Ulus 29</div>
+            <div class="place__where">Улус · гастрономия</div>
+            <p>Современная турецкая кухня, элегантный зал и панорама Босфора.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Lacivert</div>
+            <div class="place__where">Анадолухисары · под мостом ФСМ</div>
+            <p>Рыба и мезе на самой воде, огни моста над головой.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">İsmet Baba</div>
+            <div class="place__where">Ченгелькёй · рыба</div>
+            <p>Семейный рыбный ресторан у воды — душевно, по-домашнему, для местных.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Balıkçısı</div>
+            <div class="place__where">Бебек · рыба</div>
+            <p>Классический рыбный ресторан на набережной Бебека.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Feriye</div>
+            <div class="place__where">Ортакёй · османская кухня</div>
+            <p>Исторический павильон на берегу у дворца Чыраган, современная османская кухня.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Hünkar</div>
+            <div class="place__where">Нишанташи · локанта</div>
+            <p>Османская домашняя кухня на витрине, любимое место местных на обед.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Kantın</div>
+            <div class="place__where">Нишанташи · сезонная кухня</div>
+            <p>Свежая турецкая кухня от шефа Шемсы Денизсель.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+          <h3 class="places-group__title">Местное и уличное</h3>
+          <span class="places-group__count">8 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Kahvaltıcılar Sokağı</div>
+            <div class="place__where">Бешикташ · улица завтраков</div>
+            <p>Серпме-кахвалты — завтрак из десятков тарелочек, как у местных студентов.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Karadeniz Döner Asım Usta</div>
+            <div class="place__where">Рынок Бешикташа</div>
+            <p>Один из самых известных дёнеров города — очередь стоит, но движется быстро.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Кумпир и вафли</div>
+            <div class="place__where">Площадь Ортакёя</div>
+            <p>Печёная картошка с начинками и вафли — классика у мечети.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Badem Ezmesi</div>
+            <div class="place__where">Бебек · с 1904 года</div>
+            <p>Миндальная паста — лучший сладкий подарок из Стамбула.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Kanlıca yoğurdu</div>
+            <div class="place__where">Канлыджа · пристань</div>
+            <p>Знаменитый густой йогурт с сахарной пудрой.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Бёреки Ченгелькёя</div>
+            <div class="place__where">Ченгелькёй · пристань</div>
+            <p>Горячий бёрек на развес и местные хрустящие огурцы летом.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Midye tava в Румели Кавагы</div>
+            <div class="place__where">Румели Кавагы · пристань</div>
+            <p>Жареные мидии в кляре с соусом таратор у рыбацкой пристани.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Tatbak</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Лахмаджун и кебабы — быстрый и честный обед среди бутиков.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+          <h3 class="places-group__title">Виды и террасы</h3>
+          <span class="places-group__count">7 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Парк Улус</div>
+            <div class="place__where">Улус · бесплатно</div>
+            <p>Смотровая площадка над Куручешме и Бебеком — Босфор и мост как на ладони.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Холм Оташтепе</div>
+            <div class="place__where">Азиатский берег · бесплатно</div>
+            <p>Самый широкий вид на Босфор и мост Фатиха Султана Мехмета.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Крепость Йорос</div>
+            <div class="place__where">Анадолу Кавагы</div>
+            <p>Место, где Босфор открывается в Чёрное море.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Набережная Арнавуткёя</div>
+            <div class="place__where">Арнавуткёй</div>
+            <p>Деревянные ялы и мост — лучший кадр европейского берега.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Площадь Ортакёя</div>
+            <div class="place__where">Ортакёй</div>
+            <p>Мечеть Меджидийе и Босфорский мост — открытка Стамбула.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Сады музея Сабанджи</div>
+            <div class="place__where">Эмирган</div>
+            <p>Тихий вид на Верхний Босфор из сада особняка.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Терраса Sunset Grill &amp; Bar</div>
+            <div class="place__where">Улус</div>
+            <p>Лучший ресторанный закат европейского берега.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-bag"/></svg></span>
+          <h3 class="places-group__title">Шопинг</h3>
+          <span class="places-group__count">6 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Abdi İpekçi Caddesi</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Главная модная улица Турции: мировые бренды и турецкие дома моды.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Vakko</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Турецкий дом моды с 1934 года — шёлковые платки, аксессуары, подарки.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Beymen</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Универмаг премиальных турецких и мировых дизайнеров.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Zorlu Center</div>
+            <div class="place__where">Бешикташ</div>
+            <p>Премиальный торговый центр с рестораном Raffles и концертным залом Zorlu PSM.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Рынок Бешикташа</div>
+            <div class="place__where">Çarşı</div>
+            <p>Специи, сыры, оливки и сухофрукты по местным ценам.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Badem Ezmesi</div>
+            <div class="place__where">Бебек</div>
+            <p>Миндальная паста и сладости в красивой упаковке.</p>
+          </div>
+        </div>
+      </div>
+      <p class="disclaimer">Часы работы дворцов и музеев, расписание паромов и сезонные меню на Босфоре меняются — перед поездкой я сверяю всё по маршруту.</p>
+    </div>
+  </section>
+
   <!-- ================= ДЛЯ ОПЫТНЫХ ПУТЕШЕСТВЕННИКОВ ================= -->
   <section class="section section--cream" id="bosphorus-hotels" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
     <div class="container">
@@ -1843,6 +2597,7 @@
       </div>
 
       <p class="stay-compare__tip" style="margin-top: 2.6rem;"><strong>Мой совет:</strong> отели на Босфоре лучше всего сочетать с поездками по воде. Паром, частная лодка или водное такси довезут вас до Эминёню и Каракёя быстрее, чем машина в вечерних пробках.</p>
+      <p class="legend"><a href="#bosphorus" style="color: var(--color-navy); border-bottom: 1px solid var(--color-sand);">Маршрут по Босфору: прогулки рядом с этими отелями →</a></p>
       <p class="disclaimer">Цены в этой категории — от €400–500 за ночь и выше. Точные тарифы, условия завтрака и лучшие категории номеров подберу под ваши даты.</p>
     </div>
   </section>
