@@ -213,6 +213,22 @@
   .review-card__row p { font-size: 0.88rem; line-height: 1.6; opacity: 0.88; margin: 0; }
   .review-card__verdict { margin-top: 0.4rem; padding: 0.9rem 1rem; background: var(--color-cream); border-left: 2px solid var(--color-sand); font-size: 0.88rem; line-height: 1.6; }
 
+  /* ---- Where to stay: compare ---- */
+  .stay-compare { margin-top: 3.4rem; }
+  .stay-compare__title { text-align: center; font-size: 1.6rem; margin-bottom: 0.5rem; }
+  .stay-compare__lead { text-align: center; font-size: 0.92rem; opacity: 0.8; max-width: 38rem; margin: 0 auto 1.6rem; color: var(--color-graphite); }
+  .stay-compare__grid { display: grid; gap: 1.4rem; }
+  .stay-option { background: #fff; border: 1px solid rgba(201, 160, 99, 0.5); padding: 1.5rem 1.4rem; color: var(--color-graphite); }
+  .stay-option__name { font-size: 1.3rem; margin-bottom: 0.2rem; }
+  .stay-option__for { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); margin-bottom: 0.9rem; }
+  .stay-option ul { list-style: none; padding: 0; margin: 0 0 0.8rem; }
+  .stay-option li { position: relative; padding-left: 1.3rem; font-size: 0.88rem; line-height: 1.55; margin-bottom: 0.35rem; }
+  .stay-option li::before { position: absolute; left: 0; top: 0; font-weight: 600; color: var(--color-sand); }
+  .stay-option li.plus::before { content: '+'; }
+  .stay-option li.minus::before { content: '–'; }
+  .stay-option__link { display: inline-block; margin-top: 0.4rem; font-size: 0.82rem; color: var(--color-navy); border-bottom: 1px solid var(--color-sand); }
+  .stay-compare__tip { margin-top: 1.4rem; padding: 1rem 1.2rem; background: #fff; border-left: 2px solid var(--color-sand); font-size: 0.9rem; line-height: 1.6; color: var(--color-graphite); }
+
   /* ---- Practical strip ---- */
   .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
   .practical__item { padding: 1.4rem 1rem; border: 1px solid rgba(201, 160, 99, 0.4); }
@@ -229,6 +245,7 @@
 
     .route-choice { grid-template-columns: 1fr 1fr; }
     .review-cards { grid-template-columns: 1fr 1fr; }
+    .stay-compare__grid { grid-template-columns: 1fr 1fr; }
     .stop-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
     .places { grid-template-columns: repeat(2, 1fr); }
     .practical { grid-template-columns: repeat(3, 1fr); }
@@ -457,7 +474,38 @@
         <span><span class="tag tag--classic">Классика</span> знаковое место, must-see</span>
         <span><span class="tag tag--local">Местные</span> без толп туристов</span>
       </div>
-      <p class="legend"><a href="#sultanahmet-hotels" style="color: var(--color-navy); border-bottom: 1px solid var(--color-sand);">Где остановиться: отели Султанахмета на разный бюджет →</a></p>
+
+      <div class="stay-compare reveal" id="where-to-stay">
+        <h3 class="stay-compare__title">Где жить: у Айя-Софии или <span class="accent">у Галатской башни?</span></h3>
+        <p class="stay-compare__lead">Два района — два разных Стамбула. Между ними 10–15 минут на трамвае T1 (от Султанахмета до Каракёя) или 30 минут пешком через Галатский мост.</p>
+        <div class="stay-compare__grid">
+          <div class="stay-option">
+            <h4 class="stay-option__name">Султанахмет — у Айя-Софии</h4>
+            <p class="stay-option__for">Первая поездка · история · 2–4 дня</p>
+            <ul>
+              <li class="plus">Айя-София, Голубая мечеть, Цистерна и Топкапы — в 2–10 минутах пешком, к открытию вы приходите первыми</li>
+              <li class="plus">Особняки и бутик-отели с террасами и видом на купола и море</li>
+              <li class="plus">Тихие вечера и подсвеченные мечети прямо у дома</li>
+              <li class="minus">Вечером мало ресторанов и баров для местных, многие кафе закрываются рано</li>
+              <li class="minus">Много зазывал и сувенирных лавок вокруг площади</li>
+            </ul>
+            <a class="stay-option__link" href="#sultanahmet-hotels">Отели Султанахмета →</a>
+          </div>
+          <div class="stay-option">
+            <h4 class="stay-option__name">Галата — у Галатской башни</h4>
+            <p class="stay-option__for">Гастрономия · вечерняя жизнь · повторная поездка</p>
+            <ul>
+              <li class="plus">Лучшие рестораны, мейхане, кофейни и крыши для заката — рядом с отелем</li>
+              <li class="plus">Шопинг, галереи, Истикляль и Каракёй у воды; город живёт до ночи</li>
+              <li class="plus">Удобно ездить по Босфору: паромы из Каракёя и Кабаташа</li>
+              <li class="minus">Крутые улицы и лестницы — с тяжёлыми чемоданами непросто</li>
+              <li class="minus">В выходные шумно до поздней ночи — выбирайте номер окнами во двор</li>
+            </ul>
+            <a class="stay-option__link" href="#galata-hotels">Отели у Галатской башни →</a>
+          </div>
+        </div>
+        <p class="stay-compare__tip"><strong>Мой совет:</strong> если у вас 4 ночи и больше, разделите их — первые 2 ночи в Султанахмете для музеев, оставшиеся у Галатской башни для ресторанов и вечерних прогулок. Переезд занимает 20 минут на такси.</p>
+      </div>
     </div>
   </section>
 
@@ -1576,6 +1624,147 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= ОТЕЛИ У ГАЛАТСКОЙ БАШНИ ================= -->
+  <section class="section section--cream" id="galata-hotels" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где остановиться</p>
+      <h2 class="section__title section__title--center">Отели у Галатской башни <span class="accent">и в Каракёе</span></h2>
+      <p class="section__lead">Галата, Пера, Каракёй и Джихангир — для тех, кто хочет жить среди ресторанов, кофеен и крыш с видом на Босфор. Отели в подборке объединяет атмосфера, хороший завтрак, внимательный сервис и номера в достойном состоянии.</p>
+      <p class="price-legend">$ — до €100 · $$ — €100–200 · $$$ — €200–350 · $$$$ — от €350 за номер в сутки (ориентир, зависит от сезона)</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-palace"/></svg></span>
+          <h3 class="places-group__title">Роскошь и особые впечатления</h3>
+          <span class="places-group__count">4 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">The Peninsula Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Каракёй, Galataport · на берегу Босфора · мой выбор</div>
+            <p>Три исторических здания и новый корпус прямо у воды, сады и бассейн с видом на Босфор, ресторан Gallada с видом на Босфор. Лобби — в здании первого морского вокзала Турции 1940-х годов. Сервис — уровня Peninsula.</p>
+            <span class="place__tip">Идеален перед круизом: подземный круизный терминал Galataport — прямо у отеля.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Aliée Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Золотой Рог, исторические верфи Терсане</div>
+            <p>Новый отель Paris Society Collection на территории старинной османской верфи: открытая каменная кладка, сюиты с видом на Золотой Рог, спа, бассейны и восемь ресторанов и баров, один из них — под руководством шефа с тремя звёздами Michelin.</p>
+            <span class="place__tip">Для тех, кто хочет наслаждаться прежде всего самим отелем и отдыхом у воды. До Галатской башни — 10–15 минут на такси.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Soho House Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Палаццо Корпи, рядом с Пера Палас</div>
+            <p>Палаццо XIX века, где когда-то было посольство США: расписные потолки, клубные гостиные, рестораны, спа и хаммам. Номера в современном стиле, огромные кровати, египетский хлопок.</p>
+            <span class="place__tip">Богемный клубный стиль: гостям отеля открыты пространства клуба.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Pera Palace Hotel <span class="place__price">$$$$</span></div>
+            <div class="place__where">Тепебаши · с 1892 года</div>
+            <p>Отель, построенный для пассажиров «Восточного экспресса». Здесь жила Агата Кристи, а номер 411 хранит её память. Мрамор, кованый лифт, чайный салон Kubbeli. Номера просторные, гости хвалят чистоту и завтраки.</p>
+            <span class="place__tip">Выбор для тех, кто хочет историческую атмосферу.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tower"/></svg></span>
+          <h3 class="places-group__title">Дизайн и бутик-отели</h3>
+          <span class="places-group__count">5 отелей</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">The Bank Hotel Istanbul <span class="place__price">$$$</span></div>
+            <div class="place__where">Bankalar Caddesi, Каракёй · Design Hotels</div>
+            <p>Бывшее здание банка XIX века на «Уолл-стрит» Османской империи: высокие потолки, современный дизайн, тропические души. Гости отмечают отличное состояние номеров и внимательный персонал.</p>
+            <span class="place__tip">Дизайн и прогулки по Каракёю. Завтрак часто оплачивается отдельно.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Tomtom Suites <span class="place__price">$$$</span></div>
+            <div class="place__where">Томтом, 3 минуты до Истикляль</div>
+            <p>Камерный отель из одних сюит в тихом переулке между Галатасараем и Джихангиром. Номера просторные, а оценки гостей одни из самых высоких в районе — около 9,7 из 10.</p>
+            <span class="place__tip">Камерность, простор и красивые завтраки.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Georges Hotel Galata <span class="place__price">$$$</span></div>
+            <div class="place__where">Serdar-ı Ekrem, 2 минуты до башни · мой выбор</div>
+            <p>Бутик-отель, отмеченный гидом Michelin: пуховые одеяла, хорошая звукоизоляция и тропические души во всех номерах. Завтрак подают на крыше с видом на Босфор и старый город.</p>
+            <span class="place__tip">Гости ставят около 9,2–9,5 из 10.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">DeCamondo Galata <span class="place__price">$$$</span></div>
+            <div class="place__where">Галата, Tribute Portfolio (Marriott) · мой выбор</div>
+            <p>Два восстановленных особняка между башней и Каракёем, элегантные и ухоженные номера, часть с балконами. Завтрак — на крыше с видом на город, а блюда подают по меню, а не буфетом.</p>
+            <span class="place__tip">Около 9,4 из 10. В части номеров на завтрак нужно перейти в соседнее здание.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Witt Istanbul Suites <span class="place__price">$$–$$$</span></div>
+            <div class="place__where">Джихангир · мой выбор</div>
+            <p>Сюиты с гостиной и мини-кухней в зелёном богемном Джихангире. Домашний завтрак из местных и фермерских продуктов гости называют одним из лучших в районе.</p>
+            <span class="place__tip">Отель стоит на крутом склоне — без больших чемоданов проще.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+          <h3 class="places-group__title">Комфорт по разумной цене</h3>
+          <span class="places-group__count">5 отелей</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Rixos Pera Istanbul <span class="place__price">$$–$$$</span></div>
+            <div class="place__where">Пера, у музея Пера</div>
+            <p>Большой современный отель в самом центре Перы: просторные элегантные номера, спа и терраса с видом на город и Золотой Рог. Персонал хвалят за теплоту.</p>
+            <span class="place__tip">Наиболее приятная цена за удобную Перу. Завтрак может не входить в тариф.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Novotel Istanbul Bosphorus <span class="place__price">$$</span></div>
+            <div class="place__where">Каракёй, 3 минуты до Galataport</div>
+            <p>Современный отель на 200 номеров у самого Босфора, с крытым бассейном и спа. Рядом — Mürver, один из лучших ресторанов на крыше в Каракёе.</p>
+            <span class="place__tip">Практичный выбор накануне круиза: до круизного терминала — пешком.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">SuB Karaköy <span class="place__price">$$</span></div>
+            <div class="place__where">Каракёй · дизайн-отель · мой выбор</div>
+            <p>Минималистичный дизайн-отель среди галерей и кафе Каракёя. Гости отмечают хороший завтрак с видом и дружелюбную команду.</p>
+            <span class="place__tip">Около 8,4 из 10 — для тех, кому важны стиль и цена.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Galata Grace Hotel <span class="place__price">$</span></div>
+            <div class="place__where">5 минут до башни и Истикляль · мой выбор</div>
+            <p>Небольшой бутик-отель, открытый в 2015 году. Гости особенно хвалят персонал (9,7 из 10) и чистоту номеров — достойный бюджетный вариант в самом центре.</p>
+            <span class="place__tip">Около 9,1 из 10 при скромной цене.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Anemon Galata <span class="place__price">$$</span></div>
+            <div class="place__where">Площадь Галатской башни · мой выбор</div>
+            <p>Ближайший к башне серьёзный отель — она буквально за окном. Классический интерьер в историческом здании и ресторан на крыше с видом на Босфор.</p>
+            <span class="place__tip">Около 8,5 из 10. Интерьеры классические — при бронировании прошу обновлённый номер с видом на башню.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stay-compare__tip" style="margin-top: 2.6rem;">
+        <strong>Как выбрать:</strong>
+        <ul style="margin: 0.6rem 0 0; padding-left: 1.1rem;">
+          <li><strong>The Bank</strong> — дизайн и прогулки по Каракёю.</li>
+          <li><strong>Rixos Pera</strong> — наиболее приятная цена и удобная Пера.</li>
+          <li><strong>Tomtom Suites</strong> — камерность, простор и красивые завтраки.</li>
+          <li><strong>Pera Palace</strong> — историческая атмосфера.</li>
+          <li><strong>Soho House</strong> — богемный клубный стиль.</li>
+          <li><strong>Aliée</strong> — наслаждаться прежде всего самим отелем и отдыхом у воды.</li>
+          <li><strong>The Peninsula</strong> или <strong>Novotel Bosphorus</strong> — если вы остановились перед круизом: терминал Galataport в нескольких минутах пешком.</li>
+          <li><strong>Georges</strong>, <strong>DeCamondo</strong>, <strong>Witt</strong> — уютные бутик-отели с отличными завтраками.</li>
+          <li><strong>SuB Karaköy</strong>, <strong>Galata Grace</strong> — стиль и чистота при разумном бюджете.</li>
+        </ul>
+      </div>
+
+      <p class="disclaimer">Оценки — по данным Booking, Expedia, Hotels.com и Tripadvisor на октябрь 2026 года. Включён ли завтрак, какие категории номеров есть и сколько стоит проживание — уточняю под ваши даты.</p>
     </div>
   </section>
 
