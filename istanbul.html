@@ -198,6 +198,21 @@
   .place p { font-size: 0.86rem; line-height: 1.55; opacity: 0.85; margin: 0; }
   .place__tip { display: block; margin-top: 0.45rem; font-style: italic; opacity: 0.9; }
 
+  /* ---- Hotels ---- */
+  .price-legend { text-align: center; font-size: 0.82rem; color: var(--color-graphite); opacity: 0.8; margin: -1rem 0 0.5rem; }
+  .place__price { float: right; margin-left: 0.6rem; font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; color: var(--color-sand); }
+
+  .review-cards { display: grid; gap: 1.6rem; margin-top: 1.4rem; }
+  .review-card { background: #fff; border: 1px solid rgba(201, 160, 99, 0.5); padding: 1.6rem 1.5rem; color: var(--color-graphite); }
+  .review-card__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.3rem 1rem; margin-bottom: 0.3rem; }
+  .review-card__name { font-size: 1.45rem; margin: 0; }
+  .review-card__score { font-size: 0.78rem; letter-spacing: 0.06em; color: var(--color-sand); font-weight: 500; }
+  .review-card__where { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); margin-bottom: 1rem; }
+  .review-card__row { padding: 0.75rem 0; border-top: 1px solid rgba(201, 160, 99, 0.25); }
+  .review-card__row strong { display: block; font-family: var(--font-display); font-size: 1.02rem; margin-bottom: 0.25rem; }
+  .review-card__row p { font-size: 0.88rem; line-height: 1.6; opacity: 0.88; margin: 0; }
+  .review-card__verdict { margin-top: 0.4rem; padding: 0.9rem 1rem; background: var(--color-cream); border-left: 2px solid var(--color-sand); font-size: 0.88rem; line-height: 1.6; }
+
   /* ---- Practical strip ---- */
   .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
   .practical__item { padding: 1.4rem 1rem; border: 1px solid rgba(201, 160, 99, 0.4); }
@@ -213,6 +228,7 @@
     .city-hero__lead { font-size: 1.35rem; }
 
     .route-choice { grid-template-columns: 1fr 1fr; }
+    .review-cards { grid-template-columns: 1fr 1fr; }
     .stop-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
     .places { grid-template-columns: repeat(2, 1fr); }
     .practical { grid-template-columns: repeat(3, 1fr); }
@@ -441,6 +457,7 @@
         <span><span class="tag tag--classic">Классика</span> знаковое место, must-see</span>
         <span><span class="tag tag--local">Местные</span> без толп туристов</span>
       </div>
+      <p class="legend"><a href="#sultanahmet-hotels" style="color: var(--color-navy); border-bottom: 1px solid var(--color-sand);">Где остановиться: отели Султанахмета на разный бюджет →</a></p>
     </div>
   </section>
 
@@ -871,6 +888,167 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= ОТЕЛИ СУЛТАНАХМЕТА ================= -->
+  <section class="section section--cream" id="sultanahmet-hotels" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где остановиться</p>
+      <h2 class="section__title section__title--center">Отели в Султанахмете <span class="accent">на разный бюджет</span></h2>
+      <p class="section__lead">Жить в старом городе удобно: утром вы первыми у Айя-Софии, а вечером возвращаетесь пешком мимо подсвеченных мечетей. Ниже — отели, которые я рекомендую, от дворцовой роскоши до уютных особняков.</p>
+      <p class="price-legend">$ — до €100 · $$ — €100–200 · $$$ — €200–350 · $$$$ — от €350 за номер в сутки (ориентир, зависит от сезона)</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-palace"/></svg></span>
+          <h3 class="places-group__title">Роскошь и особый повод</h3>
+          <span class="places-group__count">3 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Four Seasons Sultanahmet <span class="place__price">$$$$</span></div>
+            <div class="place__where">Между Айя-Софией и Топкапы</div>
+            <p>Неоклассическое здание бывшей тюрьмы начала XX века превращено в камерный дворец с внутренним двором-садом. Безупречный сервис уровня Four Seasons, а из окон и с террасы видны купола Айя-Софии.</p>
+            <span class="place__tip">Для медового месяца и юбилеев.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Hagia Sofia Mansions, Curio Collection by Hilton <span class="place__price">$$$$</span></div>
+            <div class="place__where">Улица Согукчешме, у стен Топкапы</div>
+            <p>Номера разбросаны по 17 восстановленным османским особнякам. Есть хаммам, спа в византийской цистерне, сад и два ресторана. Атмосфера живого исторического квартала.</p>
+            <span class="place__tip">Минусы: много лестниц, завтрак часто не включён (около €30).</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Régie Ottoman <span class="place__price">$$$</span></div>
+            <div class="place__where">Сиркеджи, 10 минут до Айя-Софии</div>
+            <p>Бутик-отель на 34 номера в здании бывшего табачного склада, которому около 150 лет: кирпичные своды, арочные окна и современный дизайн. Ресторан OCAK отмечен гидом Michelin, гости хвалят завтраки и внимательный персонал.</p>
+            <span class="place__tip">Днём улицы закрыты для машин, к входу придётся пройти пешком с багажом.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-mosque"/></svg></span>
+          <h3 class="places-group__title">Бутик-отели с характером</h3>
+          <span class="places-group__count">4 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Seven Hills Palace &amp; Spa <span class="place__price">$$$</span></div>
+            <div class="place__where">Kadı Çıkmazı Sk., Султанахмет</div>
+            <p>Редкость для старого города: открытый бассейн (по сезону), спа, хаммам и сауна. Около 80 номеров, есть варианты с видом на море. Гости особенно хвалят персонал и завтраки.</p>
+            <span class="place__tip">Хорош для пар и семей, которым нужен отдых, а не только экскурсии.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Hotel Ibrahim Pasha <span class="place__price">$$$</span></div>
+            <div class="place__where">У Ипподрома · мой выбор</div>
+            <p>Один из самых стильных бутик-отелей района: тёплые красные и охристые тона, фотографии старого Стамбула, крыша с видом на Голубую мечеть. Всё рядом, но улица тихая.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Mula Hotel <span class="place__price">$$–$$$</span></div>
+            <div class="place__where">Çayıroğlu Sk., у Малой Айя-Софии</div>
+            <p>Небольшой отель на 41 номер на тихой улочке в 5 минутах от Голубой мечети. Есть сад, терраса и ресторан Nishane, на завтрак — буфет или блюда на выбор.</p>
+            <span class="place__tip">По некоторым данным, алкоголь в отеле не подают — уточню при бронировании.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">1207 Hotel Special Class <span class="place__price">$$</span></div>
+            <div class="place__where">Площадь Ипподрома · бывший Alzer Hotel</div>
+            <p>Восстановленный особняк, которому больше 100 лет, на 22 номера. Его главный козырь — терраса на крыше с видом на Голубую мечеть и Айя-Софию. Оценки гостей — около 9 из 10.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+          <h3 class="places-group__title">Уютно и разумно по цене</h3>
+          <span class="places-group__count">3 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Garden House <span class="place__price">$$</span></div>
+            <div class="place__where">2 минуты до площади Султанахмет</div>
+            <p>Деревянный османский особняк с садом, в котором растут старые ореховые деревья и журчит водопад. Есть ресторан и бесплатные закуски днём, а атмосфера — как в гостях у стамбульской семьи.</p>
+            <span class="place__tip">Лифта нет, спа нет — это отель про атмосферу.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Hotel Empress Zoe <span class="place__price">$$</span></div>
+            <div class="place__where">Джанкуртаран · мой выбор</div>
+            <p>Классика старого города, названная в честь византийской императрицы с мозаики в Айя-Софии. Номера расположены в соединённых старинных домах, а в саду — руины хаммама XV века. Камерно, очень по-стамбульски.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Sirkeci Mansion <span class="place__price">$$</span></div>
+            <div class="place__where">Над парком Гюльхане · мой выбор</div>
+            <p>Легенда среди отелей за свой сервис: персонал помнит гостей по именам. Номера чистые, хорошего размера, а до Топкапы и трамвая — пара минут пешком.</p>
+            <span class="place__tip">Лучшее соотношение цены и заботы в районе.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+          <h3 class="places-group__title">Проверка двух отелей по отзывам гостей</h3>
+        </div>
+        <p style="font-size: 0.9rem; opacity: 0.8; color: var(--color-graphite);">Оба отеля стоят не в самом Султанахмете, а рядом с ним — в Сиркеджи и Эминёню, в 10–15 минутах пешком от Айя-Софии. Ниже — то, что повторяется в свежих отзывах на Booking, Tripadvisor и Trip.com.</p>
+
+        <div class="review-cards">
+          <article class="review-card reveal">
+            <div class="review-card__head">
+              <h4 class="review-card__name">Mest Hotel Istanbul Sirkeci</h4>
+              <span class="review-card__score">≈ 9,2–9,4 / 10 на Booking и Trivago · 4,8 / 5 на Tripadvisor</span>
+            </div>
+            <div class="review-card__where">Çiçek Pazarı Sk., рядом с Египетским базаром и мечетью Рустем-паши · 4★ · 34 номера</div>
+
+            <div class="review-card__row">
+              <strong>Вид</strong>
+              <p>Главная фишка отеля — терраса на 5-м этаже, где подают завтрак, с видом на мечеть и Босфор. Из части номеров тоже видна мечеть.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Сервис</strong>
+              <p>Именно персонал хвалят больше всего: дружелюбный, внимательный, помогает с советами и трансферами. Встречаются единичные жалобы на плохой английский у части сотрудников, неприехавшее такси и промахи в уборке.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Состояние номеров</strong>
+              <p>Отель новый, номера современные и в целом чистые, кровати удобные. Но стандартные номера компактные для своей цены. Лофт-сюиты просторные (до 43 м²), однако кровать в них стоит на втором уровне, куда ведёт крутая узкая металлическая лестница — неудобно с детьми и пожилыми. Изредка пишут о колебаниях температуры воды, нестабильном Wi-Fi и запахе из слива.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Что учесть</strong>
+              <p>Рядом мечеть, поэтому азан слышен и рано утром. Вечером, после закрытия лавок, торговые улочки вокруг пустеют. Зато днём это самый живой и колоритный рыночный квартал.</p>
+            </div>
+            <div class="review-card__verdict"><strong>Мой вывод:</strong> хороший выбор для пары, если важны вид и тёплый сервис. Берите номер категории выше стандартного, но не лофт, если путешествуете с детьми или родителями. Тем, кто чутко спит, — беруши.</div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__head">
+              <h4 class="review-card__name">Hotel İlkay</h4>
+              <span class="review-card__score">≈ 8,2–8,8 / 10 на booking-сайтах · 4,4 / 5 на Tripadvisor (более 1100 отзывов)</span>
+            </div>
+            <div class="review-card__where">Между остановкой трамвая Гюльхане и Сиркеджи · классический городской отель</div>
+
+            <div class="review-card__row">
+              <strong>Сервис</strong>
+              <p>Ресепшен стабильно хвалят: дружелюбные и отзывчивые сотрудники, помогают с маршрутами и такси. Сервис простой, без пафоса, но честный и заботливый.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Состояние номеров</strong>
+              <p>Номера небольшие, но чистые и аккуратные, часть обновлена, кровати удобные. В других номерах мебель старая и потёртая, а холодильника может не быть. Звукоизоляция слабая: в номерах на улицу слышны трамвай и город. Иногда пишут о неработающем лифте.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Завтраки</strong>
+              <p>Сильная сторона отеля, за которую его хвалят чаще всего. Разнообразный и щедрый буфет, свежий хлеб, внимательный персонал в зале. Встречается и мнение, что завтрак скромный, но вполне достаточный.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Вайб и атмосфера</strong>
+              <p>Классический отель старого города: по-домашнему тёплый, без дизайнерских изысков. Для тех, кто весь день гуляет и возвращается только поспать. Главный плюс — расположение: трамвай у дверей, Гюльхане, Топкапы и Айя-София рядом.</p>
+            </div>
+            <div class="review-card__verdict"><strong>Мой вывод:</strong> надёжный вариант за разумные деньги, если важны локация и сытный завтрак, а не интерьер. При бронировании прошу обновлённый номер на высоком этаже, окнами во двор.</div>
+          </article>
+        </div>
+      </div>
+
+      <p class="disclaimer">Оценки и отзывы — по данным Booking, Tripadvisor и Trip.com на октябрь 2026 года. Цены, категории номеров и условия завтраков я уточняю под ваши даты.</p>
     </div>
   </section>
 
