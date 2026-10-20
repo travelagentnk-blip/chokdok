@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Грозный и горная Чечня: тур на 3–4 дня | Наталья Кожедуб</title>
+<meta name="description" content="Авторский тур по Чечне на 3–4 дня: обзорная экскурсия по Грозному и мечетям, озеро Кезеной-Ам, древний Хой, башни Аргунского ущелья и Шарой, а также день в Дагестане или горной Ингушетии. Отели с честными отзывами, музеи и рестораны чеченской кухни.">
+<meta name="theme-color" content="#1D3559">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<meta property="og:title" content="Грозный и горная Чечня: тур на 3–4 дня">
+<meta property="og:description" content="Грозный и мечети · Кезеной-Ам и Хой · башни и водопады · где жить и где вкусно поесть">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ==========================================================================
+     Chechnya tour — page-specific styles (built on top of styles.css tokens)
+     ========================================================================== */
+
+  .breadcrumb {
+    position: relative;
+    z-index: 2;
+    padding: 1.1rem 0;
+    background: var(--color-navy);
+    border-bottom: 1px solid rgba(201, 160, 99, 0.25);
+  }
+  .breadcrumb__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-sand-light);
+  }
+  .breadcrumb__link:hover { color: var(--color-sand); }
+  .breadcrumb__icon { width: 0.8rem; height: 0.8rem; fill: none; stroke: currentColor; stroke-width: 1.4; }
+
+  /* ---- Hero ---- */
+  .city-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-navy);
+    color: var(--color-sand-light);
+    text-align: center;
+    padding: 5rem 0 7rem;
+  }
+  .city-hero__bg { position: absolute; inset: 0; z-index: 0; }
+  .city-hero__bg svg { width: 100%; height: 100%; display: block; }
+  .city-hero__content { position: relative; z-index: 1; max-width: 42rem; margin: 0 auto; padding: 0 1.5rem; }
+  .city-hero__eyebrow {
+    font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--color-sand); margin: 0 0 1.1rem;
+  }
+  .city-hero__title { font-size: 2.4rem; line-height: 1.2; margin-bottom: 1rem; }
+  .city-hero__lead {
+    font-family: var(--font-display); font-style: italic; font-size: 1.15rem;
+    color: var(--color-sand-light); margin-bottom: 2rem;
+  }
+  .city-hero__facts {
+    display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; justify-content: center;
+    margin-bottom: 2.2rem;
+  }
+  .city-hero__fact {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    padding: 0.5rem 0.9rem; border: 1px solid rgba(201, 160, 99, 0.7);
+    color: var(--color-sand-light);
+    border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.05em;
+  }
+  .city-hero__fact svg { width: 0.95rem; height: 0.95rem; fill: none; stroke: var(--color-sand-light); stroke-width: 1.3; flex-shrink: 0; }
+
+  /* ---- Route chooser ---- */
+  .route-choice { display: grid; gap: 1.4rem; }
+  .route-choice__card {
+    display: block; padding: 1.8rem 1.6rem;
+    border: 1px solid rgba(201, 160, 99, 0.5); background: #fff;
+    color: var(--color-graphite);
+    transition: border-color var(--transition-soft), transform var(--transition-soft);
+  }
+  .route-choice__card:hover { border-color: var(--color-sand); transform: translateY(-2px); }
+  .route-choice__num {
+    font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--color-sand); margin-bottom: 0.4rem;
+  }
+  .route-choice__title { font-size: 1.45rem; margin-bottom: 0.5rem; }
+  .route-choice__text { font-size: 0.9rem; opacity: 0.8; margin-bottom: 0.9rem; }
+  .route-choice__meta { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); }
+
+  /* ---- Legend ---- */
+  .legend {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.2rem;
+    margin-top: 2rem; font-size: 0.82rem; color: var(--color-graphite);
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+
+  .tag {
+    display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px;
+    font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500;
+    vertical-align: middle; white-space: nowrap;
+  }
+  .tag--classic { background: var(--color-sand); color: var(--color-navy); }
+  .tag--local { border: 1px solid var(--color-sand); color: var(--color-sand); }
+
+  /* ---- Route map strip ---- */
+  .route-map {
+    display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center;
+    gap: 0.25rem 0; row-gap: 1.6rem;
+  }
+  .route-stop { display: flex; flex-direction: column; align-items: center; width: 6.4rem; text-align: center; }
+  .route-stop__dot {
+    width: 2.6rem; height: 2.6rem; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--color-navy); border: 1px solid var(--color-sand);
+    margin-bottom: 0.6rem;
+  }
+  .route-stop__dot svg { width: 1.2rem; height: 1.2rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
+  .route-stop__name { font-size: 0.78rem; line-height: 1.35; color: var(--color-graphite); }
+  .route-link {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 3.2rem; margin-top: 1.3rem; flex-shrink: 0;
+  }
+  .route-link__line { width: 100%; height: 1px; background: repeating-linear-gradient(90deg, var(--color-sand) 0 6px, transparent 6px 10px); }
+  .route-link__time { font-size: 0.68rem; color: var(--color-sand); opacity: 0.9; margin-top: 0.4rem; white-space: nowrap; letter-spacing: 0.02em; }
+
+  /* ---- Timeline / stop cards ---- */
+  .timeline { position: relative; display: grid; gap: 2.6rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 1.55rem; top: 0.5rem; bottom: 0.5rem;
+    width: 1px; background: rgba(201, 160, 99, 0.35);
+  }
+  .stop-card { position: relative; padding-left: 4.4rem; color: var(--color-sand-light); }
+  .stop-card__badge {
+    position: absolute; left: 0; top: 0;
+    width: 3.1rem; height: 3.1rem; border-radius: 50%;
+    background: var(--color-cream); border: 1px solid var(--color-sand);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 600; font-size: 0.92rem;
+    color: var(--color-navy); line-height: 1; z-index: 1;
+  }
+  .stop-card__title { font-size: 1.3rem; margin-bottom: 0.45rem; color: var(--color-sand-light); }
+  .stop-card__title .tag { margin-left: 0.4rem; position: relative; top: -2px; }
+  .stop-card__body { display: grid; gap: 1.2rem; }
+  .stop-card__text p { font-size: 0.95rem; margin-bottom: 0.65rem; }
+  .stop-card__text p:last-child { margin-bottom: 0; }
+
+  .side-card {
+    display: flex; align-items: flex-start; gap: 0.9rem;
+    background: var(--color-cream); border: 1px solid rgba(201, 160, 99, 0.5);
+    color: var(--color-graphite);
+    padding: 0.9rem 1.1rem;
+  }
+  .side-card__icon {
+    width: 2.3rem; height: 2.3rem; flex-shrink: 0; border-radius: 50%;
+    background: var(--color-navy);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .side-card__icon svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
+  .side-card__name { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.2rem; }
+  .side-card__meta { font-size: 0.82rem; line-height: 1.5; opacity: 0.8; }
+
+  .stop-card__note {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    color: var(--color-sand-light);
+    font-size: 0.85rem; font-style: italic;
+  }
+  .stop-card__note svg { width: 1rem; height: 1rem; fill: none; stroke: var(--color-sand-light); stroke-width: 1.3; flex-shrink: 0; margin-top: 0.15rem; }
+
+  /* ---- Place lists ---- */
+  .places-group { margin-top: 3.4rem; }
+  .places-group:first-of-type { margin-top: 2.6rem; }
+  .places-group__head {
+    display: flex; align-items: center; gap: 0.8rem;
+    padding-bottom: 0.8rem; margin-bottom: 1.4rem;
+    border-bottom: 1px solid rgba(201, 160, 99, 0.4);
+  }
+  .places-group__icon {
+    width: 2.4rem; height: 2.4rem; border-radius: 50%; flex-shrink: 0;
+    background: var(--color-navy);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .places-group__icon svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; }
+  .places-group__title { font-size: 1.35rem; margin: 0; }
+  .places-group__count { margin-left: auto; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sand); }
+
+  .places { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  .place {
+    padding: 1.1rem 1.2rem; background: #fff;
+    border: 1px solid rgba(201, 160, 99, 0.35);
+    color: var(--color-graphite);
+  }
+  .place__name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; line-height: 1.25; margin-bottom: 0.2rem; }
+  .place__where { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); margin-bottom: 0.55rem; }
+  .place p { font-size: 0.86rem; line-height: 1.55; opacity: 0.85; margin: 0; }
+  .place__tip { display: block; margin-top: 0.45rem; font-style: italic; opacity: 0.9; }
+
+  /* ---- Practical strip ---- */
+  .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
+  .practical__item { padding: 1.4rem 1rem; border: 1px solid rgba(201, 160, 99, 0.4); }
+  .practical__item svg { width: 1.5rem; height: 1.5rem; fill: none; stroke: var(--color-sand); stroke-width: 1.3; margin-bottom: 0.7rem; }
+  .practical__item strong { display: block; font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.3rem; color: var(--color-graphite); }
+  .practical__item span { font-size: 0.82rem; opacity: 0.75; color: var(--color-graphite); }
+
+  .disclaimer { text-align: center; font-size: 0.8rem; font-style: italic; opacity: 0.7; margin-top: 2rem; color: var(--color-graphite); }
+
+  @media (min-width: 768px) {
+    .city-hero { padding: 7rem 0 9rem; }
+    .city-hero__title { font-size: 3.2rem; }
+    .city-hero__lead { font-size: 1.35rem; }
+
+    .route-choice { grid-template-columns: 1fr 1fr; }
+    .stop-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
+    .places { grid-template-columns: repeat(2, 1fr); }
+    .practical { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1100px) {
+    .city-hero__title { font-size: 3.6rem; }
+    .places { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ---- Chechnya additions ---- */
+  .route-choice--days { gap: 1rem; }
+  .route-choice__card--optional { border-style: dashed; }
+
+  .tag--option { border: 1px dashed var(--color-sand); color: var(--color-sand); }
+
+  .option-cards { display: grid; gap: 1.4rem; margin-top: 2.4rem; }
+  .option-card {
+    padding: 1.6rem 1.5rem; background: #fff;
+    border: 1px solid rgba(201, 160, 99, 0.5);
+    color: var(--color-graphite);
+  }
+  .option-card__num {
+    font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--color-sand); margin-bottom: 0.4rem;
+  }
+  .option-card__title { font-size: 1.35rem; margin-bottom: 0.6rem; }
+  .option-card p { font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.7rem; }
+  .option-card__route { font-size: 0.82rem; line-height: 1.6; padding-left: 0.9rem; border-left: 2px solid var(--color-sand); margin-bottom: 0.8rem; }
+  .option-card__meta { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); }
+  .option-card__for { font-style: italic; opacity: 0.85; }
+
+  .place__fit {
+    display: block; margin-top: 0.7rem; padding-top: 0.6rem;
+    border-top: 1px dashed rgba(201, 160, 99, 0.45);
+    font-size: 0.84rem; line-height: 1.55;
+  }
+  .place__fit b { font-weight: 500; color: var(--color-navy); }
+  .place p + p { margin-top: 0.45rem; }
+
+  .dishes { display: grid; grid-template-columns: 1fr; gap: 0.8rem; margin-top: 2rem; }
+  .dish { padding: 0.9rem 1.1rem; border-left: 2px solid var(--color-sand); background: rgba(255, 255, 255, 0.6); color: var(--color-graphite); }
+  .dish__name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.15rem; }
+  .dish p { font-size: 0.85rem; line-height: 1.5; opacity: 0.85; margin: 0; }
+
+  @media (min-width: 768px) {
+    .route-choice--days { grid-template-columns: repeat(2, 1fr); }
+    .option-cards { grid-template-columns: repeat(3, 1fr); }
+    .option-cards--two { grid-template-columns: repeat(2, 1fr); }
+    .dishes { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1100px) {
+    .route-choice--days { grid-template-columns: repeat(4, 1fr); }
+    .dishes { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sprite: иконки, используются через <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="icon-telegram" viewBox="0 0 24 24">
+      <path d="M21.5 3.5 2.7 10.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.9 5.7c.2.6.4.8.9.8.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.3-1.4Zm-12.6 10 8.7-7.9c.4-.4.8-.2.5.2l-7.1 8.2-.3 3.3-1.2-3.8Z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path d="M12 2.2c2.7 0 3 0 4 .1 1.1 0 1.8.2 2.2.4a4.4 4.4 0 0 1 2.1 2.1c.2.4.4 1.1.4 2.2.1 1 .1 1.3.1 4s0 3-.1 4c0 1.1-.2 1.8-.4 2.2a4.4 4.4 0 0 1-2.1 2.1c-.4.2-1.1.4-2.2.4-1 .1-1.3.1-4 .1s-3 0-4-.1c-1.1 0-1.8-.2-2.2-.4a4.4 4.4 0 0 1-2.1-2.1c-.2-.4-.4-1.1-.4-2.2-.1-1-.1-1.3-.1-4s0-3 .1-4c0-1.1.2-1.8.4-2.2A4.4 4.4 0 0 1 5.8 2.7c.4-.2 1.1-.4 2.2-.4 1-.1 1.3-.1 4-.1ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0Z"/>
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path d="M11 4 4 12l7 8M4 12h16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Route icons (stroke-based) -->
+    <symbol id="icon-mosque" viewBox="0 0 24 24">
+      <path d="M6 20v-6a6 6 0 0 1 12 0v6" stroke-linejoin="round"/>
+      <path d="M12 8V5.5M12 5.5c.8 0 1.2-.6 1.2-1.2" stroke-linecap="round"/>
+      <path d="M2.5 20V9.5l.75-2 .75 2V20M20 20V9.5l.75-2 .75 2V20" stroke-linejoin="round"/>
+      <path d="M1.5 20h21M10 20v-3a2 2 0 0 1 4 0v3"/>
+    </symbol>
+    <symbol id="icon-tower" viewBox="0 0 24 24">
+      <path d="M12 2.5 8 9h8l-4-6.5Z" stroke-linejoin="round"/>
+      <path d="M8.6 9v11.5h6.8V9M7.5 12h9" stroke-linejoin="round"/>
+      <path d="M11 20.5v-3a1 1 0 0 1 2 0v3M5 20.5h14" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-columns" viewBox="0 0 24 24">
+      <path d="M3 8h18L12 3 3 8ZM3 20.5h18M5 18h14" stroke-linejoin="round"/>
+      <path d="M6 8v10M10 8v10M14 8v10M18 8v10"/>
+    </symbol>
+    <symbol id="icon-palace" viewBox="0 0 24 24">
+      <path d="M3 20.5V11h18v9.5M2 20.5h20" stroke-linejoin="round"/>
+      <path d="M7 11V8l2-2 2 2v3M13 11V8l2-2 2 2v3" stroke-linejoin="round"/>
+      <path d="M10.5 20.5v-4a1.5 1.5 0 0 1 3 0v4M6 14.5v2M18 14.5v2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-tea" viewBox="0 0 24 24">
+      <path d="M8 8h8l-1 3c-.5 1.6-.5 3.4 0 5l.5 2.5a1.5 1.5 0 0 1-1.5 1.5h-4a1.5 1.5 0 0 1-1.5-1.5L9 16c.5-1.6.5-3.4 0-5L8 8Z" stroke-linejoin="round"/>
+      <path d="M7 21.5h10M11 3.5c-.6.8-.6 1.7 0 2.5M13.5 3.5c-.6.8-.6 1.7 0 2.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-coffee" viewBox="0 0 24 24">
+      <path d="M4 9h12v5a6 6 0 0 1-12 0V9Z" stroke-linejoin="round"/>
+      <path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16M3 21.5h14M8 3.5c-.6.8-.6 1.7 0 2.5M11.5 3.5c-.6.8-.6 1.7 0 2.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-meal" viewBox="0 0 24 24">
+      <path d="M6 2v7a1.6 1.6 0 0 0 1.6 1.6V22M6 2v6M8 2v6M4 2v6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17.5 2c-1.6.3-2.5 1.9-2.5 4v3.2c0 1.3.9 2.3 2 2.5V22" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-street" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="12.5" rx="8.5" ry="5.5"/>
+      <ellipse cx="12" cy="12.5" rx="3" ry="1.7"/>
+      <path d="M5 9.2c1 .4 1.4 1 1.6 1.8M19 9.2c-1 .4-1.4 1-1.6 1.8M12 7v2.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-terrace" viewBox="0 0 24 24">
+      <path d="M12 3 3 8h18L12 3ZM12 8v7" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M5 21v-6h14v6M8.5 15v6M15.5 15v6M2 21h20" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path d="M4.5 8h15l-1 13h-13l-1-13Z" stroke-linejoin="round"/>
+      <path d="M8.5 10V6.5a3.5 3.5 0 0 1 7 0V10" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-tram" viewBox="0 0 24 24">
+      <rect x="5" y="5" width="14" height="13" rx="2.5"/>
+      <path d="M5 11h14M9 2.5h6M12 2.5V5M8 18l-2 3.5M16 18l2 3.5" stroke-linecap="round"/>
+      <circle cx="8.6" cy="14.5" r=".8"/><circle cx="15.4" cy="14.5" r=".8"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-walk" viewBox="0 0 24 24">
+      <circle cx="13" cy="4" r="1.8"/>
+      <path d="m10 21 2.2-6 2.8 2.5V21M9 11.5l1.5-4h3l2.5 3.5 2.5 1M10.5 7.5 7 9.5l-1 3M12.2 15l1.3-5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5.2l3.4 2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M12 21.5S5 14.7 5 9.5a7 7 0 1 1 14 0c0 5.2-7 12-7 12Z" stroke-linejoin="round"/>
+      <circle cx="12" cy="9.4" r="2.4"/>
+    </symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 11v5.5M12 8v.01" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24">
+      <rect x="2.5" y="5.5" width="19" height="13" rx="2"/>
+      <path d="M2.5 10h19M6 15h4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-scarf" viewBox="0 0 24 24">
+      <path d="M12 3a6 6 0 0 0-6 6v3c0 3 2 5.5 6 5.5s6-2.5 6-5.5V9a6 6 0 0 0-6-6Z" stroke-linejoin="round"/>
+      <path d="M9 17l-2 4.5M15 17l2 4.5M9.5 11h5" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Chechnya icons -->
+    <symbol id="icon-mountain" viewBox="0 0 24 24">
+      <path d="M1.5 20.5 8.5 8l4 6.5 3-4.5 7 10.5Z" stroke-linejoin="round"/>
+      <path d="m6.8 11 1.7 1.2 1.6-1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-waterfall" viewBox="0 0 24 24">
+      <path d="M3 4h18M5 4v9M19 4v9" stroke-linecap="round"/>
+      <path d="M9 4v12M12 4v14M15 4v12" stroke-linecap="round"/>
+      <path d="M3 19c1.5 1.3 3 1.3 4.5 0s3-1.3 4.5 0 3 1.3 4.5 0 3-1.3 4.5 0" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-lake" viewBox="0 0 24 24">
+      <path d="M2 14 7.5 5.5 11 11l2.5-3.5L19 14" stroke-linejoin="round"/>
+      <path d="M2 17.5c1.7 1.2 3.3 1.2 5 0s3.3-1.2 5 0 3.3 1.2 5 0 3.3-1.2 5 0M5 21c1.2.8 2.3.8 3.5 0s2.3-.8 3.5 0 2.3.8 3.5 0 2.3-.8 3.5 0" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-bed" viewBox="0 0 24 24">
+      <path d="M2.5 19.5V5.5M2.5 15h19v4.5M21.5 15v-3a3 3 0 0 0-3-3H11v6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6.5" cy="11" r="2"/>
+    </symbol>
+    <symbol id="icon-car" viewBox="0 0 24 24">
+      <path d="M3.5 16.5v-4l2-5h13l2 5v4h-17Z" stroke-linejoin="round"/>
+      <path d="M3.5 12.5h17M5 16.5v2.5M19 16.5v2.5" stroke-linecap="round"/>
+      <circle cx="7.5" cy="14.5" r=".8"/><circle cx="16.5" cy="14.5" r=".8"/>
+    </symbol>
+    <symbol id="icon-passport" viewBox="0 0 24 24">
+      <rect x="5" y="2.5" width="14" height="19" rx="1.5"/>
+      <circle cx="12" cy="10" r="3.2"/>
+      <path d="M8.5 17h7" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Sticky-иконки соцсетей -->
+<div class="sticky-social" aria-label="Быстрая связь">
+  <a href="https://t.me/ta_nkru" target="_blank" rel="noopener" class="sticky-social__link" aria-label="Написать в Telegram">
+    <svg class="sticky-social__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+  </a>
+  <a href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener" class="sticky-social__link" aria-label="Написать в Instagram">
+    <svg class="sticky-social__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+  </a>
+</div>
+
+<nav class="breadcrumb">
+  <div class="container">
+    <a class="breadcrumb__link" href="index.html">
+      <svg class="breadcrumb__icon" aria-hidden="true"><use href="#icon-arrow-left"/></svg>
+      На главную
+    </a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="city-hero">
+  <div class="city-hero__bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#192E52"/>
+          <stop offset="60%" stop-color="#1D3559"/>
+          <stop offset="100%" stop-color="#2A4E7B"/>
+        </linearGradient>
+        <radialGradient id="moonGlow" cx="82%" cy="20%" r="36%">
+          <stop offset="0%" stop-color="#C9A063" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#C9A063" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1200" height="500" fill="url(#skyGrad)"/>
+      <rect width="1200" height="500" fill="url(#moonGlow)"/>
+      <path d="M1000 72a34 34 0 1 0 26 56 28 28 0 1 1-26-56Z" fill="#C9A063" opacity="0.35"/>
+
+      <!-- Дальний хребет со снежными вершинами -->
+      <path d="M0 360 120 250l70 60 110-130 90 90 80-70 120 120 100-150 110 110 90-70 130 120 90-60 90 70v160H0Z" fill="#22406A" opacity="0.8"/>
+      <g fill="#C9A063" opacity="0.18">
+        <path d="m300 180 22 26-14-4-8 10-8-10-14 4Z"/>
+        <path d="m720 210 24 28-15-4-9 10-9-10-15 4Z"/>
+      </g>
+      <!-- Ближние горы -->
+      <path d="M0 420 160 330l90 50 140-90 120 80 110-60 150 100 120-70 160 90 150-60v180H0Z" fill="#183154" opacity="0.9"/>
+
+      <!-- Боевая башня (слева) -->
+      <g fill="#0F2141" opacity="0.95">
+        <path d="M150 460V318l6-4h36l6 4v142Z"/>
+        <path d="M150 318 174 266l24 52Z"/>
+        <rect x="168" y="350" width="10" height="16" fill="#22406A"/>
+        <rect x="168" y="396" width="10" height="16" fill="#22406A"/>
+      </g>
+      <!-- Мечеть с четырьмя минаретами (справа) -->
+      <g fill="#0F2141" opacity="0.95">
+        <rect x="870" y="300" width="8" height="170"/><path d="M870 300 874 258 878 300Z"/>
+        <rect x="1090" y="300" width="8" height="170"/><path d="M1090 300 1094 258 1098 300Z"/>
+        <rect x="905" y="330" width="7" height="140"/><path d="M905 330 908.5 296 912 330Z"/>
+        <rect x="1056" y="330" width="7" height="140"/><path d="M1056 330 1059.5 296 1063 330Z"/>
+        <path d="M930 470v-70a54 54 0 0 1 108 0v70Z"/>
+        <rect x="982" y="328" width="4" height="20"/>
+      </g>
+      <!-- Земля -->
+      <path d="M0 500V462c120-14 260-16 400-8s260 14 400 4 260-20 400-10v52Z" fill="#0F2141"/>
+    </svg>
+  </div>
+  <div class="city-hero__content">
+    <img class="brand-mark" src="assets/logo.png" alt="Chokdok — логотип Натальи Кожедуб" width="152" height="78">
+    <p class="city-hero__eyebrow">Авторский тур</p>
+    <h1 class="city-hero__title">Грозный <span class="accent">и горная Чечня</span></h1>
+    <p class="city-hero__lead">Три-четыре дня: белые мечети и вечерний Грозный, бирюзовый Кезеной-Ам, каменные башни над ущельями и горячий жижиг-галнаш</p>
+    <div class="city-hero__facts">
+      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-clock"/></svg>3–4 дня</span>
+      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-car"/></svg>Авто + пешие прогулки</span>
+      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-mosque"/></svg>3 главные мечети</span>
+      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-mountain"/></svg>Озеро, водопады, башни</span>
+    </div>
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="https://t.me/ta_nkru" target="_blank" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+        Обсудить поездку
+      </a>
+      <a class="btn btn--outline btn--outline-light" href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+        Написать в Instagram
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Программа по дням -->
+  <section class="section section--cream" id="program">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Программа</p>
+      <h2 class="section__title section__title--center">Три дня — <span class="accent">или четыре</span></h2>
+      <p class="section__lead">Городские впечатления сменяются горными дорогами. Первый день — Грозный и мечети, второй — озеро Кезеной-Ам и Хой, третий — башни и водопады на выбор. Четвёртый день добавляем, если хочется без спешки: музеи, рынок и, по желанию, кулинарный мастер-класс — или ещё одно ущелье. А можно съездить на день к соседям, в <a href="#neighbours" style="color: var(--color-sand);">Дагестан или горную Ингушетию</a>.</p>
+
+      <div class="route-choice route-choice--days">
+        <a class="route-choice__card reveal" href="#day1">
+          <p class="route-choice__num">День 1</p>
+          <h3 class="route-choice__title">Грозный и мечети</h3>
+          <p class="route-choice__text">Обзорная автомобильно-пешеходная экскурсия: «Сердце Чечни», проспект Путина, Грозный-Сити, а после обеда — мечети Аргуна и Шали. Вечером — подсветка и ужин на 32-м этаже.</p>
+          <p class="route-choice__meta">≈ 90 км на авто · 4–5 км пешком</p>
+        </a>
+        <a class="route-choice__card reveal" href="#day2">
+          <p class="route-choice__num">День 2</p>
+          <h3 class="route-choice__title">Кезеной-Ам и древний Хой</h3>
+          <p class="route-choice__text">Перевал через Андийский хребет, Харачой и водопад «Девичья коса», обед у самого большого озера Северного Кавказа и каменный город Хой.</p>
+          <p class="route-choice__meta">≈ 6 часов в дороге · 10–11 часов</p>
+        </a>
+        <a class="route-choice__card reveal" href="#day3">
+          <p class="route-choice__num">День 3</p>
+          <h3 class="route-choice__title">Горы на выбор</h3>
+          <p class="route-choice__text">Шарой с семью башнями и Нохчи-Келойским водопадом, или Аргунское ущелье: Нихалойские водопады, Ушкалойские башни, Пхакоч — с курортом Ведучи или без.</p>
+          <p class="route-choice__meta">Индивидуально · 8–11 часов</p>
+        </a>
+        <a class="route-choice__card route-choice__card--optional reveal" href="#day4">
+          <p class="route-choice__num">День 4 · по желанию</p>
+          <h3 class="route-choice__title">Грозный без спешки</h3>
+          <p class="route-choice__text">Национальный музей, рынок «Беркат» и, по желанию, мастер-класс по чеченской кухне — или второй горный маршрут из третьего дня.</p>
+          <p class="route-choice__meta">До отъезда · 5–9 часов</p>
+        </a>
+      </div>
+
+      <div class="legend">
+        <span><span class="tag tag--classic">Классика</span> обязательно к посещению</span>
+        <span><span class="tag tag--local">Местные</span> то, что знают свои</span>
+        <span><span class="tag tag--option">По желанию</span> если хватит сил и времени</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДЕНЬ 1: ГРОЗНЫЙ И МЕЧЕТИ ================= -->
+  <section class="section section--cream" id="day1" style="padding-top: 0;">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">День 1</p>
+      <h2 class="section__title section__title--center">Грозный и мечети: <span class="accent">обзорная экскурсия</span></h2>
+      <p class="section__lead">На машине переезжаем между районами и в соседние города, а пешком проходим центр Грозного: так увидим главное и не устанем после поезда. Мечети специально стоят в первом дне, чтобы вечером вернуться к «Сердцу Чечни» в подсветке.</p>
+
+      <div class="route-map reveal">
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+          <span class="route-stop__name">Вокзал и завтрак</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">10 мин авто</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-mosque"/></svg></span>
+          <span class="route-stop__name">«Сердце Чечни»</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">пешком</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-walk"/></svg></span>
+          <span class="route-stop__name">Проспект Путина</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">10 мин</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-columns"/></svg></span>
+          <span class="route-stop__name">Мемориал Славы</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">25 мин авто</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-mosque"/></svg></span>
+          <span class="route-stop__name">Аргун: «Сердце матери»</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">20 мин авто</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-mosque"/></svg></span>
+          <span class="route-stop__name">Шали: «Гордость мусульман»</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">40 мин авто</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-moon"/></svg></span>
+          <span class="route-stop__name">Вечерний Грозный-Сити</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="day1-timeline">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Час за часом</p>
+      <h2 class="section__title section__title--center">Первый день <span class="accent">в Чечне</span></h2>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">08:00</div>
+          <h3 class="stop-card__title">Встреча на вокзале и завтрак</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Встречаю вас на перроне, грузим чемоданы в машину и сразу едем в отель: вещи оставляем на ресепшене, а при раннем заезде можно принять душ после поезда (ранний заезд бронирую заранее).</p>
+              <p>Завтракаем не спеша. В Чечне завтрак сытный: горячие чепалгаш — тонкие лепёшки с творогом в топлёном масле, сыр, мёд, чай.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Завтрак в отеле</div>
+                <div class="side-card__meta">В Cosmos Selection Grozny City на завтрак подают и чеченские блюда: лепёшки с тыквой, кукурузный хлеб</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Мечеть «Сердце Чечни» <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Главная мечеть республики и символ нового Грозного, открыта в 2008 году. Белый мрамор, минареты высотой 62 метра, а внутри — расписанные купола и огромные люстры из тысяч кристаллов. Расскажу, как устроена мечеть, что означают надписи и как здесь принято себя вести.</p>
+              <p>Утром людей немного, и мягкий свет хорошо ложится на фасад. Неподалёку — Цветочный парк, один из самых ухоженных парков города.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Женщинам — длинная юбка или платье, закрытые руки и платок; накидки выдают на входе. Мужчинам — брюки. Во время намаза экскурсии приостанавливаются.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:15</div>
+          <h3 class="stop-card__title">Пешком: проспект Путина и храм Михаила Архангела</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Главная прогулочная улица Грозного: отреставрированные «сталинки», кафе и фонтаны. Здесь лучше всего видно, каким город стал после восстановления, и я расскажу, как он выглядел двадцать лет назад.</p>
+              <p>Отсюда недалеко до православного храма Михаила Архангела. Его в конце XIX века построили терские казаки, и это один из немногих уцелевших старых храмов Грозного. Хорошая точка, чтобы поговорить о многонациональной истории города.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+              <div>
+                <div class="side-card__name">Пауза на кофе</div>
+                <div class="side-card__meta">На проспекте Путина и бульваре Эсамбаева много кофеен, в которые заходят местные. Можно взять калмыцкий чай с молоком — его здесь пьют чаще кофе</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:15</div>
+          <h3 class="stop-card__title">Мемориальный комплекс Славы им. А. А. Кадырова <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Самый монументальный комплекс Грозного: аллея памяти героев Великой Отечественной войны и музей, посвящённый новейшей истории республики. Это самый быстрый способ понять, через что прошла Чечня и почему здесь так берегут мир.</p>
+              <p>На осмотр закладываем 40–60 минут. Подробнее о музеях Грозного — в разделе ниже.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Часы работы музея уточняю заранее. Если в день приезда он закрыт, перенесём визит на четвёртый день.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:15</div>
+          <h3 class="stop-card__title">Обед: первый жижиг-галнаш</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Пора попробовать главное блюдо Чечни: отварное мясо, галушки из кукурузной или пшеничной муки, чесночный соус и крепкий бульон. Галушки макают в соус, а мясо едят руками — так вкуснее.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">«Жижиг &amp; Galnash» или «Караван-Сарай»</div>
+                <div class="side-card__meta">Первый ресторан — за аутентичной кухней и большими порциями, второй — за восточным интерьером и саджем. Подробности ниже</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">14:45</div>
+          <h3 class="stop-card__title">Аргун: мечеть «Сердце матери» <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Двадцать пять минут на машине — и совсем другая архитектура. Мечеть имени Аймани Кадыровой, открытая в 2014 году, похожа на белый шатёр или распустившийся цветок: много стекла, лёгкие купола и минареты-иглы. Это одна из самых фотогеничных современных мечетей России.</p>
+              <p>Внутри очень светло: стены почти целиком из стекла, а интерьер кажется невесомым.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Совет фотографу</div>
+                <div class="side-card__meta">Отойдите к дальнему краю площади: оттуда мечеть целиком помещается в кадр, а в сумерках её подсветка особенно красива</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">16:00</div>
+          <h3 class="stop-card__title">Шали: мечеть «Гордость мусульман» <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Ещё двадцать минут — и самая большая мечеть Европы, открытая в 2019 году. Её архитектура отсылает к мечети Пророка в Медине: белый мрамор, колоннады, огромный двор с зонтиками-навесами и фонтаны. Масштаб здесь трудно передать на фото, его надо почувствовать.</p>
+              <p>Приезжаем к концу дня: камень становится тёплым, золотистым, а людей на площади меньше.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>По пятницам до середины дня мечети заполнены молящимися. Если первый день выпадает на пятницу, меняем порядок: сначала музеи, мечети — после обеда.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">17:30</div>
+          <h3 class="stop-card__title">Заселение и отдых</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Возвращаемся в Грозный. Пара часов на отдых — после ночи в поезде это важно. Обсудим вариант третьего дня, чтобы я подготовила машину и маршрут.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-bed"/></svg></span>
+              <div>
+                <div class="side-card__name">Где жить</div>
+                <div class="side-card__meta">Восемь отелей с честным описанием атмосферы и сервиса — в разделе «Где остановиться»</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">19:30</div>
+          <h3 class="stop-card__title">Вечерний Грозный: подсветка и ужин на высоте <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Вечером центр меняется: «Сердце Чечни» светится в темноте, а башни Грозный-Сити переливаются огнями. Небольшая прогулка вдоль мечети и Цветочного парка — местные семьи выходят гулять именно в это время.</p>
+              <p>Ужинаем в ресторане «Купол» на 32-м этаже Cosmos Selection Grozny City: чеченские блюда, европейская кухня и авторские блюда шеф-повара, а за окном — весь вечерний Грозный и подсвеченная мечеть.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-terrace"/></svg></span>
+              <div>
+                <div class="side-card__name">Ресторан «Купол» · 32 этаж</div>
+                <div class="side-card__meta">Столик у окна с видом на мечеть бронирую заранее, в выходные места заканчиваются быстро</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДЕНЬ 2: КЕЗЕНОЙ-АМ И ХОЙ ================= -->
+  <section class="section section--cream" id="day2" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">День 2</p>
+      <h2 class="section__title section__title--center">Озеро Кезеной-Ам <span class="accent">и древний Хой</span></h2>
+      <p class="section__lead">Дорога займёт около трёх часов в одну сторону и сама станет частью путешествия: ущелья, серпантин и перевал через Андийский хребет. Поэтому выезжаем в 9:00, а мечети Шали и Аргуна, которые раньше были на обратном пути, мы уже увидели в первый день. Вечер останется свободным.</p>
+
+      <div class="route-map reveal">
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-car"/></svg></span>
+          <span class="route-stop__name">Выезд из Грозного</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">1,5 ч</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-waterfall"/></svg></span>
+          <span class="route-stop__name">Харачой: Зелимхан и «Девичья коса»</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">1 ч</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-mountain"/></svg></span>
+          <span class="route-stop__name">Андийский хребет</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">30 мин</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-lake"/></svg></span>
+          <span class="route-stop__name">Кезеной-Ам: обед у воды</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">20 мин</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-tower"/></svg></span>
+          <span class="route-stop__name">Хой: башни и террасы</span>
+        </div>
+        <div class="route-link"><span class="route-link__line"></span><span class="route-link__time">3 ч</span></div>
+        <div class="route-stop">
+          <span class="route-stop__dot"><svg aria-hidden="true"><use href="#icon-moon"/></svg></span>
+          <span class="route-stop__name">Возвращение в Грозный</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="day2-timeline">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Час за часом</p>
+      <h2 class="section__title section__title--center">День <span class="accent">в горах</span></h2>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">09:00</div>
+          <h3 class="stop-card__title">Выезд и дорога через Ведено</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Равнина быстро сменяется предгорьями, а затем начинаются буковые леса и ущелья Веденского района. По дороге рассказываю о горных тейпах, кавказской войне и имаме Шамиле, чья резиденция была в Ведено.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Если укачивает в машине, сядьте впереди и примите таблетку заранее: серпантина будет много.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:30</div>
+          <h3 class="stop-card__title">Харачой: абрек Зелимхан и водопад «Девичья коса»</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Село Харачой — родина абрека Зелимхана, «кавказского Робин Гуда» начала XX века. У памятника рассказываю его историю — местные знают её наизусть.</p>
+              <p>Чуть дальше прямо у дороги со скалы тонкими струями спускается водопад «Девичья коса». Отличная остановка, чтобы размять ноги и умыться ледяной водой.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-waterfall"/></svg></span>
+              <div>
+                <div class="side-card__name">Харачоевский водопад</div>
+                <div class="side-card__meta">Красивее всего в мае–июне, когда тает снег. В конце лета струй меньше, но фото всё равно получаются красивые</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:30</div>
+          <h3 class="stop-card__title">Перевал через Андийский хребет <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Дорога поднимается выше леса, и открываются альпийские луга и хребты до горизонта. Делаем остановку на смотровой площадке у перевала: отсюда видно и Чечню, и Дагестан.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Наверху даже летом прохладно и ветрено — возьмите ветровку или кофту.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:15</div>
+          <h3 class="stop-card__title">Озеро Кезеной-Ам <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Самое большое озеро Северного Кавказа лежит на высоте около 1 870 метров, прямо на границе с Дагестаном. Вода меняет цвет от бирюзового до глубокого синего в зависимости от облаков. В озере водится эндемичная кезенойская форель — она есть только здесь и занесена в Красную книгу.</p>
+              <p>Гуляем по берегу, фотографируемся и обедаем в ресторане туристического комплекса с видом на воду: чеченская и европейская кухня, горячий хлеб, мясо и чай с чабрецом.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Ресторан комплекса «Кезеной-Ам»</div>
+                <div class="side-card__meta">Займите столик на веранде. Летом здесь же можно взять катамаран или прокатиться верхом</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">14:30</div>
+          <h3 class="stop-card__title">Древний Хой — каменный город <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>В двадцати минутах от озера, над ущельем, стоит заброшенное селение из серого сланца. Дома и боевые башни сложены без раствора, а склоны вокруг изрезаны старинными земледельческими террасами. Когда-то Хой называли «житницей» горной Чечни.</p>
+              <p>Поднимаемся по тропинкам между домами. Ощущение — будто вы в кадре исторического кино: тишина, ветер и ни одного современного здания до горизонта.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Нужна удобная обувь с цепкой подошвой: камни и тропинки неровные.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">16:00</div>
+          <h3 class="stop-card__title">Обратная дорога в Грозный</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Возвращаемся тем же перевалом, но в предзакатном свете он выглядит совсем иначе. Если есть силы и желание, по пути заезжаем к роднику или в придорожную пекарню за свежими хингалш с тыквой.</p>
+              <p>В Грозном около 19:00. Вечер свободный: можно поужинать в «Караван-Сарае» или спокойно отдохнуть в отеле.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-bed"/></svg></span>
+              <div>
+                <div class="side-card__name">Можно остаться в горах</div>
+                <div class="side-card__meta">Если хочется встретить рассвет над озером, ночуем на турбазе «Кезеной-Ам», а третий день начинаем прямо из гор</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДЕНЬ 3: ГОРЫ НА ВЫБОР ================= -->
+  <section class="section section--cream" id="day3" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">День 3</p>
+      <h2 class="section__title section__title--center">В горы — <span class="accent">по выбранному маршруту</span></h2>
+      <p class="section__lead">Экскурсия проходит в индивидуальном формате, выезд из Грозного в 8:30–9:00. Выберите вариант по настроению: башни и крепости, природа и курорт или только водопады и история.</p>
+
+      <div class="option-cards">
+        <article class="option-card reveal">
+          <p class="option-card__num">Вариант 1</p>
+          <h3 class="option-card__title">Крепость Шарой и водопад</h3>
+          <div class="option-card__route">Грозный → Нохчи-Келойский водопад → Шаройский историко-архитектурный комплекс → обед в горах → Грозный</div>
+          <p>Едем к Шаройскому комплексу с семью боевыми башнями. На месте разбираемся, как устроены боевые и жилые башни, кто и зачем их строил, и как жили горные общества-тукхумы.</p>
+          <p>По пути останавливаемся у Нохчи-Келойского водопада высотой около 54 метров. К нему ведёт короткая тропа, а брызги долетают до смотровой площадки.</p>
+          <p class="option-card__for">Для тех, кому интересны древние крепости и горные пейзажи без толп туристов.</p>
+          <p class="option-card__meta">≈ 10–11 часов · самый дальний вариант</p>
+        </article>
+
+        <article class="option-card reveal">
+          <p class="option-card__num">Вариант 2</p>
+          <h3 class="option-card__title">Аргунское ущелье и Ведучи</h3>
+          <div class="option-card__route">Грозный → Нихалойские водопады → Ушкалойские башни → Пхакоч → курорт Ведучи → Грозный</div>
+          <p>Насыщенный маршрут по самому красивому ущелью Чечни. Сначала каскад Нихалойских водопадов, затем Ушкалойские башни, встроенные в скальную нишу над рекой, и средневековый комплекс Пхакоч.</p>
+          <p>Завершаем день на горном курорте Ведучи: подъёмник, панорамы Главного Кавказского хребта и кофе на высоте.</p>
+          <p class="option-card__for">Для тех, кто хочет совместить природу, историю и знакомство с горным курортом.</p>
+          <p class="option-card__meta">≈ 9–10 часов · самый разнообразный</p>
+        </article>
+
+        <article class="option-card reveal">
+          <p class="option-card__num">Вариант 3</p>
+          <h3 class="option-card__title">Аргунское ущелье: водопады и башни</h3>
+          <div class="option-card__route">Грозный → Чанты-Аргунский источник → Нихалойские водопады → Ушкалойские башни → Пхакоч → Грозный</div>
+          <p>Путешествие по ущелью в спокойном темпе. Пьём воду из Чанты-Аргунского источника, гуляем по тропам у Нихалойских водопадов и смотрим Ушкалойские башни.</p>
+          <p>В комплексе Пхакоч знакомимся с архитектурой и традиционным укладом горной Чечни: как строили дома, как делили землю и воду.</p>
+          <p class="option-card__for">Для тех, кто хочет сосредоточиться на природе и истории, без курорта Ведучи.</p>
+          <p class="option-card__meta">≈ 8 часов · самый спокойный</p>
+        </article>
+      </div>
+
+      <p class="disclaimer">Аргунское ущелье и Ведучи находятся в пограничной зоне с Грузией: на постах проверяют паспорта, поэтому берём их с собой. Если вы иностранец, пропуск в погранзону оформляем заранее, обычно это занимает несколько недель.</p>
+    </div>
+  </section>
+
+  <!-- ================= ДЕНЬ 4 ================= -->
+  <section class="section section--navy" id="day4">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">День 4 · по желанию</p>
+      <h2 class="section__title section__title--center">Грозный <span class="accent">без спешки</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Четвёртый день стоит добавить, если поезд или самолёт вечером. Можно взять второй горный маршрут из третьего дня, а можно провести спокойный день в городе: музеи, рынок и, если захотите, мастер-класс по чеченской кухне.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Национальный музей Чеченской Республики</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Главный исторический музей республики: археология, оружие, украшения, традиционные костюмы и живопись. Особенно интересны залы о башенной культуре, если накануне вы были в горах: теперь станет понятно, что вы видели в Хое и Пхакоче.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Если в первый день не успели в Мемориальный комплекс Славы — заезжаем сюда же.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:00</div>
+          <h3 class="stop-card__title">Рынок «Беркат» <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Центральный рынок Грозного — самое живое место в городе. Пробуем горный мёд, сушёные фрукты и чеченскую халву из обжаренной муки и масла, нюхаем чабрец и мяту, смотрим на рулоны тканей и войлок.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-bag"/></svg></span>
+              <div>
+                <div class="side-card__name">Что увезти домой</div>
+                <div class="side-card__meta">Горный мёд, чеченская халва, сушёная черемша, войлочные изделия и платки ручной работы. Цены спрашивайте спокойно: торговаться здесь принято, но вежливо</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:30</div>
+          <h3 class="stop-card__title">Мастер-класс по чеченской кухне <span class="tag tag--option">По желанию</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Если хочется не только попробовать чеченскую кухню, но и приготовить её своими руками, можно устроить мастер-класс. Вас научат раскатывать тонкое тесто на чепалгаш и лепить хингалш с тыквой, а потом приготовленное вы съедите вместе с жижиг-галнаш, сискалом и чаем.</p>
+              <p>Это хороший повод расспросить о местных традициях: как готовят к праздникам, как принимают гостей и почему гостя не отпускают голодным.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Устраивается по запросу</div>
+                <div class="side-card__meta">Мастер-класс не входит в базовую программу: скажите заранее, если он вам интересен, и я подберу формат и время. Сразу предупредите об аллергиях и о том, едите ли вы баранину</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">16:00</div>
+          <h3 class="stop-card__title">Финал: смотровая Грозный-Сити и проводы</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Если позволяет время, поднимаемся на смотровую площадку Грозный-Сити — оттуда видно и мечеть, и горы, где вы были накануне. Затем трансфер на вокзал или в аэропорт.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Вечером, если в эти дни есть концерт, советую ансамбль танца «Вайнах» в Чеченской филармонии — это стоит увидеть вживую.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ: СОСЕДИ ================= -->
+  <section class="section section--cream" id="neighbours">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Ещё один день · по желанию</p>
+      <h2 class="section__title section__title--center">Соседи: <span class="accent">Дагестан или горная Ингушетия</span></h2>
+      <p class="section__lead">Из Грозного удобно съездить на день в соседнюю республику. Это можно сделать вместо четвёртого дня или добавить пятым. Выезжаем рано, в 7:30–8:00, и возвращаемся в Грозный вечером. Экскурсия индивидуальная, на машине.</p>
+
+      <div class="option-cards option-cards--two">
+        <article class="option-card reveal">
+          <p class="option-card__num">Дагестан</p>
+          <h3 class="option-card__title">Сулакский каньон и бархан Сарыкум</h3>
+          <div class="option-card__route">Грозный → Хасавюрт → Сулакский каньон (Дубки) → прогулка на катере → обед у воды → бархан Сарыкум → Грозный</div>
+          <p>Едем к Сулакскому каньону, одному из самых глубоких в мире: местами больше 1 900 метров, глубже Гранд-Каньона. Со смотровой площадки в посёлке Дубки бирюзовая река виднеется далеко внизу.</p>
+          <p>Затем спускаемся к воде и на катере проходим по каньону и Чиркейскому водохранилищу между отвесными стенами. Обедаем у воды: свежая рыба, дагестанские чуду и хинкал.</p>
+          <p>На обратном пути заезжаем к бархану Сарыкум, одному из крупнейших песчаных барханов Евразии. Посреди зелёных предгорий стоит настоящая пустыня, и на закате песок светится золотым.</p>
+          <p class="option-card__for">Для тех, кто хочет самых эффектных пейзажей и контрастов: горы, вода и пустыня за один день.</p>
+          <p class="option-card__meta">≈ 11–12 часов · около 6 часов в дороге</p>
+        </article>
+
+        <article class="option-card reveal">
+          <p class="option-card__num">Ингушетия</p>
+          <h3 class="option-card__title">Башни и храмы горной Ингушетии</h3>
+          <div class="option-card__route">Грозный → Назрань → Ассинское ущелье → храм Тхаба-Ерды → Таргим и Эгикал → перевал у горы Цей-Лоам → Вовнушки → Грозный</div>
+          <p>Горная Ингушетия — край башен. В Ассинском ущелье стоит Тхаба-Ерды, одна из древнейших христианских построек Северного Кавказа. Рядом, в Таргимской котловине, — целые башенные городки Таргим и Эгикал с боевыми и жилыми башнями и склепами.</p>
+          <p>Дорога поднимается к смотровой площадке у горы Цей-Лоам на высоте около 2 150 метров, откуда видны ущелья и снежные хребты. Затем едем к Вовнушкам: башни стоят прямо на краю скал и кажутся их продолжением. Это одно из самых фотогеничных мест Кавказа.</p>
+          <p>Обедаем в горах: ингушская кухня близка к чеченской, так что можно сравнить, чем отличаются местные чепалгаш и мясо с галушками.</p>
+          <p class="option-card__for">Для тех, кому понравились башни Хоя и Шароя и хочется увидеть, как строили соседи.</p>
+          <p class="option-card__meta">≈ 9–10 часов · около 4–5 часов в дороге</p>
+        </article>
+      </div>
+
+      <p class="disclaimer">В обе поездки берём паспорт: на въезде в соседние республики есть посты. Горная Ингушетия граничит с Грузией, поэтому для иностранцев правила въезда в приграничные районы уточняю заранее. Катера на Сулаке работают в тёплый сезон, а горные дороги Ингушетии лучше проходимы с мая по октябрь.</p>
+    </div>
+  </section>
+
+  <!-- ================= ОТЕЛИ ================= -->
+  <section class="section section--cream" id="hotels">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где остановиться</p>
+      <h2 class="section__title section__title--center">Отели — <span class="accent">с честными впечатлениями</span></h2>
+      <p class="section__lead">Все маршруты начинаются из Грозного, поэтому живём в городе. Ниже — восемь вариантов с разной атмосферой: от высотной «пятёрки» с видом на мечеть до домашнего гостевого дома и ночи у озера.</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-bed"/></svg></span>
+          <h3 class="places-group__title">Отели и гостевые дома</h3>
+          <span class="places-group__count">8 вариантов</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Cosmos Selection Grozny City</div>
+            <div class="place__where">Комплекс «Грозный-Сити» · 5★ · рядом с мечетью</div>
+            <p><b>Атмосфера:</b> столичная и немного торжественная. Высотные башни, панорамные окна и вид на «Сердце Чечни», которая ночью светится прямо под вами.</p>
+            <p><b>Сервис:</b> сетевые стандарты, слаженный ресепшен, завтраки с чеченскими блюдами. На 32-м этаже — ресторан «Купол».</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> как в большом современном городе, до мечети и проспекта Путина можно дойти пешком. Хороший выбор для первой поездки и для тех, кто ценит вид из окна. Атмосфера скорее деловая, чем уютная, — просите номер на высоком этаже с видом на мечеть.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">The Local Hotels Grozny</div>
+            <div class="place__where">Пр. Мохаммеда Али, 53/25 · бассейн, SPA, ресторан Liwa</div>
+            <p><b>Атмосфера:</b> современная, с восточными акцентами. Дизайнерские интерьеры, а ресторан Liwa оформлен в арабском стиле. Вечером здесь хочется остаться, а не уходить в город.</p>
+            <p><b>Сервис:</b> около 4,9 из 5 по трём сотням отзывов, в том числе свежих 2026 года. Гости хвалят кухню, доброжелательный персонал, разнообразный завтрак-буфет и SPA-центр Sakura Time. Есть бассейн, сауна и тренажёрный зал.</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> как на маленьком курорте в черте города. После гор можно провести вечер в SPA и поужинать в отеле. Подходит тем, кто хочет комфорта уровня «пятёрки», но в более камерной обстановке, чем высотки Грозный-Сити. Отель стоит чуть в стороне от центра, так что к мечети удобнее ехать на машине. Изредка гости жалуются на духоту в номере, поэтому при заселении прошу проверить кондиционер.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Grozny Palace</div>
+            <div class="place__where">Ул. Маты Кишиевой, 59</div>
+            <p><b>Атмосфера:</b> современный дизайн с элементами чеченской культуры. Национальный колорит чувствуется уже в лобби и ресторане.</p>
+            <p><b>Сервис:</b> в свежих отзывах гости хвалят чистоту и внимательный, дружелюбный персонал. В ресторане — местные блюда и европейское меню.</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> как в гостях, но с удобствами хорошего отеля. Подходит тем, кто хочет почувствовать Чечню, не уезжая из города, и любит тёплый, личный приём.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">«Дона»</div>
+            <div class="place__where">Пр. Х. А. Исаева, 85 · центр, у мечети и «Грозный Молла»</div>
+            <p><b>Атмосфера:</b> городская и практичная. Отель занимает два нижних этажа жилой высотки в самом центре: до «Сердца Чечни» и проспекта Путина можно дойти пешком.</p>
+            <p><b>Сервис:</b> около 9,1 балла по двум сотням отзывов. Гости хвалят расположение и завтраки из местных продуктов, которые подают в ресторане на первом этаже. Завтрак включён в стоимость.</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> в самой гуще города. Удобно тем, кто хочет вечером гулять по центру и смотреть на подсветку мечети, а не ездить на такси. Это хороший средний вариант по цене. Вида с высоты и SPA здесь нет.</span>
+            <span class="place__tip">В Грозном есть несколько объектов с названием «Дона», поэтому бронирую именно тот, что на проспекте Исаева.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Арена Сити</div>
+            <div class="place__where">Центр, тихая зона · бассейн и SPA</div>
+            <p><b>Атмосфера:</b> спокойная, курортная. Отель стоит в тихой части центра, внутри — бассейн, сауна, SPA и тренажёрный зал.</p>
+            <p><b>Сервис:</b> гости отмечают чистые номера, хорошую уборку и разнообразные завтраки. Национальную кухню подают в ресторане «Огни Востока».</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> отдохнувшими. После целого дня в горах приятно вернуться в бассейн и сауну, а не просто в номер. Подходит семьям и тем, кто ценит тишину. До центра — приятная прогулка или пять минут на такси.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Union Hotel Grozny</div>
+            <div class="place__where">Тихий жилой район · ≈ 1,8 км от центра, 1,4 км от вокзала</div>
+            <p><b>Атмосфера:</b> спокойная и уютная. Номера в минималистичном стиле со свежим ремонтом, вокруг — тихий спальный район.</p>
+            <p><b>Сервис:</b> одна из самых высоких оценок в городе — около 9,4 по сотне с лишним отзывов. Чаще всего хвалят вежливый персонал, который откликается на просьбы: например, к заселению гостей с малышом заранее поставили детское кресло. Завтрак простой, без шведской линии, но вкусный.</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> как в небольшом заботливом отеле, где вас запоминают. Подходит парам и семьям, которым важнее сервис и чистота, чем вид и инфраструктура. Честно о минусах: лифта нет, в части номеров слышна дорога, а при полной загрузке бывают перебои с горячей водой. Поэтому прошу тихий номер, а гостям с тяжёлым багажом советую другие отели.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Гостевой дом «Городок»</div>
+            <div class="place__where">Ул. Нурсултана Назарбаева · ≈ 1,3 км от центра</div>
+            <p><b>Атмосфера:</b> домашняя и камерная, без гостиничной суеты.</p>
+            <p><b>Сервис:</b> простой, без ресторана и SPA, зато с личной заботой. Оценка около 9,3 по более чем сотне отзывов.</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> как у знакомых, которые подскажут, где купить лучший мёд. Самый бюджетный вариант из списка. Подойдёт спокойным путешественникам, которым не нужны бассейн и ресторан.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Турбаза «Кезеной-Ам»</div>
+            <div class="place__where">Берег озера · Веденский район · номера и коттеджи</div>
+            <p><b>Атмосфера:</b> горная и тихая. Утром над озером стоит туман, вечером — звёзды, каких не увидишь в городе.</p>
+            <p><b>Сервис:</b> проще, чем в Грозном, — это база отдыха, а не отель. Есть ресторан с чеченской и европейской кухней, летом работают прокат катамаранов и конные прогулки.</p>
+            <span class="place__fit"><b>Как вы будете себя чувствовать:</b> далеко от суеты. Хороший вариант на одну ночь после второго дня, если хочется встретить рассвет у воды. Ночью в горах прохладно даже летом.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= МУЗЕИ ================= -->
+  <section class="section section--cream" id="museums" style="padding-top: 0;">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Что посмотреть</p>
+      <h2 class="section__title section__title--center">Музеи <span class="accent">и места силы</span></h2>
+      <p class="section__lead">В Чечне история — не только в залах музеев. Половина самого интересного стоит под открытым небом, в горах.</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-columns"/></svg></span>
+          <h3 class="places-group__title">Музеи Грозного</h3>
+          <span class="places-group__count">4 места</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Национальный музей Чеченской Республики</div>
+            <div class="place__where">Грозный · история и искусство</div>
+            <p>Создан в 1996 году на основе двух музеев: краеведческого (1924) и музея изобразительных искусств имени П. З. Захарова (1961). Археология, оружие, костюмы, украшения и картины. Если идти только в один музей — то сюда.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Мемориальный комплекс Славы им. А. А. Кадырова</div>
+            <div class="place__where">Грозный · история XX века</div>
+            <p>Аллея памяти героев Великой Отечественной войны и музейная экспозиция о новейшей истории республики. Самое быстрое и наглядное погружение в контекст.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Храм Архангела Михаила</div>
+            <div class="place__where">Грозный · конец XIX века</div>
+            <p>Храм, построенный терскими казаками и восстановленный после войны. Небольшой, но очень важный для понимания многонационального прошлого города.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Смотровая площадка Грозный-Сити</div>
+            <div class="place__where">Комплекс высоток в центре</div>
+            <p>Не музей, но лучший способ увидеть город целиком: мечеть, Сунжу и горы на горизонте. Красивее всего на закате.</p>
+            <span class="place__tip">Часы работы меняются — проверяю перед поездкой.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tower"/></svg></span>
+          <h3 class="places-group__title">Под открытым небом</h3>
+          <span class="places-group__count">4 места</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Хой</div>
+            <div class="place__where">Веденский район · у озера Кезеной-Ам</div>
+            <p>Заброшенное каменное селение с башнями и земледельческими террасами — настоящий музей под открытым небом. День 2.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Шаройский комплекс</div>
+            <div class="place__where">Шаройский район</div>
+            <p>Семь боевых башен на одном склоне — самый наглядный пример башенной архитектуры. День 3, вариант 1.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Ушкалойские башни</div>
+            <div class="place__where">Аргунское ущелье</div>
+            <p>Сторожевые башни, встроенные прямо в скальную нишу над рекой, — редкий даже для Кавказа тип построек. День 3, варианты 2 и 3.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Пхакоч</div>
+            <div class="place__where">Аргунское ущелье</div>
+            <p>Средневековый комплекс жилых и боевых построек, по которому видно, как была устроена жизнь горного селения. День 3, варианты 2 и 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ЕДА ================= -->
+  <section class="section section--cream" id="food" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где вкусно поесть</p>
+      <h2 class="section__title section__title--center">Чеченская кухня: <span class="accent">что и где пробовать</span></h2>
+      <p class="section__lead">Чеченская кухня простая и очень сытная: мясо, кукуруза, тыква, творог и чеснок. Порции большие, гостей кормят щедро, а чай подают ко всему. Алкоголь в республике почти не продаётся и в ресторанах не подаётся.</p>
+
+      <div class="dishes">
+        <div class="dish reveal">
+          <div class="dish__name">Жижиг-галнаш</div>
+          <p>Главное блюдо: отварное мясо, галушки, чесночный соус и бульон. Пробуем хотя бы дважды — в ресторане и дома.</p>
+        </div>
+        <div class="dish reveal">
+          <div class="dish__name">Чепалгаш</div>
+          <p>Тонкие лепёшки с творогом или тыквой, сложенные стопкой и пропитанные топлёным маслом. Лучшие — горячие, прямо со сковороды.</p>
+        </div>
+        <div class="dish reveal">
+          <div class="dish__name">Хингалш</div>
+          <p>Полумесяцы из тонкого теста со сладковатой тыквой. Любимая домашняя выпечка и лучший перекус в дорогу.</p>
+        </div>
+        <div class="dish reveal">
+          <div class="dish__name">Сискал</div>
+          <p>Кукурузный хлеб — к мясу, к сыру, к чаю. Простой, но без него стол не считается накрытым.</p>
+        </div>
+        <div class="dish reveal">
+          <div class="dish__name">Чеченская халва</div>
+          <p>Из обжаренной муки, масла и сахара или мёда. Совсем не похожа на подсолнечную халву — попробуйте на рынке.</p>
+        </div>
+        <div class="dish reveal">
+          <div class="dish__name">Калмыцкий чай</div>
+          <p>Чай с молоком, маслом, солью и перцем. Звучит странно, но в горах согревает лучше любого кофе.</p>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+          <h3 class="places-group__title">Рестораны: вкусно и атмосферно</h3>
+          <span class="places-group__count">7 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">«Купол»</div>
+            <div class="place__where">32 этаж Cosmos Selection Grozny City · кухня шеф-повара</div>
+            <p>Гастрономическая вершина города — и в прямом смысле тоже. Национальные блюда по традиционным рецептам, европейская кухня и авторские блюда шефа. Цены для ресторана такого уровня умеренные.</p>
+            <span class="place__tip">Для ужина в первый вечер; столик у окна бронирую заранее.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">«Караван-Сарай»</div>
+            <div class="place__where">Ул. Дукувахи Абдурахманова, 20 · восточный интерьер</div>
+            <p>Большой ресторан в турецко-восточном стиле: узоры, арабские светильники, мягкие диваны. Здесь стоит заказать жижиг-галнаш, кавказский садж на сковороде или турецкий стейк.</p>
+            <span class="place__tip">В пятницу открывается позже, с 13:30.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">«Жижиг &amp; Galnash»</div>
+            <div class="place__where">Проспект Путина и другие филиалы · вайнахская кухня</div>
+            <p>Ресторан традиционной кухни: много дерева и камня, портреты горцев в папахах на стенах. Порции огромные, жижиг-галнаш — в нескольких вариантах.</p>
+            <span class="place__tip">Честно: сервис бывает неторопливым. Идём сюда за едой, а не за обслуживанием.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">The House Restaurant</div>
+            <div class="place__where">«Барский дом» · бульвар Эсамбаева, 2</div>
+            <p>Ресторан в здании «Барского дома» в самом центре. Спокойная атмосфера для неспешного ужина и хорошее место, чтобы посидеть после прогулки по бульвару.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Grill House Grozny</div>
+            <div class="place__where">Бульвар Эсамбаева, 11 · мясо на углях</div>
+            <p>Стейки, шашлыки и мясо на гриле — для вечера, когда хочется просто хорошего мяса. Рядом с проспектом Путина.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">«Огни Востока»</div>
+            <div class="place__where">Отель «Арена Сити» · национальная кухня</div>
+            <p>Удобно, если вы живёте в «Арена Сити»: чеченские блюда без поездки через весь город, спокойный зал и хорошие завтраки.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Мастер-класс по чеченской кухне</div>
+            <div class="place__where">По запросу · День 4</div>
+            <p>Готовите чепалгаш и хингалш своими руками, а потом обедаете тем, что приготовили, вместе с жижиг-галнаш и чаем.</p>
+            <span class="place__tip">Не входит в базовую программу — предупредите заранее, и я всё устрою.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical info -->
+  <section class="section section--cream" style="padding-top: 0;" id="practical">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Полезно знать</p>
+      <h2 class="section__title section__title--center">Советы <span class="accent">местного</span></h2>
+      <div class="practical">
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-scarf"/></svg>
+          <strong>Одежда</strong>
+          <span>Женщинам — юбки и платья ниже колена, закрытые плечи, в мечеть — платок. Мужчинам — без шорт. В горы — удобная обувь и ветровка</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-passport"/></svg>
+          <strong>Документы</strong>
+          <span>Паспорт всегда с собой: на дорогах посты, а Аргунское ущелье и Ведучи — пограничная зона. Иностранцам нужен пропуск, оформляем заранее</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-card"/></svg>
+          <strong>Деньги и время</strong>
+          <span>В Грозном везде принимают карты, в горах нужны наличные. Алкоголь почти не продаётся. Пятница — день молитвы, до обеда мечети заняты</span>
+        </div>
+      </div>
+      <p class="disclaimer">Лучшее время для поездки — с мая по октябрь: открыт перевал к Кезеной-Аму и полноводны водопады. Часы работы музеев и ресторанов меняются, поэтому перед поездкой я сверяю всё по маршруту, бронирую столики и подтверждаю заселение.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--navy cta">
+    <div class="container cta__inner reveal">
+      <h2 class="cta__title">Поедем в Чечню?</h2>
+      <p class="cta__lead">Подберу отель под ваш стиль отдыха, встречу с поезда, соберу маршрут на 3 или 4 дня, а по желанию устрою мастер-класс по чеченской кухне.</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="https://t.me/ta_nkru" target="_blank" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+          Написать в Telegram
+        </a>
+        <a class="btn btn--outline btn--outline-light" href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+          Написать в Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <img class="brand-mark" src="assets/logo.png" alt="Chokdok — логотип Натальи Кожедуб" width="104" height="53">
+    <p class="footer__brand">Наталья Кожедуб</p>
+    <div class="footer__social">
+      <a href="https://t.me/ta_nkru" target="_blank" rel="noopener" aria-label="Telegram">
+        <svg class="footer__icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+      </a>
+      <a href="https://instagram.com/chokdoktravel" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="footer__icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+      </a>
+    </div>
+    <p class="footer__copyright">© 2026 Наталья Кожедуб</p>
+    <p class="footer__legal">Instagram — продукт компании Meta Platforms Inc., деятельность которой по реализации продуктов Instagram и Facebook на территории Российской Федерации признана экстремистской и запрещена.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
