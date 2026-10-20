@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Стамбул: два маршрута от местного жителя | Наталья Кожедуб</title>
-<meta name="description" content="Три маршрута по Стамбулу: Султанахмет, Таксим — Галата и Босфор. Классические достопримечательности и тихие места без толп, лучшие видовые точки, кофейни, уличная еда, террасы и рестораны для ужина.">
+<meta name="description" content="Четыре маршрута по Стамбулу: Султанахмет, Таксим — Галата, Босфор и Принцевы острова. Классические достопримечательности и тихие места без толп, лучшие видовые точки, кофейни, уличная еда, террасы и рестораны для ужина.">
 <meta name="theme-color" content="#1D3559">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 
@@ -229,6 +229,13 @@
   .stay-option__link { display: inline-block; margin-top: 0.4rem; font-size: 0.82rem; color: var(--color-navy); border-bottom: 1px solid var(--color-sand); }
   .stay-compare__tip { margin-top: 1.4rem; padding: 1rem 1.2rem; background: #fff; border-left: 2px solid var(--color-sand); font-size: 0.9rem; line-height: 1.6; color: var(--color-graphite); }
 
+  /* ---- Islands story ---- */
+  .story { display: grid; gap: 1.4rem; margin-top: 2.4rem; }
+  .story__item { background: #fff; border: 1px solid rgba(201, 160, 99, 0.45); padding: 1.4rem 1.4rem 1.3rem; color: var(--color-graphite); }
+  .story__item h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .story__item p { font-size: 0.9rem; line-height: 1.65; opacity: 0.88; margin: 0 0 0.55rem; }
+  .story__item p:last-child { margin-bottom: 0; }
+
   /* ---- Practical strip ---- */
   .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
   .practical__item { padding: 1.4rem 1rem; border: 1px solid rgba(201, 160, 99, 0.4); }
@@ -244,9 +251,9 @@
     .city-hero__lead { font-size: 1.35rem; }
 
     .route-choice { grid-template-columns: 1fr 1fr; }
-    .route-choice > .route-choice__card:nth-child(3):last-child { grid-column: 1 / -1; }
     .review-cards { grid-template-columns: 1fr 1fr; }
     .stay-compare__grid { grid-template-columns: 1fr 1fr; }
+    .story { grid-template-columns: repeat(3, 1fr); }
     .stop-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
     .places { grid-template-columns: repeat(2, 1fr); }
     .practical { grid-template-columns: repeat(3, 1fr); }
@@ -430,7 +437,7 @@
     <h1 class="city-hero__title">Стамбул <span class="accent">глазами местного</span></h1>
     <p class="city-hero__lead">Два дня, две стороны Золотого Рога: главные открытки города и тихие дворики, где пьют чай сами стамбульцы</p>
     <div class="city-hero__facts">
-      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-walk"/></svg>3 маршрута</span>
+      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-walk"/></svg>4 маршрута</span>
       <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-eye"/></svg>Классика + места без толп</span>
       <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-meal"/></svg>50+ проверенных мест</span>
     </div>
@@ -452,9 +459,9 @@
   <!-- Выбор маршрута -->
   <section class="section section--cream" id="routes">
     <div class="container">
-      <p class="eyebrow eyebrow--center">Три маршрута</p>
+      <p class="eyebrow eyebrow--center">Четыре маршрута</p>
       <h2 class="section__title section__title--center">Выберите, <span class="accent">с чего начать</span></h2>
-      <p class="section__lead">Первые два маршрута рассчитаны на полный день пешком в спокойном темпе, третий — на несколько прогулок по Босфору. В нём есть обязательная классика — и места рядом, о которых знают в основном местные.</p>
+      <p class="section__lead">Первые два маршрута рассчитаны на полный день пешком в спокойном темпе, третий — на несколько прогулок по Босфору, четвёртый — на день на Принцевых островах. В каждом есть обязательная классика — и места рядом, о которых знают в основном местные.</p>
 
       <div class="route-choice">
         <a class="route-choice__card reveal" href="#sultanahmet">
@@ -474,6 +481,12 @@
           <h3 class="route-choice__title">Босфор</h3>
           <p class="route-choice__text">Нишанташи и Зорлу, Бешикташ, Ортакёй, Куручешме и Бебек, Верхний Босфор и Ченгелькёй на азиатском берегу. Четыре прогулки для тех, кто уже видел старый город.</p>
           <p class="route-choice__meta">4 прогулки · по полдня и дню</p>
+        </a>
+        <a class="route-choice__card reveal" href="#islands">
+          <p class="route-choice__num">Маршрут 4</p>
+          <h3 class="route-choice__title">Принцевы острова</h3>
+          <p class="route-choice__text">День без машин: паром с чайками, сосновый лес Хейбелиады, особняки Бююкады и монастырь на холме, история названия и чем острова отличаются друг от друга.</p>
+          <p class="route-choice__meta">1 день · паром ≈ 1,5 ч</p>
         </a>
       </div>
 
@@ -2512,6 +2525,293 @@
         </div>
       </div>
       <p class="disclaimer">Часы работы дворцов и музеев, расписание паромов и сезонные меню на Босфоре меняются — перед поездкой я сверяю всё по маршруту.</p>
+    </div>
+  </section>
+
+  <!-- ================= МАРШРУТ 4: ПРИНЦЕВЫ ОСТРОВА ================= -->
+  <section class="section section--cream" id="islands" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Маршрут 4</p>
+      <h2 class="section__title section__title--center">Принцевы острова: <span class="accent">Стамбул без машин</span></h2>
+      <p class="section__lead">Полтора часа на пароме — и вы в другом мире: деревянные особняки в бугенвиллиях, сосновые леса, велосипеды вместо машин и чайки над пристанью. Сами стамбульцы называют их просто Adalar — «Острова».</p>
+
+      <div class="story">
+        <div class="story__item reveal">
+          <h3>Почему «Принцевы»</h3>
+          <p>В VI веке византийский император Юстин II построил на самом большом острове дворец. Остров стали называть Принкипо — «Остров принца», а позже это имя перешло на весь архипелаг.</p>
+          <p>Острова быстро превратились в место почётной ссылки. Сюда отправляли свергнутых императоров, принцев и императриц, которые жили в монастырях под надзором. Так у названия появился второй смысл: острова, куда ссылали принцев.</p>
+        </div>
+        <div class="story__item reveal">
+          <h3>Как стали дачей Стамбула</h3>
+          <p>В XIX веке пароходы связали острова с городом, и здесь появились летние виллы греческих, армянских, еврейских и турецких семей. Отсюда и смесь церквей, мечетей и синагог, и особая атмосфера старого космополитичного Стамбула.</p>
+          <p>Турки называли архипелаг Kızıl Adalar — «Красные острова» — за красноватые скалы, в которых много железа.</p>
+        </div>
+        <div class="story__item reveal">
+          <h3>Сколько их</h3>
+          <p>Всего островов девять. Жилых и доступных на регулярном пароме — четыре: Кыналыада, Бургазада, Хейбелиада и Бююкада. Ещё на маленьком Седефе стоят частные виллы.</p>
+          <p>Остальные четыре — Яссыада, Сивриада, Кашык и Тавшан — необитаемые или закрытые. С некоторыми из них связаны мрачные страницы истории.</p>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-pin"/></svg></span>
+          <h3 class="places-group__title">Чем острова отличаются друг от друга</h3>
+          <span class="places-group__count">4 + 5 островов</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Бююкада · Büyükada</div>
+            <div class="place__where">Греческое «Принкипо» · самый большой · ≈ 1,5 ч на пароме</div>
+            <p>Остров-символ архипелага. Монастырь Святого Георгия (Aya Yorgi) на вершине холма Юджетепе с видом на все острова, огромное деревянное здание бывшего греческого приюта, особняки XIX века, исторический отель Splendid Palas 1908 года. В 1929–1933 годах здесь в изгнании жил Лев Троцкий. На острове также находится Музей Принцевых островов в бухте Ая Никола.</p>
+            <span class="place__tip">Самый популярный: здесь больше всего достопримечательностей, ресторанов и отелей, сюда привозят все экскурсии. Поэтому в летние выходные здесь многолюдно.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Хейбелиада · Heybeliada</div>
+            <div class="place__where">Греческое «Халки» · второй по величине</div>
+            <p>Турецкое название означает «остров-перемётная сума»: два холма похожи на седельную сумку. Греческое «Халки» — от слова «медь», которую здесь когда-то добывали. На вершине холма стоит знаменитая Халкинская богословская семинария, закрытая с 1971 года. Здесь также Военно-морской лицей, сосновые леса, мыс Деирмен Бурну и тихие пляжи.</p>
+            <span class="place__tip">Второй по популярности, но заметно спокойнее Бююкады. Лучший остров для велосипеда и прогулок по лесу.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Бургазада · Burgazada</div>
+            <div class="place__where">Греческое «Антигони» · маленький и сонный</div>
+            <p>Остров писателей: здесь жил классик турецкой прозы Сайт Фаик Абасыянык, и его дом стал музеем. Узкие улочки, церковь у пристани, холм Христос и скалы Калпазанкая на западном берегу, где встречают закат.</p>
+            <span class="place__tip">Менее популярен: мало «открыточных» достопримечательностей. Именно за это его любят стамбульцы — здесь тихо даже летом.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Кыналыада · Kınalıada</div>
+            <div class="place__where">Греческое «Проти» — «первый» · ближайший к городу</div>
+            <p>Ближайший к Стамбулу остров — около 30 минут на пароме. Название значит «хной окрашенный»: за красноватые скалы. Здесь исторически живёт армянская община, а в XI веке в монастыре на острове окончил дни ослеплённый император Роман IV Диоген. Деревьев мало, зато много мест для купания.</p>
+            <span class="place__tip">Наименее популярный из четырёх: остров голый и почти без достопримечательностей. Это место для купания и тишины, а не для экскурсий.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Седеф · Sedef</div>
+            <div class="place__where">Маленький остров между Бююкадой и азиатским берегом</div>
+            <p>Частные виллы и сосны, регулярного парома нет. Туристического значения почти не имеет.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Яссыада · Yassıada</div>
+            <div class="place__where">«Плоский остров»</div>
+            <p>Здесь в 1960–1961 годах после военного переворота судили премьер-министра Аднана Мендереса и членов его правительства. Сегодня остров переименован в «Остров демократии и свобод», на нём открыт мемориальный комплекс.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Сивриада · Sivriada</div>
+            <div class="place__where">«Острый остров»</div>
+            <p>Самая мрачная страница истории островов. В 1910 году сюда вывезли тысячи бездомных собак Стамбула, и они погибли. С тех пор остров называют Хайырсызада — «остров без добра». Он необитаем.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Кашык и Тавшан</div>
+            <div class="place__where">«Ложка» и «Заяц»</div>
+            <p>Крошечные острова: Кашык похож на ложку и находится в частной собственности, Тавшан необитаем.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stay-compare__tip" style="margin-top: 2rem;">
+        <strong>Почему одни острова популярнее других:</strong>
+        <ul style="margin: 0.6rem 0 0; padding-left: 1.1rem;">
+          <li><strong>Размер и достопримечательности.</strong> На Бююкаде есть монастырь на холме, особняки, музей, отели и десятки ресторанов, на маленьких островах — только улочки и природа.</li>
+          <li><strong>Туры и паромы.</strong> Экскурсии почти всегда везут на Бююкаду, и паромы там самые частые, поэтому поток туристов идёт именно туда.</li>
+          <li><strong>Инфраструктура.</strong> Бургазада и Кыналыада живут летом как дачные посёлки: кафе меньше, многие работают только в сезон.</li>
+          <li><strong>Природа.</strong> На Хейбелиаде и Бююкаде растут сосновые леса, а Кыналыада почти безлесная, поэтому её выбирают для купания, а не для прогулок.</li>
+          <li><strong>Доступ.</strong> Седеф, Кашык и другие маленькие острова частные или закрытые, регулярного парома туда нет.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="islands-day">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">День на островах</p>
+      <h2 class="section__title section__title--center">Хейбелиада <span class="accent">и Бююкада</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Классический день на островах. Начинаем с тихой Хейбелиады, пока туристы плывут дальше, а на Бююкаду приезжаем уже к обеду.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">08:30</div>
+          <h3 class="stop-card__title">Паром на острова <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Паромы Şehir Hatları уходят на острова из Кабаташа и Эминёню, а с азиатского берега — из Кадыкёя и Бостанджи. Плывём около полутора часов: мимо Девичьей башни, дворца Топкапы и стамбульского берега. Есть и скоростные паромы частных компаний — быстрее, но без палубы.</p>
+              <p>Классика поездки — симит и чай в стаканчике на палубе, а чайки ловят кусочки бублика прямо на лету.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Оплата по Istanbulkart. Выбирайте будний день: в летние выходные и праздники паромы переполнены.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Хейбелиада: лес и тишина <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Сходим на Хейбелиаде, пока туристы плывут дальше. Пройдите мимо деревянных особняков в цветах к холму Юмит: на его вершине стоит Халкинская семинария, а с площадки рядом видно соседние острова.</p>
+              <p>Ещё лучше — взять велосипед у пристани и доехать через сосновый лес до мыса Деирмен Бурну.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Чай у пристани</div>
+                <div class="side-card__meta">Чайные и кафе на набережной Хейбелиады — тихо, вид на Бююкаду и паромы</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Бююкада: особняки XIX века <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>10–15 минут на пароме — и вы на главном острове. От пристани по улицам Чанкая и Низам тянутся деревянные особняки в бугенвиллиях и садах — самые красивые на всех островах.</p>
+              <p>Конных фаэтонов больше нет: в 2020 году их отменили. Теперь по острову ездят электрические мини-автобусы и такси, а многие берут напрокат велосипеды и электровелосипеды.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Что увидеть по пути</div>
+                <div class="side-card__meta">Отель Splendid Palas у пристани, особняки улицы Чанкая и бывший дом Троцкого на северном берегу</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:30</div>
+          <h3 class="stop-card__title">Подъём к монастырю Ая Йорги <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Доезжаем до площади Бирлик (Луна-парк), а дальше 20–30 минут пешком в гору по мощёной дорожке. Монастырь Святого Георгия на вершине Юджетепе — самая высокая точка острова. Отсюда видны все Принцевы острова и Мраморное море.</p>
+              <p>По традиции на подъёме загадывают желание и завязывают нитку на ветках. 23 апреля, в день святого Георгия, сюда поднимаются тысячи паломников.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Обед на вершине</div>
+                <div class="side-card__meta">Yücetepe Kır Gazinosu у монастыря — простая кухня и, пожалуй, лучший вид на островах</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">16:00</div>
+          <h3 class="stop-card__title">Чай в Splendid Palas и мороженое на пристани</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Спускаемся к пристани. Отель Splendid Palas с красными куполами открылся в 1908 году, тогда же, когда острова были главным курортом стамбульской знати. На его террасе хорошо выпить чай или кофе.</p>
+              <p>Перед паромом — мороженое и прогулка вдоль набережной.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+              <div>
+                <div class="side-card__name">Splendid Palas</div>
+                <div class="side-card__meta">Исторический отель у пристани. Если хотите провести на островах ночь — это самый атмосферный вариант</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">18:00</div>
+          <h3 class="stop-card__title">Паром на закате</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Обратно лучше плыть на закатном пароме: солнце садится за исторический полуостров, и силуэты мечетей Султанахмета проступают на фоне неба. Это один из самых красивых видов Стамбула, а смотреть на него можно с палубы обычного городского парома.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Посмотрите время последних паромов заранее: зимой расписание короче.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="islands-tips">
+    <div class="container">
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-walk"/></svg></span>
+          <h3 class="places-group__title">Другие варианты дня на островах</h3>
+          <span class="places-group__count">3 варианта</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Тихий день: Бургазада</div>
+            <div class="place__where">Для тех, кто уже был на Бююкаде</div>
+            <p>Дом-музей Сайта Фаика, прогулка по сонным улочкам, подъём на холм Христос и закат на скалах Калпазанкая с ужином в ресторане на берегу.</p>
+            <span class="place__tip">Здесь острова такие, какими их помнят сами стамбульцы.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Пляжный день: Кыналыада</div>
+            <div class="place__where">С июня по сентябрь</div>
+            <p>Ближайший к городу остров, всего 30 минут на пароме. Здесь купаются в пляжных клубах на скалах, обедают у пристани и возвращаются на вечернем пароме.</p>
+            <span class="place__tip">Хороший вариант для жаркого дня.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Ночь на Бююкаде</div>
+            <div class="place__where">Острова без туристов</div>
+            <p>Останьтесь на ночь в Splendid Palas или в одном из бутик-отелей в особняках. Вечером, когда уходят последние паромы с туристами, остров становится тихим и очень романтичным.</p>
+            <span class="place__tip">Утром — завтрак и велосипед по пустому острову.</span>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+          <h3 class="places-group__title">Где поесть и выпить чай</h3>
+          <span class="places-group__count">5 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Yücetepe Kır Gazinosu</div>
+            <div class="place__where">Бююкада · вершина холма у Ая Йорги</div>
+            <p>Простая турецкая кухня, вино и вид на все острова — главный обеденный адрес Бююкады.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Терраса Splendid Palas</div>
+            <div class="place__where">Бююкада · у пристани</div>
+            <p>Чай и кофе в историческом отеле 1908 года.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Рыбные рестораны у пристани</div>
+            <div class="place__where">Бююкада и Хейбелиада</div>
+            <p>Рыба дня, мезе и вид на паромы. Выбирайте место, где рыба лежит на льду у входа.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Kalpazankaya</div>
+            <div class="place__where">Бургазада · западный берег</div>
+            <p>Ресторан на скалах, где лучше всего встречать закат.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Симит и чай на пароме</div>
+            <div class="place__where">По пути на острова</div>
+            <p>Самый стамбульский перекус: бублик, чай и чайки за кормой.</p>
+          </div>
+        </div>
+      </div>
+      <div class="practical" style="margin-top: 3rem;">
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-clock"/></svg>
+          <strong>Когда ехать</strong>
+          <span>Лучше всего — будни с апреля по июнь и в сентябре–октябре. В летние выходные на Бююкаде очень людно</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-walk"/></svg>
+          <strong>Как передвигаться</strong>
+          <span>Машин нет: пешком, на велосипеде или на электрических мини-автобусах и такси. Фаэтоны отменены в 2020 году</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-card"/></svg>
+          <strong>Паромы</strong>
+          <span>Городские паромы оплачиваются по Istanbulkart. Скоростные паромы частных компаний быстрее, но билеты стоят дороже</span>
+        </div>
+      </div>
+      <p class="disclaimer">Расписание паромов и часы работы монастыря и музеев зависят от сезона — перед поездкой я уточняю их под ваши даты.</p>
     </div>
   </section>
 
