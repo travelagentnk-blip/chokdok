@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Стамбул: два маршрута от местного жителя | Наталья Кожедуб</title>
-<meta name="description" content="Два пеших маршрута по Стамбулу: Султанахмет и Таксим — Галата. Классические достопримечательности и тихие места без толп, лучшие видовые точки, кофейни, уличная еда, террасы и рестораны для ужина.">
+<meta name="description" content="Четыре маршрута по Стамбулу: Султанахмет, Таксим — Галата, Босфор и Принцевы острова. Классические достопримечательности и тихие места без толп, лучшие видовые точки, кофейни, уличная еда, террасы и рестораны для ужина.">
 <meta name="theme-color" content="#1D3559">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 
@@ -198,6 +198,44 @@
   .place p { font-size: 0.86rem; line-height: 1.55; opacity: 0.85; margin: 0; }
   .place__tip { display: block; margin-top: 0.45rem; font-style: italic; opacity: 0.9; }
 
+  /* ---- Hotels ---- */
+  .price-legend { text-align: center; font-size: 0.82rem; color: var(--color-graphite); opacity: 0.8; margin: -1rem 0 0.5rem; }
+  .place__price { float: right; margin-left: 0.6rem; font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; color: var(--color-sand); }
+
+  .review-cards { display: grid; gap: 1.6rem; margin-top: 1.4rem; }
+  .review-card { background: #fff; border: 1px solid rgba(201, 160, 99, 0.5); padding: 1.6rem 1.5rem; color: var(--color-graphite); }
+  .review-card__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.3rem 1rem; margin-bottom: 0.3rem; }
+  .review-card__name { font-size: 1.45rem; margin: 0; }
+  .review-card__score { font-size: 0.78rem; letter-spacing: 0.06em; color: var(--color-sand); font-weight: 500; }
+  .review-card__where { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); margin-bottom: 1rem; }
+  .review-card__row { padding: 0.75rem 0; border-top: 1px solid rgba(201, 160, 99, 0.25); }
+  .review-card__row strong { display: block; font-family: var(--font-display); font-size: 1.02rem; margin-bottom: 0.25rem; }
+  .review-card__row p { font-size: 0.88rem; line-height: 1.6; opacity: 0.88; margin: 0; }
+  .review-card__verdict { margin-top: 0.4rem; padding: 0.9rem 1rem; background: var(--color-cream); border-left: 2px solid var(--color-sand); font-size: 0.88rem; line-height: 1.6; }
+
+  /* ---- Where to stay: compare ---- */
+  .stay-compare { margin-top: 3.4rem; }
+  .stay-compare__title { text-align: center; font-size: 1.6rem; margin-bottom: 0.5rem; }
+  .stay-compare__lead { text-align: center; font-size: 0.92rem; opacity: 0.8; max-width: 38rem; margin: 0 auto 1.6rem; color: var(--color-graphite); }
+  .stay-compare__grid { display: grid; gap: 1.4rem; }
+  .stay-option { background: #fff; border: 1px solid rgba(201, 160, 99, 0.5); padding: 1.5rem 1.4rem; color: var(--color-graphite); }
+  .stay-option__name { font-size: 1.3rem; margin-bottom: 0.2rem; }
+  .stay-option__for { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-sand); margin-bottom: 0.9rem; }
+  .stay-option ul { list-style: none; padding: 0; margin: 0 0 0.8rem; }
+  .stay-option li { position: relative; padding-left: 1.3rem; font-size: 0.88rem; line-height: 1.55; margin-bottom: 0.35rem; }
+  .stay-option li::before { position: absolute; left: 0; top: 0; font-weight: 600; color: var(--color-sand); }
+  .stay-option li.plus::before { content: '+'; }
+  .stay-option li.minus::before { content: '–'; }
+  .stay-option__link { display: inline-block; margin-top: 0.4rem; font-size: 0.82rem; color: var(--color-navy); border-bottom: 1px solid var(--color-sand); }
+  .stay-compare__tip { margin-top: 1.4rem; padding: 1rem 1.2rem; background: #fff; border-left: 2px solid var(--color-sand); font-size: 0.9rem; line-height: 1.6; color: var(--color-graphite); }
+
+  /* ---- Islands story ---- */
+  .story { display: grid; gap: 1.4rem; margin-top: 2.4rem; }
+  .story__item { background: #fff; border: 1px solid rgba(201, 160, 99, 0.45); padding: 1.4rem 1.4rem 1.3rem; color: var(--color-graphite); }
+  .story__item h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .story__item p { font-size: 0.9rem; line-height: 1.65; opacity: 0.88; margin: 0 0 0.55rem; }
+  .story__item p:last-child { margin-bottom: 0; }
+
   /* ---- Practical strip ---- */
   .practical { display: grid; grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
   .practical__item { padding: 1.4rem 1rem; border: 1px solid rgba(201, 160, 99, 0.4); }
@@ -213,6 +251,9 @@
     .city-hero__lead { font-size: 1.35rem; }
 
     .route-choice { grid-template-columns: 1fr 1fr; }
+    .review-cards { grid-template-columns: 1fr 1fr; }
+    .stay-compare__grid { grid-template-columns: 1fr 1fr; }
+    .story { grid-template-columns: repeat(3, 1fr); }
     .stop-card__body { grid-template-columns: 1.5fr 1fr; align-items: start; }
     .places { grid-template-columns: repeat(2, 1fr); }
     .practical { grid-template-columns: repeat(3, 1fr); }
@@ -396,7 +437,7 @@
     <h1 class="city-hero__title">Стамбул <span class="accent">глазами местного</span></h1>
     <p class="city-hero__lead">Два дня, две стороны Золотого Рога: главные открытки города и тихие дворики, где пьют чай сами стамбульцы</p>
     <div class="city-hero__facts">
-      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-walk"/></svg>2 пеших маршрута</span>
+      <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-walk"/></svg>4 маршрута</span>
       <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-eye"/></svg>Классика + места без толп</span>
       <span class="city-hero__fact"><svg aria-hidden="true"><use href="#icon-meal"/></svg>50+ проверенных мест</span>
     </div>
@@ -418,9 +459,9 @@
   <!-- Выбор маршрута -->
   <section class="section section--cream" id="routes">
     <div class="container">
-      <p class="eyebrow eyebrow--center">Два маршрута</p>
+      <p class="eyebrow eyebrow--center">Четыре маршрута</p>
       <h2 class="section__title section__title--center">Выберите, <span class="accent">с чего начать</span></h2>
-      <p class="section__lead">Каждый маршрут рассчитан на полный день пешком в спокойном темпе. В нём есть обязательная классика — и места рядом, о которых знают в основном местные.</p>
+      <p class="section__lead">Первые два маршрута рассчитаны на полный день пешком в спокойном темпе, третий — на несколько прогулок по Босфору, четвёртый — на день на Принцевых островах. В каждом есть обязательная классика — и места рядом, о которых знают в основном местные.</p>
 
       <div class="route-choice">
         <a class="route-choice__card reveal" href="#sultanahmet">
@@ -435,11 +476,55 @@
           <p class="route-choice__text">Истикляль и ретро-трамвай, богемный Джихангир, антиквары Чукурджумы, Галатская башня, лучшие крыши для заката и шопинг.</p>
           <p class="route-choice__meta">≈ 6 км · 10–12 часов</p>
         </a>
+        <a class="route-choice__card reveal" href="#bosphorus">
+          <p class="route-choice__num">Маршрут 3</p>
+          <h3 class="route-choice__title">Босфор</h3>
+          <p class="route-choice__text">Нишанташи и Зорлу, Бешикташ, Ортакёй, Куручешме и Бебек, Верхний Босфор и Ченгелькёй на азиатском берегу. Четыре прогулки для тех, кто уже видел старый город.</p>
+          <p class="route-choice__meta">4 прогулки · по полдня и дню</p>
+        </a>
+        <a class="route-choice__card reveal" href="#islands">
+          <p class="route-choice__num">Маршрут 4</p>
+          <h3 class="route-choice__title">Принцевы острова</h3>
+          <p class="route-choice__text">День без машин: паром с чайками, сосновый лес Хейбелиады, особняки Бююкады и монастырь на холме, история названия и чем острова отличаются друг от друга.</p>
+          <p class="route-choice__meta">1 день · паром ≈ 1,5 ч</p>
+        </a>
       </div>
 
       <div class="legend">
         <span><span class="tag tag--classic">Классика</span> знаковое место, must-see</span>
         <span><span class="tag tag--local">Местные</span> без толп туристов</span>
+      </div>
+
+      <div class="stay-compare reveal" id="where-to-stay">
+        <h3 class="stay-compare__title">Где жить: у Айя-Софии или <span class="accent">у Галатской башни?</span></h3>
+        <p class="stay-compare__lead">Два района — два разных Стамбула. Между ними 10–15 минут на трамвае T1 (от Султанахмета до Каракёя) или 30 минут пешком через Галатский мост.</p>
+        <div class="stay-compare__grid">
+          <div class="stay-option">
+            <h4 class="stay-option__name">Султанахмет — у Айя-Софии</h4>
+            <p class="stay-option__for">Первая поездка · история · 2–4 дня</p>
+            <ul>
+              <li class="plus">Айя-София, Голубая мечеть, Цистерна и Топкапы — в 2–10 минутах пешком, к открытию вы приходите первыми</li>
+              <li class="plus">Особняки и бутик-отели с террасами и видом на купола и море</li>
+              <li class="plus">Тихие вечера и подсвеченные мечети прямо у дома</li>
+              <li class="minus">Вечером мало ресторанов и баров для местных, многие кафе закрываются рано</li>
+              <li class="minus">Много зазывал и сувенирных лавок вокруг площади</li>
+            </ul>
+            <a class="stay-option__link" href="#sultanahmet-hotels">Отели Султанахмета →</a>
+          </div>
+          <div class="stay-option">
+            <h4 class="stay-option__name">Галата — у Галатской башни</h4>
+            <p class="stay-option__for">Гастрономия · вечерняя жизнь · повторная поездка</p>
+            <ul>
+              <li class="plus">Лучшие рестораны, мейхане, кофейни и крыши для заката — рядом с отелем</li>
+              <li class="plus">Шопинг, галереи, Истикляль и Каракёй у воды; город живёт до ночи</li>
+              <li class="plus">Удобно ездить по Босфору: паромы из Каракёя и Кабаташа</li>
+              <li class="minus">Крутые улицы и лестницы — с тяжёлыми чемоданами непросто</li>
+              <li class="minus">В выходные шумно до поздней ночи — выбирайте номер окнами во двор</li>
+            </ul>
+            <a class="stay-option__link" href="#galata-hotels">Отели у Галатской башни →</a>
+          </div>
+        </div>
+        <p class="stay-compare__tip"><strong>Мой совет:</strong> если у вас 4 ночи и больше, разделите их — первые 2 ночи в Султанахмете для музеев, оставшиеся у Галатской башни для ресторанов и вечерних прогулок. Переезд занимает 20 минут на такси.<br>Бывали в Стамбуле уже много раз? <a href="#bosphorus-hotels" style="color: var(--color-navy); border-bottom: 1px solid var(--color-sand);">Отели на Босфоре и Золотом Роге →</a></p>
       </div>
     </div>
   </section>
@@ -871,6 +956,167 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= ОТЕЛИ СУЛТАНАХМЕТА ================= -->
+  <section class="section section--cream" id="sultanahmet-hotels" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где остановиться</p>
+      <h2 class="section__title section__title--center">Отели в Султанахмете <span class="accent">на разный бюджет</span></h2>
+      <p class="section__lead">Жить в старом городе удобно: утром вы первыми у Айя-Софии, а вечером возвращаетесь пешком мимо подсвеченных мечетей. Ниже — отели, которые я рекомендую, от дворцовой роскоши до уютных особняков.</p>
+      <p class="price-legend">$ — до €100 · $$ — €100–200 · $$$ — €200–350 · $$$$ — от €350 за номер в сутки (ориентир, зависит от сезона)</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-palace"/></svg></span>
+          <h3 class="places-group__title">Роскошь и особый повод</h3>
+          <span class="places-group__count">3 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Four Seasons Sultanahmet <span class="place__price">$$$$</span></div>
+            <div class="place__where">Между Айя-Софией и Топкапы</div>
+            <p>Неоклассическое здание бывшей тюрьмы начала XX века превращено в камерный дворец с внутренним двором-садом. Безупречный сервис уровня Four Seasons, а из окон и с террасы видны купола Айя-Софии.</p>
+            <span class="place__tip">Для медового месяца и юбилеев.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Hagia Sofia Mansions, Curio Collection by Hilton <span class="place__price">$$$$</span></div>
+            <div class="place__where">Улица Согукчешме, у стен Топкапы</div>
+            <p>Номера разбросаны по 17 восстановленным османским особнякам. Есть хаммам, спа в византийской цистерне, сад и два ресторана. Атмосфера живого исторического квартала.</p>
+            <span class="place__tip">Минусы: много лестниц, завтрак часто не включён (около €30).</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Régie Ottoman <span class="place__price">$$$</span></div>
+            <div class="place__where">Сиркеджи, 10 минут до Айя-Софии</div>
+            <p>Бутик-отель на 34 номера в здании бывшего табачного склада, которому около 150 лет: кирпичные своды, арочные окна и современный дизайн. Ресторан OCAK отмечен гидом Michelin, гости хвалят завтраки и внимательный персонал.</p>
+            <span class="place__tip">Днём улицы закрыты для машин, к входу придётся пройти пешком с багажом.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-mosque"/></svg></span>
+          <h3 class="places-group__title">Бутик-отели с характером</h3>
+          <span class="places-group__count">4 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Seven Hills Palace &amp; Spa <span class="place__price">$$$</span></div>
+            <div class="place__where">Kadı Çıkmazı Sk., Султанахмет</div>
+            <p>Редкость для старого города: открытый бассейн (по сезону), спа, хаммам и сауна. Около 80 номеров, есть варианты с видом на море. Гости особенно хвалят персонал и завтраки.</p>
+            <span class="place__tip">Хорош для пар и семей, которым нужен отдых, а не только экскурсии.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Hotel Ibrahim Pasha <span class="place__price">$$$</span></div>
+            <div class="place__where">У Ипподрома · мой выбор</div>
+            <p>Один из самых стильных бутик-отелей района: тёплые красные и охристые тона, фотографии старого Стамбула, крыша с видом на Голубую мечеть. Всё рядом, но улица тихая.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Mula Hotel <span class="place__price">$$–$$$</span></div>
+            <div class="place__where">Çayıroğlu Sk., у Малой Айя-Софии</div>
+            <p>Небольшой отель на 41 номер на тихой улочке в 5 минутах от Голубой мечети. Есть сад, терраса и ресторан Nishane, на завтрак — буфет или блюда на выбор.</p>
+            <span class="place__tip">По некоторым данным, алкоголь в отеле не подают — уточню при бронировании.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">1207 Hotel Special Class <span class="place__price">$$</span></div>
+            <div class="place__where">Площадь Ипподрома · бывший Alzer Hotel</div>
+            <p>Восстановленный особняк, которому больше 100 лет, на 22 номера. Его главный козырь — терраса на крыше с видом на Голубую мечеть и Айя-Софию. Оценки гостей — около 9 из 10.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+          <h3 class="places-group__title">Уютно и разумно по цене</h3>
+          <span class="places-group__count">3 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Garden House <span class="place__price">$$</span></div>
+            <div class="place__where">2 минуты до площади Султанахмет</div>
+            <p>Деревянный османский особняк с садом, в котором растут старые ореховые деревья и журчит водопад. Есть ресторан и бесплатные закуски днём, а атмосфера — как в гостях у стамбульской семьи.</p>
+            <span class="place__tip">Лифта нет, спа нет — это отель про атмосферу.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Hotel Empress Zoe <span class="place__price">$$</span></div>
+            <div class="place__where">Джанкуртаран · мой выбор</div>
+            <p>Классика старого города, названная в честь византийской императрицы с мозаики в Айя-Софии. Номера расположены в соединённых старинных домах, а в саду — руины хаммама XV века. Камерно, очень по-стамбульски.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Sirkeci Mansion <span class="place__price">$$</span></div>
+            <div class="place__where">Над парком Гюльхане · мой выбор</div>
+            <p>Легенда среди отелей за свой сервис: персонал помнит гостей по именам. Номера чистые, хорошего размера, а до Топкапы и трамвая — пара минут пешком.</p>
+            <span class="place__tip">Лучшее соотношение цены и заботы в районе.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+          <h3 class="places-group__title">Проверка двух отелей по отзывам гостей</h3>
+        </div>
+        <p style="font-size: 0.9rem; opacity: 0.8; color: var(--color-graphite);">Оба отеля стоят не в самом Султанахмете, а рядом с ним — в Сиркеджи и Эминёню, в 10–15 минутах пешком от Айя-Софии. Ниже — то, что повторяется в свежих отзывах на Booking, Tripadvisor и Trip.com.</p>
+
+        <div class="review-cards">
+          <article class="review-card reveal">
+            <div class="review-card__head">
+              <h4 class="review-card__name">Mest Hotel Istanbul Sirkeci</h4>
+              <span class="review-card__score">≈ 9,2–9,4 / 10 на Booking и Trivago · 4,8 / 5 на Tripadvisor</span>
+            </div>
+            <div class="review-card__where">Çiçek Pazarı Sk., рядом с Египетским базаром и мечетью Рустем-паши · 4★ · 34 номера</div>
+
+            <div class="review-card__row">
+              <strong>Вид</strong>
+              <p>Главная фишка отеля — терраса на 5-м этаже, где подают завтрак, с видом на мечеть и Босфор. Из части номеров тоже видна мечеть.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Сервис</strong>
+              <p>Именно персонал хвалят больше всего: дружелюбный, внимательный, помогает с советами и трансферами. Встречаются единичные жалобы на плохой английский у части сотрудников, неприехавшее такси и промахи в уборке.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Состояние номеров</strong>
+              <p>Отель новый, номера современные и в целом чистые, кровати удобные. Но стандартные номера компактные для своей цены. Лофт-сюиты просторные (до 43 м²), однако кровать в них стоит на втором уровне, куда ведёт крутая узкая металлическая лестница — неудобно с детьми и пожилыми. Изредка пишут о колебаниях температуры воды, нестабильном Wi-Fi и запахе из слива.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Что учесть</strong>
+              <p>Рядом мечеть, поэтому азан слышен и рано утром. Вечером, после закрытия лавок, торговые улочки вокруг пустеют. Зато днём это самый живой и колоритный рыночный квартал.</p>
+            </div>
+            <div class="review-card__verdict"><strong>Мой вывод:</strong> хороший выбор для пары, если важны вид и тёплый сервис. Берите номер категории выше стандартного, но не лофт, если путешествуете с детьми или родителями. Тем, кто чутко спит, — беруши.</div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__head">
+              <h4 class="review-card__name">Hotel İlkay</h4>
+              <span class="review-card__score">≈ 8,2–8,8 / 10 на booking-сайтах · 4,4 / 5 на Tripadvisor (более 1100 отзывов)</span>
+            </div>
+            <div class="review-card__where">Между остановкой трамвая Гюльхане и Сиркеджи · классический городской отель</div>
+
+            <div class="review-card__row">
+              <strong>Сервис</strong>
+              <p>Ресепшен стабильно хвалят: дружелюбные и отзывчивые сотрудники, помогают с маршрутами и такси. Сервис простой, без пафоса, но честный и заботливый.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Состояние номеров</strong>
+              <p>Номера небольшие, но чистые и аккуратные, часть обновлена, кровати удобные. В других номерах мебель старая и потёртая, а холодильника может не быть. Звукоизоляция слабая: в номерах на улицу слышны трамвай и город. Иногда пишут о неработающем лифте.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Завтраки</strong>
+              <p>Сильная сторона отеля, за которую его хвалят чаще всего. Разнообразный и щедрый буфет, свежий хлеб, внимательный персонал в зале. Встречается и мнение, что завтрак скромный, но вполне достаточный.</p>
+            </div>
+            <div class="review-card__row">
+              <strong>Вайб и атмосфера</strong>
+              <p>Классический отель старого города: по-домашнему тёплый, без дизайнерских изысков. Для тех, кто весь день гуляет и возвращается только поспать. Главный плюс — расположение: трамвай у дверей, Гюльхане, Топкапы и Айя-София рядом.</p>
+            </div>
+            <div class="review-card__verdict"><strong>Мой вывод:</strong> надёжный вариант за разумные деньги, если важны локация и сытный завтрак, а не интерьер. При бронировании прошу обновлённый номер на высоком этаже, окнами во двор.</div>
+          </article>
+        </div>
+      </div>
+
+      <p class="disclaimer">Оценки и отзывы — по данным Booking, Tripadvisor и Trip.com на октябрь 2026 года. Цены, категории номеров и условия завтраков я уточняю под ваши даты.</p>
     </div>
   </section>
 
@@ -1398,6 +1644,1261 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= ОТЕЛИ У ГАЛАТСКОЙ БАШНИ ================= -->
+  <section class="section section--cream" id="galata-hotels" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где остановиться</p>
+      <h2 class="section__title section__title--center">Отели у Галатской башни <span class="accent">и в Каракёе</span></h2>
+      <p class="section__lead">Галата, Пера, Каракёй и Джихангир — для тех, кто хочет жить среди ресторанов, кофеен и крыш с видом на Босфор. Отели в подборке объединяет атмосфера, хороший завтрак, внимательный сервис и номера в достойном состоянии.</p>
+      <p class="price-legend">$ — до €100 · $$ — €100–200 · $$$ — €200–350 · $$$$ — от €350 за номер в сутки (ориентир, зависит от сезона)</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-palace"/></svg></span>
+          <h3 class="places-group__title">Роскошь и особые впечатления</h3>
+          <span class="places-group__count">3 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">The Peninsula Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Каракёй, Galataport · на берегу Босфора · мой выбор</div>
+            <p>Три исторических здания и новый корпус прямо у воды, сады, бассейн и ресторан Gallada с видом на Босфор. Лобби — в здании первого морского вокзала Турции 1940-х годов. Сервис — уровня Peninsula.</p>
+            <span class="place__tip">Идеален перед круизом: подземный круизный терминал Galataport — прямо у отеля.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Soho House Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Палаццо Корпи, рядом с Пера Палас</div>
+            <p>Палаццо XIX века, где когда-то было посольство США: расписные потолки, клубные гостиные, рестораны, спа и хаммам. Номера в современном стиле, огромные кровати, египетский хлопок.</p>
+            <span class="place__tip">Богемный клубный стиль: гостям отеля открыты пространства клуба.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Pera Palace Hotel <span class="place__price">$$$$</span></div>
+            <div class="place__where">Тепебаши · с 1892 года</div>
+            <p>Отель, построенный для пассажиров «Восточного экспресса». Здесь жила Агата Кристи, а номер 411 хранит её память. Мрамор, кованый лифт, чайный салон Kubbeli. Номера просторные, гости хвалят чистоту и завтраки.</p>
+            <span class="place__tip">Выбор для тех, кто хочет историческую атмосферу.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tower"/></svg></span>
+          <h3 class="places-group__title">Дизайн и бутик-отели</h3>
+          <span class="places-group__count">5 отелей</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">The Bank Hotel Istanbul <span class="place__price">$$$</span></div>
+            <div class="place__where">Bankalar Caddesi, Каракёй · Design Hotels</div>
+            <p>Бывшее здание банка XIX века на «Уолл-стрит» Османской империи: высокие потолки, современный дизайн, тропические души. Гости отмечают отличное состояние номеров и внимательный персонал.</p>
+            <span class="place__tip">Дизайн и прогулки по Каракёю. Завтрак часто оплачивается отдельно.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Tomtom Suites <span class="place__price">$$$</span></div>
+            <div class="place__where">Томтом, 3 минуты до Истикляль</div>
+            <p>Камерный отель из одних сюит в тихом переулке между Галатасараем и Джихангиром. Номера просторные, а оценки гостей одни из самых высоких в районе — около 9,7 из 10.</p>
+            <span class="place__tip">Камерность, простор и красивые завтраки.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Georges Hotel Galata <span class="place__price">$$$</span></div>
+            <div class="place__where">Serdar-ı Ekrem, 2 минуты до башни · мой выбор</div>
+            <p>Бутик-отель, отмеченный гидом Michelin: пуховые одеяла, хорошая звукоизоляция и тропические души во всех номерах. Завтрак подают на крыше с видом на Босфор и старый город.</p>
+            <span class="place__tip">Гости ставят около 9,2–9,5 из 10.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">DeCamondo Galata <span class="place__price">$$$</span></div>
+            <div class="place__where">Галата, Tribute Portfolio (Marriott) · мой выбор</div>
+            <p>Два восстановленных особняка между башней и Каракёем, элегантные и ухоженные номера, часть с балконами. Завтрак — на крыше с видом на город, а блюда подают по меню, а не буфетом.</p>
+            <span class="place__tip">Около 9,4 из 10. В части номеров на завтрак нужно перейти в соседнее здание.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Witt Istanbul Suites <span class="place__price">$$–$$$</span></div>
+            <div class="place__where">Джихангир · мой выбор</div>
+            <p>Сюиты с гостиной и мини-кухней в зелёном богемном Джихангире. Домашний завтрак из местных и фермерских продуктов гости называют одним из лучших в районе.</p>
+            <span class="place__tip">Отель стоит на крутом склоне — без больших чемоданов проще.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+          <h3 class="places-group__title">Комфорт по разумной цене</h3>
+          <span class="places-group__count">5 отелей</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Rixos Pera Istanbul <span class="place__price">$$–$$$</span></div>
+            <div class="place__where">Пера, у музея Пера</div>
+            <p>Большой современный отель в самом центре Перы: просторные элегантные номера, спа и терраса с видом на город и Золотой Рог. Персонал хвалят за теплоту.</p>
+            <span class="place__tip">Наиболее приятная цена за удобную Перу. Завтрак может не входить в тариф.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Novotel Istanbul Bosphorus <span class="place__price">$$</span></div>
+            <div class="place__where">Каракёй, 3 минуты до Galataport</div>
+            <p>Современный отель на 200 номеров у самого Босфора, с крытым бассейном и спа. Рядом — Mürver, один из лучших ресторанов на крыше в Каракёе.</p>
+            <span class="place__tip">Практичный выбор накануне круиза: до круизного терминала — пешком.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">SuB Karaköy <span class="place__price">$$</span></div>
+            <div class="place__where">Каракёй · дизайн-отель · мой выбор</div>
+            <p>Минималистичный дизайн-отель среди галерей и кафе Каракёя. Гости отмечают хороший завтрак с видом и дружелюбную команду.</p>
+            <span class="place__tip">Около 8,4 из 10 — для тех, кому важны стиль и цена.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Galata Grace Hotel <span class="place__price">$</span></div>
+            <div class="place__where">5 минут до башни и Истикляль · мой выбор</div>
+            <p>Небольшой бутик-отель, открытый в 2015 году. Гости особенно хвалят персонал (9,7 из 10) и чистоту номеров — достойный бюджетный вариант в самом центре.</p>
+            <span class="place__tip">Около 9,1 из 10 при скромной цене.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Anemon Galata <span class="place__price">$$</span></div>
+            <div class="place__where">Площадь Галатской башни · мой выбор</div>
+            <p>Ближайший к башне серьёзный отель — она буквально за окном. Классический интерьер в историческом здании и ресторан на крыше с видом на Босфор.</p>
+            <span class="place__tip">Около 8,5 из 10. Интерьеры классические — при бронировании прошу обновлённый номер с видом на башню.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stay-compare__tip" style="margin-top: 2.6rem;">
+        <strong>Как выбрать:</strong>
+        <ul style="margin: 0.6rem 0 0; padding-left: 1.1rem;">
+          <li><strong>The Bank</strong> — дизайн и прогулки по Каракёю.</li>
+          <li><strong>Rixos Pera</strong> — наиболее приятная цена и удобная Пера.</li>
+          <li><strong>Tomtom Suites</strong> — камерность, простор и красивые завтраки.</li>
+          <li><strong>Pera Palace</strong> — историческая атмосфера.</li>
+          <li><strong>Soho House</strong> — богемный клубный стиль.</li>
+          <li><strong>The Peninsula</strong> или <strong>Novotel Bosphorus</strong> — если вы остановились перед круизом: терминал Galataport в нескольких минутах пешком.</li>
+          <li><strong>Georges</strong>, <strong>DeCamondo</strong>, <strong>Witt</strong> — уютные бутик-отели с отличными завтраками.</li>
+          <li><strong>SuB Karaköy</strong>, <strong>Galata Grace</strong> — стиль и чистота при разумном бюджете.</li>
+        </ul>
+      </div>
+
+      <p class="disclaimer">Оценки — по данным Booking, Expedia, Hotels.com и Tripadvisor на октябрь 2026 года. Включён ли завтрак, какие категории номеров есть и сколько стоит проживание — уточняю под ваши даты.</p>
+    </div>
+  </section>
+
+  <!-- ================= МАРШРУТ 3: БОСФОР ================= -->
+  <section class="section section--cream" id="bosphorus" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Маршрут 3</p>
+      <h2 class="section__title section__title--center">Босфор: <span class="accent">Стамбул, где живут стамбульцы</span></h2>
+      <p class="section__lead">Для тех, кто уже видел старый город. Дворцы и крепости, деревянные особняки-ялы, рыбные ресторанчики у воды и модный Нишанташи. Районы далеко друг от друга, поэтому маршрут разделён на четыре прогулки: соседние районы объединены, и каждая занимает полдня или день.</p>
+
+      <div class="route-choice route-choice--four">
+        <a class="route-choice__card reveal" href="#bosphorus-nisantasi">
+          <p class="route-choice__num">Прогулка 1 · полдня</p>
+          <h3 class="route-choice__title">Нишанташи и Зорлу</h3>
+          <p class="route-choice__text">Стамбульский стиль: бутики и турецкие дизайнеры, парк Мачка с канатной дорогой, обед в любимых локантах местных, вечером — шопинг или спектакль в Зорлу.</p>
+          <p class="route-choice__meta">≈ 3 км пешком + такси</p>
+        </a>
+        <a class="route-choice__card reveal" href="#bosphorus-shore">
+          <p class="route-choice__num">Прогулка 2 · день</p>
+          <h3 class="route-choice__title">Бешикташ — Ортакёй — Куручешме — Бебек</h3>
+          <p class="route-choice__text">Дворец Долмабахче, рынок Бешикташа, мечеть Ортакёй у моста, деревянные ялы Арнавуткёя, чай у воды в Бебеке и ужин на закате.</p>
+          <p class="route-choice__meta">≈ 8 км вдоль воды</p>
+        </a>
+        <a class="route-choice__card reveal" href="#bosphorus-upper">
+          <p class="route-choice__num">Прогулка 3 · день</p>
+          <h3 class="route-choice__title">Верхний Босфор</h3>
+          <p class="route-choice__text">Крепость Румели Хисары, парк Эмирган и музей Сакыпа Сабанджи, рыбацкий Румели Кавагы и закат у крепости Йорос, где Босфор встречается с Чёрным морем.</p>
+          <p class="route-choice__meta">Такси + паромы</p>
+        </a>
+        <a class="route-choice__card reveal" href="#bosphorus-asia">
+          <p class="route-choice__num">Прогулка 4 · день</p>
+          <h3 class="route-choice__title">Ченгелькёй и азиатский берег</h3>
+          <p class="route-choice__text">Дворец Бейлербейи, чай под старым платаном в Ченгелькёе, павильон Кючюксу, знаменитый йогурт Канлыджи и ужин у воды под мостом.</p>
+          <p class="route-choice__meta">≈ 6 км + такси</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-nisantasi">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 1 · полдня</p>
+      <h2 class="section__title section__title--center">Нишанташи <span class="accent">и Зорлу</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Самый модный район Стамбула — его здесь называют стамбульским Парижем. Начинаем неспешно, как местные: кофе, витрины, парк.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Завтрак в Нишанташи</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Начните с позднего завтрака в Teşvikiye, сердце района. Нишанташи просыпается не рано, поэтому к 10 утра улицы ещё спокойные, а за столиками — местные с собаками и газетами.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+              <div>
+                <div class="side-card__name">House Café Nişantaşı</div>
+                <div class="side-card__meta">Классика района: большие завтраки, хорошая выпечка, терраса на улице. Альтернатива — простой турецкий завтрак в любой кафешке на Şakayık Sk.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:00</div>
+          <h3 class="stop-card__title">Абди Ипекчи и мечеть Тешвикие <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Abdi İpekçi Caddesi — главная модная улица Турции: мировые бренды, флагманы турецких домов Vakko и Beymen. На углу — изящная мечеть Тешвикие XIX века.</p>
+              <p>Самое интересное — в боковых улочках: небольшие бутики турецких дизайнеров, концепт-сторы, ювелирные мастерские и книжные магазины.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-bag"/></svg></span>
+              <div>
+                <div class="side-card__name">Что купить</div>
+                <div class="side-card__meta">Vakko — шёлковые платки и аксессуары; Beymen — турецкие и мировые дизайнеры; керамика и украшения местных мастеров в переулках</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Парк Мачка и канатная дорога <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Спуститесь в зелёный парк Мачка — здесь гуляют и бегают местные, туристов почти нет. Прокатитесь на короткой канатной дороге Мачка — Ташкышла: несколько минут над кронами деревьев с видом на парк и Босфор вдали.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Канатная дорога работает по Istanbulkart, как обычный транспорт.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:30</div>
+          <h3 class="stop-card__title">Обед в локанте для своих <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Hünkar — османская локанта с 1950-х годов: на витрине десятки блюд, от хюнкяр бегенди (мясо на баклажанном пюре) до долмы и домашних десертов. Или Kantın — сезонная турецкая кухня от шефа Шемсы Денизсель, всё из свежих продуктов дня.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Hünkar или Kantın</div>
+                <div class="side-card__meta">Для быстрого местного варианта — лахмаджун и кебаб в Tatbak</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">16:00</div>
+          <h3 class="stop-card__title">Зорлу-центр: шопинг или спектакль</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>10 минут на такси — и вы в Zorlu Center: магазины премиальных марок, рестораны и Zorlu PSM, одна из главных концертных площадок города. Проверьте афишу: мюзиклы, концерты и шоу идут почти каждый вечер.</p>
+              <p>Если хочется не шопинга, а неба — поднимитесь в лаунж Raffles Istanbul, отель находится прямо в комплексе Зорлу.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Билеты в Zorlu PSM на популярные шоу раскупают заранее — могу помочь с бронированием.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-shore">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 2 · день</p>
+      <h2 class="section__title section__title--center">Бешикташ — Ортакёй — <span class="accent">Куручешме — Бебек</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Самая красивая прогулка вдоль европейского берега: от султанского дворца до богемного Бебека. Всё время у воды, в конце — закат.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">09:00</div>
+          <h3 class="stop-card__title">Улица завтраков в Бешикташе <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Начните день как студенты и футбольные фанаты Бешикташа: на Kahvaltıcılar Sokağı, «улице завтраков» у рынка Çarşı, подают серпме-кахвалты — десятки маленьких тарелок с сырами, вареньем, каймаком, яйцами с суджуком и бесконечным чаем.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Kahvaltıcılar Sokağı</div>
+                <div class="side-card__meta">Выбирайте любое заведение, где сидят местные; в выходные очереди — приходите до 10:00</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:15</div>
+          <h3 class="stop-card__title">Дворец Долмабахче <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Главный дворец поздней Османской империи на самом берегу: хрустальная лестница, люстра весом 4,5 тонны в Церемониальном зале и комната, где умер Ататюрк — часы в ней остановлены на 9:05.</p>
+              <p>Приходите к открытию: группы с круизных лайнеров подъезжают ближе к полудню.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Долмабахче закрыт по понедельникам. Берите билет с посещением Гарема — он не менее красив, чем парадные залы.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Рынок Бешикташа и обед <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Возвращаемся в Çarşı — живой рынок Бешикташа: рыбные ряды, лавки со специями и сырами, кафе болельщиков. Обед — знаменитый дёнер Karadeniz Döner Asım Usta: в очереди стоят все, от студентов до бизнесменов.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+              <div>
+                <div class="side-card__name">Karadeniz Döner Asım Usta</div>
+                <div class="side-card__meta">Тонко нарезанный дёнер из говядины в лаваше или на тарелке. Берите с айраном</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">14:00</div>
+          <h3 class="stop-card__title">Мечеть Ортакёй у Босфорского моста <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>20 минут пешком вдоль Çırağan Caddesi, мимо дворца Чыраган, — и вы на площади Ортакёя. Барочная мечеть Меджидийе на фоне моста — одна из самых узнаваемых открыток Стамбула.</p>
+              <p>Уличная классика Ортакёя — кумпир (печёная картошка с начинками) и вафли с фруктами и шоколадом.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>В выходные на площади очень людно. В будни после обеда здесь гораздо спокойнее.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">15:30</div>
+          <h3 class="stop-card__title">Куручешме и деревянные ялы Арнавуткёя <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Идём дальше вдоль воды через Куручешме к Арнавуткёю — самой красивой и самой тихой части прогулки. Ряды деревянных ялы (особняков на воде) XIX века, крутые улочки с эркерами, рыбаки на набережной.</p>
+              <p>Поднимитесь на пару кварталов вглубь от набережной: здесь сохранился настоящий старый Стамбул.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Лучший кадр</div>
+                <div class="side-card__meta">Набережная Арнавуткёя: ялы на переднем плане, мост Босфор — на заднем</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">17:00</div>
+          <h3 class="stop-card__title">Бебек: чай у воды и миндальная паста <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Бебек — элегантный район с яхтами и платанами. Возьмите чай на террасе Bebek Kahve, старой кофейни прямо у воды, где десятилетиями собираются местные.</p>
+              <p>Вкусный подарок домой — бадем эзмеси (миндальная паста) в Bebek Badem Ezmesi, кондитерской с 1904 года.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+              <div>
+                <div class="side-card__name">Bebek Kahve</div>
+                <div class="side-card__meta">Стаканчик чая, нарды, вид на яхты — без пафоса, в отличие от модных кафе по соседству</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">18:30</div>
+          <h3 class="stop-card__title">Закат над Босфором</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Закат лучше всего встречать с холма Улус — над Куручешме и Бебеком: Босфор, мост и оба берега как на ладони. Бесплатный вариант — смотровая площадка в парке Улус, ресторанный — терраса Sunset Grill &amp; Bar.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-terrace"/></svg></span>
+              <div>
+                <div class="side-card__name">Sunset Grill &amp; Bar</div>
+                <div class="side-card__meta">Авторская кухня и одна из лучших террас города. Бронь столика у края — заранее</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">20:00</div>
+          <h3 class="stop-card__title">Ужин у воды</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Если хочется рыбы — Bebek Balıkçısı, классический рыбный ресторан на набережной Бебека. Если хочется османской кухни в историческом здании — Feriye на берегу в Ортакёе. Для гастрономического вечера с видом — Ulus 29.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Бронь обязательна</div>
+                <div class="side-card__meta">Летом просите столик на террасе у воды</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-upper">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 3 · день</p>
+      <h2 class="section__title section__title--center">Верхний Босфор: <span class="accent">крепости и рыбацкие деревни</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Чем дальше на север, тем зеленее берега и тише город. Здесь стамбульцы проводят выходные: завтраки в парках, рыба у пристани, закат над Чёрным морем.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">09:00</div>
+          <h3 class="stop-card__title">Крепость Румели Хисары <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Крепость, которую Мехмед Завоеватель построил в 1452 году всего за четыре месяца, — накануне взятия Константинополя. Мощные башни спускаются к самой воде, над ними — мост Фатиха Султана Мехмета.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Уточните, открыта ли крепость для посещения: её реставрировали. Даже снаружи, с набережной, вид впечатляет.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Поздний завтрак в парке Эмирган <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Парк Эмирган — один из самых красивых в Стамбуле: в апреле здесь проходит фестиваль тюльпанов. Среди деревьев стоят три исторических павильона — Жёлтый, Розовый и Белый.</p>
+              <p>Позавтракайте в Emirgan Sütiş: турецкий завтрак и молочные десерты с видом на Босфор.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Emirgan Sütiş</div>
+                <div class="side-card__meta">Знаменит мухаллеби и сютлачом. В выходные — очереди семей, в будни спокойно</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:30</div>
+          <h3 class="stop-card__title">Музей Сакыпа Сабанджи <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Особняк Atlı Köşk над Босфором, сады с видом на воду и сильные выставки мирового уровня: здесь показывали Пикассо, Родена и Дали. Плюс одна из лучших коллекций османской каллиграфии.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Музей закрыт по понедельникам. Кафе-ресторан в саду музея — хорошая точка для кофе.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:30</div>
+          <h3 class="stop-card__title">Обед в рыбацком Румели Кавагы <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Едем на север в Сарыер и дальше в Румели Кавагы — последнюю деревню европейского берега перед Чёрным морем. Пристань, лодки, рыбные ресторанчики с жареными мидиями (midye tava) и рыбой дня.</p>
+              <p>По пути в Сарыере попробуйте сарыер-бёреги — местные слоёные пирожки, которыми славится район.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Рыба у пристани</div>
+                <div class="side-card__meta">Выбирайте ресторан, где рыба лежит на льду у входа, и спрашивайте, что поймали сегодня</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">15:30</div>
+          <h3 class="stop-card__title">Паром на азиатский берег: Анадолу Кавагы</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Короткий паром переправит вас на другой берег — в Анадолу Кавагы. Поднимитесь пешком (20–25 минут) к крепости Йорос: византийские и генуэзские руины на холме, откуда видно, как Босфор открывается в Чёрное море.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Крепость Йорос</div>
+                <div class="side-card__meta">Один из самых эффектных видов Стамбула — и почти без туристов, кроме пассажиров длинного парома</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">18:00</div>
+          <h3 class="stop-card__title">Закат и обратная дорога</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Встретьте закат у крепости или в одном из рыбных ресторанчиков у пристани Анадолу Кавагы. Обратно — на такси (около часа) или на пароме Şehir Hatları по расписанию.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Классический способ проделать этот путь — «длинный паром» по Босфору из Эминёню до Анадолу Кавагы. Расписание меняется по сезонам.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="bosphorus-asia">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Прогулка 4 · день</p>
+      <h2 class="section__title section__title--center">Ченгелькёй <span class="accent">и азиатский берег</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Азиатский берег Босфора — спокойный, зелёный и очень «домашний». Летние дворцы султанов, чайные под платанами и лучший йогурт в Стамбуле.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Дворец Бейлербейи <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Летний дворец султанов прямо под Босфорским мостом. Он меньше и уютнее Долмабахче, а туристов здесь в разы меньше. Мраморные залы, бассейн с фонтаном, сады с магнолиями — и вид на европейский берег.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Уточните день закрытия перед поездкой: дворцы-музеи обычно не работают один день в неделю.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">11:30</div>
+          <h3 class="stop-card__title">Ченгелькёй: чай под старым платаном <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>10 минут на такси или 25 минут пешком вдоль воды — и вы в Ченгелькёе, деревне, которой Стамбул так и не смог стать окончательно. На площади у пристани — Çınaraltı, чайный сад под огромным столетним платаном. Чай, симит, вид на воду.</p>
+              <p>Напротив, на берегу, — величественное здание военного лицея Кулели, а рядом — деревянный павильон Вахдеттина.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Çengelköy Çınaraltı</div>
+                <div class="side-card__meta">Одно из самых душевных мест Стамбула. Утром в будни — только местные</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Бёреки Ченгелькёя <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Попробуйте местную выпечку в старой бёречной у пристани — с сыром, шпинатом или мясом, горячую, с чаем. А летом обязательно купите знаменитые ченгелькёйские огурцы — маленькие и хрустящие, ими славится деревня.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+              <div>
+                <div class="side-card__name">Çengelköy Börekçisi</div>
+                <div class="side-card__meta">Бёрек на развес — дешевле и вкуснее любого кафе</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">14:00</div>
+          <h3 class="stop-card__title">Павильон Кючюксу и Анадолухисары <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Едем на север вдоль берега. Кючюксу — изящный павильон в стиле рококо на самой кромке воды, где султаны отдыхали во время прогулок по Босфору. Рядом — маленькая крепость Анадолухисары, старшая «сестра» Румели Хисары на противоположном берегу.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-palace"/></svg></span>
+              <div>
+                <div class="side-card__name">Küçüksu Kasrı</div>
+                <div class="side-card__meta">Маленький, но очень красивый — осмотр занимает 30–40 минут</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">15:30</div>
+          <h3 class="stop-card__title">Знаменитый йогурт Канлыджи <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Канлыджа — тихая деревня у пристани, знаменитая на весь Стамбул своим йогуртом: густым, кисловатым, его подают в маленьких мисочках с сахарной пудрой. Ешьте его на скамейке у воды — так делают стамбульцы уже больше ста лет.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+              <div>
+                <div class="side-card__name">Kanlıca yoğurdu</div>
+                <div class="side-card__meta">Продают в кафе у пристани. С чаем — идеальный полдник</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">17:30</div>
+          <h3 class="stop-card__title">Закат на холме Оташтепе <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Поднимитесь на такси на холм Otağtepe над мостом Фатиха Султана Мехмета: парк, чайная и один из самых широких видов на Босфор. Местные приезжают сюда именно ради заката.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Otağtepe</div>
+                <div class="side-card__meta">Бесплатно, просторно, без толп. Возьмите тёплую кофту — на холме ветрено</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">19:30</div>
+          <h3 class="stop-card__title">Ужин под мостом</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Lacivert — ресторан на самой воде под мостом Фатиха Султана Мехмета: рыба, мезе и огни моста над головой. Или вернитесь в Ченгелькёй — в старый рыбный İsmet Baba, где семьи ужинают у воды уже несколько поколений.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Lacivert или İsmet Baba</div>
+                <div class="side-card__meta">Lacivert — эффектно и на особый случай; İsmet Baba — душевно и по-домашнему</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="bosphorus-places">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Где поесть, выпить чай и купить</p>
+      <h2 class="section__title section__title--center">Проверенные места <span class="accent">на Босфоре</span></h2>
+      <p class="section__lead">Списки по всем четырём прогулкам — чтобы выбирать по настроению и тому, на каком берегу вы оказались.</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+          <h3 class="places-group__title">Кофейни и чайные</h3>
+          <span class="places-group__count">7 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Çengelköy Çınaraltı</div>
+            <div class="place__where">Ченгелькёй · чайный сад</div>
+            <p>Чай под столетним платаном у пристани. Самое душевное место азиатского берега.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Kahve</div>
+            <div class="place__where">Бебек · у воды</div>
+            <p>Старая кофейня на набережной: чай, нарды и вид на яхты.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Emirgan Sütiş</div>
+            <div class="place__where">Парк Эмирган</div>
+            <p>Завтраки и молочные десерты с видом на Босфор.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Чайная на Оташтепе</div>
+            <div class="place__where">Холм Otağtepe · азиатский берег</div>
+            <p>Чай с самым широким видом на Босфор и мост на закате.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">House Café Nişantaşı</div>
+            <div class="place__where">Нишанташи · Тешвикие</div>
+            <p>Завтраки, выпечка и терраса для наблюдения за модным Нишанташи.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Кафе музея Сакыпа Сабанджи</div>
+            <div class="place__where">Эмирган · сад музея</div>
+            <p>Кофе и десерты в саду особняка над Босфором.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Чайные у пристани Канлыджи</div>
+            <div class="place__where">Канлыджа</div>
+            <p>Чай с местным йогуртом на скамейке у воды.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+          <h3 class="places-group__title">Рестораны</h3>
+          <span class="places-group__count">8 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Sunset Grill &amp; Bar</div>
+            <div class="place__where">Улус · терраса</div>
+            <p>Авторская кухня и одна из лучших террас Стамбула с видом на Босфор.</p>
+            <span class="place__tip">Бронь заранее, особенно на закат.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Ulus 29</div>
+            <div class="place__where">Улус · гастрономия</div>
+            <p>Современная турецкая кухня, элегантный зал и панорама Босфора.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Lacivert</div>
+            <div class="place__where">Анадолухисары · под мостом ФСМ</div>
+            <p>Рыба и мезе на самой воде, огни моста над головой.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">İsmet Baba</div>
+            <div class="place__where">Ченгелькёй · рыба</div>
+            <p>Семейный рыбный ресторан у воды — душевно, по-домашнему, для местных.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Balıkçısı</div>
+            <div class="place__where">Бебек · рыба</div>
+            <p>Классический рыбный ресторан на набережной Бебека.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Feriye</div>
+            <div class="place__where">Ортакёй · османская кухня</div>
+            <p>Исторический павильон на берегу у дворца Чыраган, современная османская кухня.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Hünkar</div>
+            <div class="place__where">Нишанташи · локанта</div>
+            <p>Османская домашняя кухня на витрине, любимое место местных на обед.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Kantın</div>
+            <div class="place__where">Нишанташи · сезонная кухня</div>
+            <p>Свежая турецкая кухня от шефа Шемсы Денизсель.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-street"/></svg></span>
+          <h3 class="places-group__title">Местное и уличное</h3>
+          <span class="places-group__count">8 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Kahvaltıcılar Sokağı</div>
+            <div class="place__where">Бешикташ · улица завтраков</div>
+            <p>Серпме-кахвалты — завтрак из десятков тарелочек, как у местных студентов.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Karadeniz Döner Asım Usta</div>
+            <div class="place__where">Рынок Бешикташа</div>
+            <p>Один из самых известных дёнеров города — очередь стоит, но движется быстро.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Кумпир и вафли</div>
+            <div class="place__where">Площадь Ортакёя</div>
+            <p>Печёная картошка с начинками и вафли — классика у мечети.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Badem Ezmesi</div>
+            <div class="place__where">Бебек · с 1904 года</div>
+            <p>Миндальная паста — лучший сладкий подарок из Стамбула.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Kanlıca yoğurdu</div>
+            <div class="place__where">Канлыджа · пристань</div>
+            <p>Знаменитый густой йогурт с сахарной пудрой.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Бёреки Ченгелькёя</div>
+            <div class="place__where">Ченгелькёй · пристань</div>
+            <p>Горячий бёрек на развес и местные хрустящие огурцы летом.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Midye tava в Румели Кавагы</div>
+            <div class="place__where">Румели Кавагы · пристань</div>
+            <p>Жареные мидии в кляре с соусом таратор у рыбацкой пристани.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Tatbak</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Лахмаджун и кебабы — быстрый и честный обед среди бутиков.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+          <h3 class="places-group__title">Виды и террасы</h3>
+          <span class="places-group__count">7 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Парк Улус</div>
+            <div class="place__where">Улус · бесплатно</div>
+            <p>Смотровая площадка над Куручешме и Бебеком — Босфор и мост как на ладони.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Холм Оташтепе</div>
+            <div class="place__where">Азиатский берег · бесплатно</div>
+            <p>Самый широкий вид на Босфор и мост Фатиха Султана Мехмета.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Крепость Йорос</div>
+            <div class="place__where">Анадолу Кавагы</div>
+            <p>Место, где Босфор открывается в Чёрное море.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Набережная Арнавуткёя</div>
+            <div class="place__where">Арнавуткёй</div>
+            <p>Деревянные ялы и мост — лучший кадр европейского берега.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Площадь Ортакёя</div>
+            <div class="place__where">Ортакёй</div>
+            <p>Мечеть Меджидийе и Босфорский мост — открытка Стамбула.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Сады музея Сабанджи</div>
+            <div class="place__where">Эмирган</div>
+            <p>Тихий вид на Верхний Босфор из сада особняка.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Терраса Sunset Grill &amp; Bar</div>
+            <div class="place__where">Улус</div>
+            <p>Лучший ресторанный закат европейского берега.</p>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-bag"/></svg></span>
+          <h3 class="places-group__title">Шопинг</h3>
+          <span class="places-group__count">6 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Abdi İpekçi Caddesi</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Главная модная улица Турции: мировые бренды и турецкие дома моды.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Vakko</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Турецкий дом моды с 1934 года — шёлковые платки, аксессуары, подарки.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Beymen</div>
+            <div class="place__where">Нишанташи</div>
+            <p>Универмаг премиальных турецких и мировых дизайнеров.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Zorlu Center</div>
+            <div class="place__where">Бешикташ</div>
+            <p>Премиальный торговый центр с рестораном Raffles и концертным залом Zorlu PSM.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Рынок Бешикташа</div>
+            <div class="place__where">Çarşı</div>
+            <p>Специи, сыры, оливки и сухофрукты по местным ценам.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Bebek Badem Ezmesi</div>
+            <div class="place__where">Бебек</div>
+            <p>Миндальная паста и сладости в красивой упаковке.</p>
+          </div>
+        </div>
+      </div>
+      <p class="disclaimer">Часы работы дворцов и музеев, расписание паромов и сезонные меню на Босфоре меняются — перед поездкой я сверяю всё по маршруту.</p>
+    </div>
+  </section>
+
+  <!-- ================= МАРШРУТ 4: ПРИНЦЕВЫ ОСТРОВА ================= -->
+  <section class="section section--cream" id="islands" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Маршрут 4</p>
+      <h2 class="section__title section__title--center">Принцевы острова: <span class="accent">Стамбул без машин</span></h2>
+      <p class="section__lead">Полтора часа на пароме — и вы в другом мире: деревянные особняки в бугенвиллиях, сосновые леса, велосипеды вместо машин и чайки над пристанью. Сами стамбульцы называют их просто Adalar — «Острова».</p>
+
+      <div class="story">
+        <div class="story__item reveal">
+          <h3>Почему «Принцевы»</h3>
+          <p>В VI веке византийский император Юстин II построил на самом большом острове дворец. Остров стали называть Принкипо — «Остров принца», а позже это имя перешло на весь архипелаг.</p>
+          <p>Острова быстро превратились в место почётной ссылки. Сюда отправляли свергнутых императоров, принцев и императриц, которые жили в монастырях под надзором. Так у названия появился второй смысл: острова, куда ссылали принцев.</p>
+        </div>
+        <div class="story__item reveal">
+          <h3>Как стали дачей Стамбула</h3>
+          <p>В XIX веке пароходы связали острова с городом, и здесь появились летние виллы греческих, армянских, еврейских и турецких семей. Отсюда и смесь церквей, мечетей и синагог, и особая атмосфера старого космополитичного Стамбула.</p>
+          <p>Турки называли архипелаг Kızıl Adalar — «Красные острова» — за красноватые скалы, в которых много железа.</p>
+        </div>
+        <div class="story__item reveal">
+          <h3>Сколько их</h3>
+          <p>Всего островов девять. Жилых и доступных на регулярном пароме — четыре: Кыналыада, Бургазада, Хейбелиада и Бююкада. Ещё на маленьком Седефе стоят частные виллы.</p>
+          <p>Остальные четыре — Яссыада, Сивриада, Кашык и Тавшан — необитаемые или закрытые. С некоторыми из них связаны мрачные страницы истории.</p>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-pin"/></svg></span>
+          <h3 class="places-group__title">Чем острова отличаются друг от друга</h3>
+          <span class="places-group__count">4 + 5 островов</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Бююкада · Büyükada</div>
+            <div class="place__where">Греческое «Принкипо» · самый большой · ≈ 1,5 ч на пароме</div>
+            <p>Остров-символ архипелага. Монастырь Святого Георгия (Aya Yorgi) на вершине холма Юджетепе с видом на все острова, огромное деревянное здание бывшего греческого приюта, особняки XIX века, исторический отель Splendid Palas 1908 года. В 1929–1933 годах здесь в изгнании жил Лев Троцкий. На острове также находится Музей Принцевых островов в бухте Ая Никола.</p>
+            <span class="place__tip">Самый популярный: здесь больше всего достопримечательностей, ресторанов и отелей, сюда привозят все экскурсии. Поэтому в летние выходные здесь многолюдно.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Хейбелиада · Heybeliada</div>
+            <div class="place__where">Греческое «Халки» · второй по величине</div>
+            <p>Турецкое название означает «остров-перемётная сума»: два холма похожи на седельную сумку. Греческое «Халки» — от слова «медь», которую здесь когда-то добывали. На вершине холма стоит знаменитая Халкинская богословская семинария, закрытая с 1971 года. Здесь также Военно-морской лицей, сосновые леса, мыс Деирмен Бурну и тихие пляжи.</p>
+            <span class="place__tip">Второй по популярности, но заметно спокойнее Бююкады. Лучший остров для велосипеда и прогулок по лесу.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Бургазада · Burgazada</div>
+            <div class="place__where">Греческое «Антигони» · маленький и сонный</div>
+            <p>Остров писателей: здесь жил классик турецкой прозы Сайт Фаик Абасыянык, и его дом стал музеем. Узкие улочки, церковь у пристани, холм Христос и скалы Калпазанкая на западном берегу, где встречают закат.</p>
+            <span class="place__tip">Менее популярен: мало «открыточных» достопримечательностей. Именно за это его любят стамбульцы — здесь тихо даже летом.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Кыналыада · Kınalıada</div>
+            <div class="place__where">Греческое «Проти» — «первый» · ближайший к городу</div>
+            <p>Ближайший к Стамбулу остров — около 30 минут на пароме. Название значит «хной окрашенный»: за красноватые скалы. Здесь исторически живёт армянская община, а в XI веке в монастыре на острове окончил дни ослеплённый император Роман IV Диоген. Деревьев мало, зато много мест для купания.</p>
+            <span class="place__tip">Наименее популярный из четырёх: остров голый и почти без достопримечательностей. Это место для купания и тишины, а не для экскурсий.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Седеф · Sedef</div>
+            <div class="place__where">Маленький остров между Бююкадой и азиатским берегом</div>
+            <p>Частные виллы и сосны, регулярного парома нет. Туристического значения почти не имеет.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Яссыада · Yassıada</div>
+            <div class="place__where">«Плоский остров»</div>
+            <p>Здесь в 1960–1961 годах после военного переворота судили премьер-министра Аднана Мендереса и членов его правительства. Сегодня остров переименован в «Остров демократии и свобод», на нём открыт мемориальный комплекс.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Сивриада · Sivriada</div>
+            <div class="place__where">«Острый остров»</div>
+            <p>Самая мрачная страница истории островов. В 1910 году сюда вывезли тысячи бездомных собак Стамбула, и они погибли. С тех пор остров называют Хайырсызада — «остров без добра». Он необитаем.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Кашык и Тавшан</div>
+            <div class="place__where">«Ложка» и «Заяц»</div>
+            <p>Крошечные острова: Кашык похож на ложку и находится в частной собственности, Тавшан необитаем.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stay-compare__tip" style="margin-top: 2rem;">
+        <strong>Почему одни острова популярнее других:</strong>
+        <ul style="margin: 0.6rem 0 0; padding-left: 1.1rem;">
+          <li><strong>Размер и достопримечательности.</strong> На Бююкаде есть монастырь на холме, особняки, музей, отели и десятки ресторанов, на маленьких островах — только улочки и природа.</li>
+          <li><strong>Туры и паромы.</strong> Экскурсии почти всегда везут на Бююкаду, и паромы там самые частые, поэтому поток туристов идёт именно туда.</li>
+          <li><strong>Инфраструктура.</strong> Бургазада и Кыналыада живут летом как дачные посёлки: кафе меньше, многие работают только в сезон.</li>
+          <li><strong>Природа.</strong> На Хейбелиаде и Бююкаде растут сосновые леса, а Кыналыада почти безлесная, поэтому её выбирают для купания, а не для прогулок.</li>
+          <li><strong>Доступ.</strong> Седеф, Кашык и другие маленькие острова частные или закрытые, регулярного парома туда нет.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" id="islands-day">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">День на островах</p>
+      <h2 class="section__title section__title--center">Хейбелиада <span class="accent">и Бююкада</span></h2>
+      <p class="section__lead" style="color: var(--color-sand-light);">Классический день на островах. Начинаем с тихой Хейбелиады, пока туристы плывут дальше, а на Бююкаду приезжаем уже к обеду.</p>
+
+      <div class="timeline">
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">08:30</div>
+          <h3 class="stop-card__title">Паром на острова <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Паромы Şehir Hatları уходят на острова из Кабаташа и Эминёню, а с азиатского берега — из Кадыкёя и Бостанджи. Плывём около полутора часов: мимо Девичьей башни, дворца Топкапы и стамбульского берега. Есть и скоростные паромы частных компаний — быстрее, но без палубы.</p>
+              <p>Классика поездки — симит и чай в стаканчике на палубе, а чайки ловят кусочки бублика прямо на лету.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Оплата по Istanbulkart. Выбирайте будний день: в летние выходные и праздники паромы переполнены.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">10:00</div>
+          <h3 class="stop-card__title">Хейбелиада: лес и тишина <span class="tag tag--local">Местные</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Сходим на Хейбелиаде, пока туристы плывут дальше. Пройдите мимо деревянных особняков в цветах к холму Юмит: на его вершине стоит Халкинская семинария, а с площадки рядом видно соседние острова.</p>
+              <p>Ещё лучше — взять велосипед у пристани и доехать через сосновый лес до мыса Деирмен Бурну.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-tea"/></svg></span>
+              <div>
+                <div class="side-card__name">Чай у пристани</div>
+                <div class="side-card__meta">Чайные и кафе на набережной Хейбелиады — тихо, вид на Бююкаду и паромы</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">12:30</div>
+          <h3 class="stop-card__title">Бююкада: особняки XIX века <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>10–15 минут на пароме — и вы на главном острове. От пристани по улицам Чанкая и Низам тянутся деревянные особняки в бугенвиллиях и садах — самые красивые на всех островах.</p>
+              <p>Конных фаэтонов больше нет: в 2020 году их отменили. Теперь по острову ездят электрические мини-автобусы и такси, а многие берут напрокат велосипеды и электровелосипеды.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-eye"/></svg></span>
+              <div>
+                <div class="side-card__name">Что увидеть по пути</div>
+                <div class="side-card__meta">Отель Splendid Palas у пристани, особняки улицы Чанкая и бывший дом Троцкого на северном берегу</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">13:30</div>
+          <h3 class="stop-card__title">Подъём к монастырю Ая Йорги <span class="tag tag--classic">Классика</span></h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Доезжаем до площади Бирлик (Луна-парк), а дальше 20–30 минут пешком в гору по мощёной дорожке. Монастырь Святого Георгия на вершине Юджетепе — самая высокая точка острова. Отсюда видны все Принцевы острова и Мраморное море.</p>
+              <p>По традиции на подъёме загадывают желание и завязывают нитку на ветках. 23 апреля, в день святого Георгия, сюда поднимаются тысячи паломников.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+              <div>
+                <div class="side-card__name">Обед на вершине</div>
+                <div class="side-card__meta">Yücetepe Kır Gazinosu у монастыря — простая кухня и, пожалуй, лучший вид на островах</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">16:00</div>
+          <h3 class="stop-card__title">Чай в Splendid Palas и мороженое на пристани</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Спускаемся к пристани. Отель Splendid Palas с красными куполами открылся в 1908 году, тогда же, когда острова были главным курортом стамбульской знати. На его террасе хорошо выпить чай или кофе.</p>
+              <p>Перед паромом — мороженое и прогулка вдоль набережной.</p>
+            </div>
+            <div class="side-card">
+              <span class="side-card__icon"><svg aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+              <div>
+                <div class="side-card__name">Splendid Palas</div>
+                <div class="side-card__meta">Исторический отель у пристани. Если хотите провести на островах ночь — это самый атмосферный вариант</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop-card reveal">
+          <div class="stop-card__badge">18:00</div>
+          <h3 class="stop-card__title">Паром на закате</h3>
+          <div class="stop-card__body">
+            <div class="stop-card__text">
+              <p>Обратно лучше плыть на закатном пароме: солнце садится за исторический полуостров, и силуэты мечетей Султанахмета проступают на фоне неба. Это один из самых красивых видов Стамбула, а смотреть на него можно с палубы обычного городского парома.</p>
+            </div>
+            <div class="stop-card__note">
+              <svg aria-hidden="true"><use href="#icon-info"/></svg>
+              <span>Посмотрите время последних паромов заранее: зимой расписание короче.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="islands-tips">
+    <div class="container">
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-walk"/></svg></span>
+          <h3 class="places-group__title">Другие варианты дня на островах</h3>
+          <span class="places-group__count">3 варианта</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Тихий день: Бургазада</div>
+            <div class="place__where">Для тех, кто уже был на Бююкаде</div>
+            <p>Дом-музей Сайта Фаика, прогулка по сонным улочкам, подъём на холм Христос и закат на скалах Калпазанкая с ужином в ресторане на берегу.</p>
+            <span class="place__tip">Здесь острова такие, какими их помнят сами стамбульцы.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Пляжный день: Кыналыада</div>
+            <div class="place__where">С июня по сентябрь</div>
+            <p>Ближайший к городу остров, всего 30 минут на пароме. Здесь купаются в пляжных клубах на скалах, обедают у пристани и возвращаются на вечернем пароме.</p>
+            <span class="place__tip">Хороший вариант для жаркого дня.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Ночь на Бююкаде</div>
+            <div class="place__where">Острова без туристов</div>
+            <p>Останьтесь на ночь в Splendid Palas или в одном из бутик-отелей в особняках. Вечером, когда уходят последние паромы с туристами, остров становится тихим и очень романтичным.</p>
+            <span class="place__tip">Утром — завтрак и велосипед по пустому острову.</span>
+          </div>
+        </div>
+      </div>
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-meal"/></svg></span>
+          <h3 class="places-group__title">Где поесть и выпить чай</h3>
+          <span class="places-group__count">5 мест</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Yücetepe Kır Gazinosu</div>
+            <div class="place__where">Бююкада · вершина холма у Ая Йорги</div>
+            <p>Простая турецкая кухня, вино и вид на все острова — главный обеденный адрес Бююкады.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Терраса Splendid Palas</div>
+            <div class="place__where">Бююкада · у пристани</div>
+            <p>Чай и кофе в историческом отеле 1908 года.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Рыбные рестораны у пристани</div>
+            <div class="place__where">Бююкада и Хейбелиада</div>
+            <p>Рыба дня, мезе и вид на паромы. Выбирайте место, где рыба лежит на льду у входа.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Kalpazankaya</div>
+            <div class="place__where">Бургазада · западный берег</div>
+            <p>Ресторан на скалах, где лучше всего встречать закат.</p>
+          </div>
+          <div class="place">
+            <div class="place__name">Симит и чай на пароме</div>
+            <div class="place__where">По пути на острова</div>
+            <p>Самый стамбульский перекус: бублик, чай и чайки за кормой.</p>
+          </div>
+        </div>
+      </div>
+      <div class="practical" style="margin-top: 3rem;">
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-clock"/></svg>
+          <strong>Когда ехать</strong>
+          <span>Лучше всего — будни с апреля по июнь и в сентябре–октябре. В летние выходные на Бююкаде очень людно</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-walk"/></svg>
+          <strong>Как передвигаться</strong>
+          <span>Машин нет: пешком, на велосипеде или на электрических мини-автобусах и такси. Фаэтоны отменены в 2020 году</span>
+        </div>
+        <div class="practical__item reveal">
+          <svg aria-hidden="true"><use href="#icon-card"/></svg>
+          <strong>Паромы</strong>
+          <span>Городские паромы оплачиваются по Istanbulkart. Скоростные паромы частных компаний быстрее, но билеты стоят дороже</span>
+        </div>
+      </div>
+      <p class="disclaimer">Расписание паромов и часы работы монастыря и музеев зависят от сезона — перед поездкой я уточняю их под ваши даты.</p>
+    </div>
+  </section>
+
+  <!-- ================= ДЛЯ ОПЫТНЫХ ПУТЕШЕСТВЕННИКОВ ================= -->
+  <section class="section section--cream" id="bosphorus-hotels" style="border-top: 1px solid rgba(201, 160, 99, 0.35);">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Если вы в Стамбуле уже не в пятый раз</p>
+      <h2 class="section__title section__title--center">Другой Стамбул: <span class="accent">Босфор и роскошь у воды</span></h2>
+      <p class="section__lead">Айя-София и Галата уже знакомы? Тогда пора жить там, где живут сами стамбульцы: на берегах Босфора, на азиатской стороне, в Нишанташи или на Золотом Роге. Здесь отель становится частью путешествия, а в старый город вы приезжаете по воде или на такси.</p>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-palace"/></svg></span>
+          <h3 class="places-group__title">Топ-7: Босфор, азиатский берег и Нишанташи</h3>
+          <span class="places-group__count">7 отелей</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Çırağan Palace Kempinski <span class="place__price">$$$$</span></div>
+            <div class="place__where">Бешикташ · европейский берег Босфора</div>
+            <p>Настоящий османский дворец XIX века прямо на воде. Бассейн-инфинити буквально сливается с Босфором, сады, ресторан Tuğra с дворцовой кухней. Самый «курортный» адрес в городе.</p>
+            <span class="place__tip">Для тех, кто хочет почувствовать себя султаном.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Four Seasons Hotel Istanbul at the Bosphorus <span class="place__price">$$$$</span></div>
+            <div class="place__where">Бешикташ · европейский берег Босфора</div>
+            <p>Дворец XIX века на самом берегу: терраса и бассейн у воды, мраморные залы и знаменитый сервис Four Seasons. По оценкам гостей — один из лучших отелей Стамбула.</p>
+            <span class="place__tip">Безупречная классика, когда важны и история, и комфорт.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Mandarin Oriental Bosphorus <span class="place__price">$$$$</span></div>
+            <div class="place__where">Куручешме, у Ортакёя</div>
+            <p>Современный и спокойный люкс на набережной, открытый в 2021 году. Спа называют одним из лучших в городе, рядом — Ортакёй и набережная Бебека.</p>
+            <span class="place__tip">Для любителей современного дизайна и спа-дней.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Six Senses Kocatas Mansions <span class="place__price">$$$$</span></div>
+            <div class="place__where">Сарыер · Верхний Босфор</div>
+            <p>Два особняка XIX века в зелёной части Верхнего Босфора, вдали от центра. Ставка на велнес и спа, собственная лодка для поездок в город — по воде, без пробок.</p>
+            <span class="place__tip">Перезагрузка и тишина: Стамбул как загородный отдых.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Sumahan on the Water <span class="place__price">$$$$</span></div>
+            <div class="place__where">Ченгелькёй · азиатский берег</div>
+            <p>Небольшой бутик-отель в здании бывшей фабрики ракы на самой кромке воды, с видом на европейский берег. Рядом — рыбные ресторанчики Ченгелькёя и азиатская жизнь без туристов.</p>
+            <span class="place__tip">Для тех, кто хочет увидеть Стамбул с другой стороны Босфора.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Raffles Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Зорлу-центр · Бешикташ</div>
+            <p>Городской люкс с фирменным батлер-сервисом Raffles, видом на Босфор, крытым и открытым бассейнами и спа с хаммамом. Внизу — магазины и театр Zorlu, рядом — Нишанташи.</p>
+            <span class="place__tip">Для шопинга, спектаклей и городской жизни.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">The St. Regis Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Нишанташи, у парка Мачка</div>
+            <p>Изысканный отель в самом модном районе Стамбула: бутики, галереи и лучшие кофейни Нишанташи прямо за дверью. Фирменный батлер-сервис St. Regis.</p>
+            <span class="place__tip">Для тех, кто приехал за модой, гастрономией и стамбульским светским ритмом.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="places-group">
+        <div class="places-group__head">
+          <span class="places-group__icon"><svg aria-hidden="true"><use href="#icon-tower"/></svg></span>
+          <h3 class="places-group__title">Золотой Рог: новый комплекс Tersane</h3>
+          <span class="places-group__count">2 отеля</span>
+        </div>
+        <div class="places">
+          <div class="place">
+            <div class="place__name">Aliée Istanbul <span class="place__price">$$$$</span></div>
+            <div class="place__where">Исторические верфи Терсане · Paris Society Collection</div>
+            <p>Камерный люкс на территории старинной османской верфи: открытая каменная кладка, сюиты до 70 м² с видом на воду, спа, ради которого гости выбирают отель, и восемь ресторанов и баров, один из них — у шефа с тремя звёздами Michelin.</p>
+            <span class="place__tip">Для пары и особого повода. Уточните, включён ли завтрак.</span>
+          </div>
+          <div class="place">
+            <div class="place__name">Rixos Tersane Istanbul <span class="place__price">$$$–$$$$</span></div>
+            <div class="place__where">Исторические верфи Терсане · соседний с Aliée отель</div>
+            <p>Большой новый отель курортного типа на 400+ номеров: просторные номера с видом на Золотой Рог, новый спа и спортзал, бассейн-инфинити, рестораны. Есть номера с доступом к детской зоне Nickelodeon.</p>
+            <span class="place__tip">Для семей с детьми и тех, кому нужен курорт в городе.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="stay-compare__tip" style="margin-top: 2.6rem;"><strong>Мой совет:</strong> отели на Босфоре лучше всего сочетать с поездками по воде. Паром, частная лодка или водное такси довезут вас до Эминёню и Каракёя быстрее, чем машина в вечерних пробках.</p>
+      <p class="legend"><a href="#bosphorus" style="color: var(--color-navy); border-bottom: 1px solid var(--color-sand);">Маршрут по Босфору: прогулки рядом с этими отелями →</a></p>
+      <p class="disclaimer">Цены в этой категории — от €400–500 за ночь и выше. Точные тарифы, условия завтрака и лучшие категории номеров подберу под ваши даты.</p>
     </div>
   </section>
 
